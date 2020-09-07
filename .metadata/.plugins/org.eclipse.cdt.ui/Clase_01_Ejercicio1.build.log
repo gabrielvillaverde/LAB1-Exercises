@@ -1,0 +1,16 @@
+03:21:44 **** Incremental Build of configuration Debug for project Clase_01_Ejercicio1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_01_Ejercicio1.o" "..\\src\\Clase_01_Ejercicio1.c" 
+..\src\Clase_01_Ejercicio1.c: In function 'main':
+..\src\Clase_01_Ejercicio1.c:38:9: warning: implicit declaration of function '__fpurge' [-Wimplicit-function-declaration]
+   38 |         __fpurge(stdin); // fflush(stdin)
+      |         ^~~~~~~~
+gcc -o Clase_01_Ejercicio1 "src\\Clase_01.o" "src\\Clase_01_Ejercicio1.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase_01_Ejercicio1.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Clase 1\Clase_01_Ejercicio1\Debug/../src/Clase_01_Ejercicio1.c:16: multiple definition of `main'; src\Clase_01.o:C:\Users\Hzkr\eclipse-workspace\Clase 1\Clase_01_Ejercicio1\Debug/../src/Clase_01.c:16: first defined here
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase_01_Ejercicio1.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Clase 1\Clase_01_Ejercicio1\Debug/../src/Clase_01_Ejercicio1.c:38: undefined reference to `__fpurge'
+collect2.exe: error: ld returned 1 exit status
+
+03:21:44 Build Failed. 4 errors, 1 warnings. (took 495ms)
+

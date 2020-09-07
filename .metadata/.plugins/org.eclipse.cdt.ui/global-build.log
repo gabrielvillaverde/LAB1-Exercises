@@ -1,0 +1,5 @@
+20:57:16 **** Incremental Build of configuration Debug for project Clase_Repaso_Ej1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_Repaso_Ej1.o" "..\\src\\Clase_Repaso_Ej1.c" 
+gcc -o Clase_Repaso_Ej1.exe "src\\Clase_Repaso_Ej1.o" 
+Info: Nothing to build for Clase_Repaso_Ej1

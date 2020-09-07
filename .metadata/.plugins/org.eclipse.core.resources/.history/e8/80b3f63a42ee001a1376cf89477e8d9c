@@ -1,0 +1,42 @@
+/*
+ ============================================================================
+ Name        : Clase_04_Ej4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Prototipo de funciones
+int utn_getNumero(int * pResultado);
+
+// Función principal
+int main(void) {
+
+	setbuf(stdout,NULL);
+
+	int numero;
+
+	utn_getNumero(&numero); // Llamo a la función getNumero.
+
+	return EXIT_SUCCESS;
+}
+
+
+// Función utn_getNumero
+int utn_getNumero(int * pResultado) {
+
+	int numeroIngresado;
+	printf("Ingrese un numero:");
+
+	scanf("%d",&numeroIngresado);
+	if(numeroIngresado >= 0 && numeroIngresado < 100){
+		*pResultado = numeroIngresado;
+	}
+	else
+		printf("Error.");
+}

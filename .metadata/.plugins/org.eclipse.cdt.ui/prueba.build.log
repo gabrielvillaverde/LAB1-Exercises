@@ -1,0 +1,14 @@
+18:36:10 **** Rebuild of configuration Debug for project prueba ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\prueba.o" "..\\src\\prueba.c" 
+..\src\prueba.c: In function 'main':
+..\src\prueba.c:28:20: error: 'num1' undeclared (first use in this function)
+   28 |  resultado = sumar(num1, num2);
+      |                    ^~~~
+..\src\prueba.c:28:20: note: each undeclared identifier is reported only once for each function it appears in
+..\src\prueba.c:28:26: error: 'num2' undeclared (first use in this function)
+   28 |  resultado = sumar(num1, num2);
+      |                          ^~~~
+
+18:36:10 Build Failed. 2 errors, 0 warnings. (took 154ms)
+

@@ -1,0 +1,73 @@
+/*
+ * utn.c
+ *
+ *  Created on: 3 sep. 2020
+ *      Author: Hzkr
+ */
+
+/* Ejercicio: Desarrollar la función utn_getNumero. */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Segunda forma
+
+int utn_getNumero(int * pResultado, char * mensaje, char * mensajeError, int minimo, int maximo, int reintentos)
+{
+	int retorno = -1;
+	int bufferInt; // Variable de intercambio con el usuario, donde leeré y guardaré el dato que el usuario ingresa.
+
+	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >= 0)
+	{
+		do
+		{
+			printf("%s", mensaje); // Recibo un dato string, el mensaje del usuario.
+			scanf("%d", &bufferInt); // Leo lo que recibo del usuario, y lo asigno a la dirección de memoria de bufferInt.
+			if(bufferInt >= minimo && bufferInt <= maximo) // Si lo que hay dentro de bufferInt es mayor/igual al mínimo, y menor/igual al máximo...
+			{
+				*pResultado = bufferInt; // Le asigno al puntero, lo que hay en bufferInt.
+				retorno = 0; // Salió todo bien, por eso el retorno devuelve 0.
+				break; // Esto haría que deje de reintentar con la segunda forma.
+			}
+			else
+			{
+				printf("%s",mensajeError);
+				reintentos--;
+			}
+		}while(reintentos >= 0);
+	}
+	return retorno;
+}
+
+/* // Primera forma
+
+int utn_getNumero(int * pResultado, char * mensaje, char * mensajeError, int minimo, int maximo, int reintentos)
+{
+	int retorno = -1;
+	int bufferInt; // Lo que leo con el scanf, lo guardo acá.
+	int contadorIntentos = 0;
+	// Chequear que todos los punteros que recibí, no sean NULL.
+	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL){
+		do
+		{
+			if(contadorIntentos == reintentos){ // Verifica que el contador de intentos sea igual a reintentos.
+				retorno = -2; // ...en tal caso, pone el retorno en -2 y sale. El retorno está puesto así para, en el main, devolver como resultado que se superó la cantidad de intentos.
+				break;
+			}
+
+			printf("%s\n", mensaje);
+			scanf("%d", &bufferInt);
+			if(bufferInt >= minimo && bufferInt <= maximo){ // Verifica que sea mayor/igual que el mínimo y que sea menor/igual que el máximo.
+				retorno = 0; // ...en tal caso, pone el retorno en 0 para indicar que salió todo bien.
+				*pResultado = bufferInt; // El puntero de resultado se asigna a bufferInt.
+				break;
+			}
+			else{
+				printf("%s\n", mensajeError);
+			}
+			contadorIntentos++;
+		}while(1);
+	return retorno;
+	}
+}
+*/

@@ -1,0 +1,111 @@
+/*
+ ============================================================================
+Pedir al usuario dos números float:
+
+- Sumar
+- Restar
+- Multiplicar
+- Dividir
+
+Si no hubo errores, imprimir el resultado: "La suma es...".
+Todas las funciones hay que hacer que si salieron bien:
+
+- return = 0
+- return = -1
+
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+// Solo en Linux, para el __fpurge usar #include <stdio ext.h>
+
+// Prototipos de funciones
+int sumar (int operador1,int operador2);
+int restar (int operador1,int operador2);
+int multiplicar (int operador1,int operador2);
+float dividir (int operador1,int operador2);
+
+int main(void) {
+
+	setbuf(stdout,NULL); // Solo en Windows
+
+	int num1;
+	int num2;
+	char operacion;
+	int resultadoInt;
+	float resultadoFloat;
+	float resultado;
+
+	printf("Ingrese un número: \n");
+	fflush(stdin); // Solo en Windows
+	// Si es Linux = __fpurge(stdin);
+	scanf("%d", &num1);
+
+	printf("Ingrese una operación: (+, -, * o /)\n ");
+	fflush(stdin); // Solo en Windows
+	// Si es Linux = __fpurge(stdin);
+	scanf("%c", &operacion);
+
+	printf("Ingrese otro número: \n");
+	fflush(stdin); // Solo en Windows
+	// Si es Linux = __fpurge(stdin);
+	scanf("%d", &num2);
+
+	switch(operacion){
+	case '+':
+		resultadoInt = sumar(num1,num2);
+		break;
+	case '-':
+		resultadoInt = restar(num1,num2);
+		break;
+	case '*':
+		resultadoInt = multiplicar(num1,num2);
+		break;
+	case '/':
+		resultadoFloat = dividir(num1,num2, &resultado);
+		printf("El resultado es %f", resultadoFloat);
+		break;
+	}
+
+	if(operacion!='/'){
+		printf("El resultado es %d", resultadoInt);
+	}
+
+	return EXIT_SUCCESS;
+}
+
+// Declaración de funciones:
+int sumar(int operador1,int operador2, int result){
+	int resultado;
+	resultado = operador1 + operador2;
+	return resultado;
+}
+
+int restar(int operador1,int operador2){
+	int resultado;
+	resultado = operador1 - operador2;
+	return resultado;
+}
+
+int multiplicar(int operador1,int operador2){
+	int resultado;
+	resultado = operador1 * operador2;
+	return resultado;
+}
+
+float dividir(int operador1,int operador2, int variableDevuelta){
+	int resultado;
+	int hayError;
+
+	if(operador2! = 0){
+		resultado = operador1 / operador2;
+		hayError = 0; // No hay error.
+	}
+
+	else{
+		hayError = -1; // Si hay error.
+	}
+	resultado = (float)operador1 / operador2;
+	return hayError;
+}

@@ -1,0 +1,109 @@
+/*
+ ============================================================================
+Pedir al usuario dos números float:
+
+- Sumar
+- Restar
+- Multiplicar
+- Dividir
+
+Si no hubo errores, imprimir el resultado: "La suma es...".
+Todas las funciones hay que hacer que si salieron bien:
+
+- return = 0
+- return = -1
+
+ ============================================================================
+ */
+
+float getFloat(void);
+int sumarNumeros(float operadorA, float operadorB, float *respuesta);
+int restarNumeros(float operadorA, float operadorB, float *respuesta);
+int multiplicarNumeros(float operadorA, float operadorB, float *respuesta);
+int dividirNumeros(float operadorA, float operadorB, float *respuesta);
+
+
+int main (void)
+{
+	float numeroA;
+	float numeroB;
+	float suma;
+	float resta;
+	float multiplicacion;
+	float division;
+
+	numeroA = getFloat();
+	numeroB = getFloat();
+
+    if (sumarNumeros(numeroA, numeroB, &suma) == 0)
+    {
+        printf("La suma es %f\n", suma);
+    }
+
+    if (restarNumeros(numeroA, numeroB, &resta) == 0)
+    {
+        printf("La resta es %f\n", resta);
+    }
+
+    if (multiplicarNumeros(numeroA, numeroB, &multiplicacion) == 0)
+    {
+        printf("La multiplicacion es %f\n", multiplicacion);
+    }
+
+    if (dividirNumeros(numeroA, numeroB, &division) == 0)
+    {
+        printf("La division es %f\n", division);
+    }
+
+
+}
+
+float getFloat(void)
+{
+	float num;
+
+	printf("Ingrese un numero: ");
+	scanf("%f", &num);
+
+	return num;
+}
+
+int sumarNumeros(float operadorA, float operadorB, float *respuesta)
+{
+
+	*respuesta = operadorA + operadorB;
+
+	return 0;
+}
+
+int restarNumeros(float operadorA, float operadorB, float *respuesta)
+{
+
+	*respuesta = operadorA - operadorB;
+
+	return 0;
+}
+
+int multiplicarNumeros(float operadorA, float operadorB, float *respuesta)
+{
+
+	*respuesta = operadorA * operadorB;
+
+	return 0;
+}
+
+int dividirNumeros(float operadorA, float operadorB, float *respuesta)
+{
+	int retorno;
+	if(operadorB != 0)
+	{
+	   *respuesta = (float) operadorA / operadorB;
+	    retorno = 0;
+	}
+	else
+	{
+	    retorno = -1;
+	}
+	return retorno;
+}
+

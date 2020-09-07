@@ -1,0 +1,6 @@
+19:41:50 **** Incremental Build of configuration Debug for project Clase_04_Ej1_SinBibliotecas ****
+Info: Internal Builder is used for build
+gcc -o Clase_04_Ej1_SinBibliotecas.exe "src\\Clase_04_Ej1_SinBibliotecas.o" 
+
+19:41:50 Build Finished. 0 errors, 0 warnings. (took 202ms)
+

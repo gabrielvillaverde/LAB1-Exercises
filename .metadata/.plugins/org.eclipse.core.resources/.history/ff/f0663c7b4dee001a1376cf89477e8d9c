@@ -1,0 +1,34 @@
+/*
+ ============================================================================
+ Name        : Clase_04_Ej4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Prototipo de funciones
+int utn_getNumero(int* pResultado,int min,int max,char* msg,char* msgError, int reintentos);
+
+// Función principal
+int main(void) {
+	/*
+	char* variable = "Ingresame algo che:";
+	printf("%s",variable);
+	return 0;
+	*/
+
+	setbuf(stdout,NULL);
+
+	int edad;
+
+	if(utn_getNumero(&edad,1,120, "Ingrese edad: ", "Ingrese una edad correcta.",2) == 0){
+		printf("Ingresaste: %d", edad);
+	}
+
+	return EXIT_SUCCESS;
+}

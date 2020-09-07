@@ -1,0 +1,51 @@
+/*
+ ============================================================================
+Una función que tenga dos parámetros y sume dos números y devuelva el resultado.
+La otra función que tenga tres parámetros, un parámetro para guardar resultados y dos que son los números para sumar.
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int funcionSumar(int parametroUno, int parametroDos);
+int segundaFuncionSumar(int parametroUno, int parametroDos, int resultado);
+
+int main(void) {
+
+	setbuf(stdout,NULL); // Para que la consola no imprima todo de una.
+
+	int numeroIngresadoUno;
+	int numeroIngresadoDos;
+	int resultadoUno;
+	int resultadoDos = 0; // Para la segundaFuncionSumar
+
+	printf("Ingrese el primer número:\n");
+	scanf("%d",&numeroIngresadoUno);
+
+	printf("Ingrese el segundo número:\n");
+	scanf("%d",&numeroIngresadoDos);
+
+	resultadoUno = funcionSumar(numeroIngresadoUno, numeroIngresadoDos);
+	printf("El resultado es: %d\n", resultadoUno);
+
+	segundaFuncionSumar(numeroIngresadoUno, numeroIngresadoDos, resultadoDos);
+	printf("El resultado Dos en la función main es: %d\n, porque le está pasando la copia, y no el valor verdadero", resultadoDos);
+
+	return EXIT_SUCCESS;
+}
+
+int funcionSumar(int parametroUno, int parametroDos){
+
+	int resultado = parametroUno + parametroDos;
+
+	return resultado;
+}
+
+int segundaFuncionSumar(int parametroUno, int parametroDos, int resultadoDos){
+
+	resultadoDos = parametroUno + parametroDos;
+	printf("El resultado Dos dentro de la segundaFuncionSumar es: %d\n", resultadoDos);
+
+	return resultadoDos;
+}

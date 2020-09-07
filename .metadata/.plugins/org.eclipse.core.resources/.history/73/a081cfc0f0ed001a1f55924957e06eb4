@@ -1,0 +1,14 @@
+/*
+ * utn.c
+ *
+ *  Created on: 3 sep. 2020
+ *      Author: Hzkr
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int utn_getNumero(int * pResultado, char * mensaje, char * mensajeError, int minimo, int maximo, int reintentos)
+{
+	printf("%s", mensaje);
+}

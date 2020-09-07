@@ -1,0 +1,41 @@
+/*
+ ============================================================================
+ Name        : Parcialito_03.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "utn.h"
+
+int main(void) {
+
+	int acumulador = 0; // A
+	int numero; // B
+	int contador = 0; // C
+	float promedio; // D
+	int respuesta;
+
+	while(1) // E, el while es infinito hasta que el usuario ingrese el número 1000. Este número no se tiene en cuenta para acumular. La cantidad de reintentos es 3.
+	{
+		respuesta = utn_getNumero(&numero, "Ingrese un numero:\n*,*Error\n",0,1000,3); // F
+		if(respuesta == 0 && numero!= 1000) // G
+		{
+			acumulador = acumulador + numero; // H
+			contador++;
+		}
+		else
+		{
+			break; // I
+		}
+	}
+	promedio = (float)acumulador/contador; // J
+	printf("\n El promedio es: %f", promedio);
+	return 0;
+
+	return EXIT_SUCCESS;
+}

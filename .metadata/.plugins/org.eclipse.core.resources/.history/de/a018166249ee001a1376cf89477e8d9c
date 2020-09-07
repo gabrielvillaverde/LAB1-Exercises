@@ -1,0 +1,59 @@
+/*
+ ============================================================================
+ Name        : Clase_04_Ej4.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+// Prototipo de funciones
+int utn_getNumero(int* pResultado,int min,int max,char* msg,char* msgError, int reintentos);
+
+// Función principal
+int main(void) {
+	/*
+	char* variable = "Ingresame algo che:";
+	printf("%s",variable);
+	return 0;
+	*/
+
+	setbuf(stdout,NULL);
+
+	int edad;
+
+	if(utn_getNumero(&edad,1,120, "Ingrese edad: ", "Ingrese una edad correcta.") == 0){
+		printf("Ingresaste: %d", edad);
+	}
+
+	return EXIT_SUCCESS;
+}
+
+// Función utn_getNumero
+
+/* Pide al usuario un número.
+Recibe pResultado, que es la dirección de memoria de la variable donde escribe el valor.
+Recibe el mínimo (inclusive) y el máximo.
+Mensaje: el mensaje que imprime para pedir un valor.
+Retorno: Si está todo OK, devuelve 0. Si hubo un error, devuelve -1.
+*/
+int utn_getNumero(int* pResultado,int min,int max,char* msg,char* msgError, int reintentos) {
+
+	int numeroIngresado;
+	int variableDeRetorno = -1;
+	printf("%s\n",msg);
+
+	scanf("%d",&numeroIngresado);
+	if(numeroIngresado >= min && numeroIngresado < max){ // Si verifica que ingresó un número valido...
+		*pResultado = numeroIngresado; // ...utiliza el puntero para escribir en la variable numeroIngresado.
+		variableDeRetorno = 0; // ...la variable de retorno devolverá un 0, indicando que está OK.
+	}
+	else
+		printf("%s", msgError);
+
+	return variableDeRetorno;
+}

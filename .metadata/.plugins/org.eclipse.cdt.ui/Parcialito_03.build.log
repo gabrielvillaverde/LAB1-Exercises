@@ -1,0 +1,15 @@
+02:51:26 **** Rebuild of configuration Debug for project Parcialito_03 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Parcialito_03.o" "..\\src\\Parcialito_03.c" 
+..\src\Parcialito_03.c: In function 'main':
+..\src\Parcialito_03.c:25:15: warning: implicit declaration of function 'utn_getNumero' [-Wimplicit-function-declaration]
+   25 |   respuesta = utn_getNumero(&numero, "Ingrese un numero:\n*,*Error\n",0,1000,2); // F
+      |               ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Parcialito_03.exe "src\\Parcialito_03.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Parcialito_03.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Clase 1\Parcialito_03\Debug/../src/Parcialito_03.c:25: undefined reference to `utn_getNumero'
+collect2.exe: error: ld returned 1 exit status
+
+02:51:27 Build Failed. 2 errors, 1 warnings. (took 516ms)
+
