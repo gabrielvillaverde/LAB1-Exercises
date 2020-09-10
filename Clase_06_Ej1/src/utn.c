@@ -7,7 +7,82 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "utn.h"
+
+static int getInt(int* pResultado);
+static int esNumerica(char* cadena);
+static int myGets(char* cadena, int longitud);
+
+// Funciones estáticas:
+// Static es como si la función fuese de uso SOLAMENTE para el archivo utn.c, y no se puede llamar desde el main por ejemplo. Además su prototipo no hay que declararlo en el .h, hacerlo arriba de todo en el .c como prototipo.
+
+// Busca como resultado un entero
+// Llama a la que obtiene un string cualquiera de la terminal
+static int getInt(int* pResultado)
+{
+	int retorno = -1;
+	char buffer[4096]; // Lo declaro así de grande para asegurarme de que el usuario ingresará menos caracteres que esa cantidad.
+
+	fflush(stdin);
+	// Llamo a la función myGets y le paso el buffer y el tamaño que no quiero desbordar.
+	if(myGets(buffer,sizeof(buffer)) == 0 && esNumerica(buffer)) // Si myGets me devuelve un 0 es porque lo que la mandé a hacer lo hizo bien, y si es numérica, entro al código. La función esNumerica me indica que lo que hay en buffer son números.
+	{ // Si son números...
+		retorno = 0; // Todo OK.
+		*pResultado = atoi(buffer); // ...los puedo convertir. Con atoi convierto texto en un entero.
+		// La función atoi convierte un array de caracteres (una cadena, un string), en un número entero.
+		// Si ingresas el texto "10", te lo convierte en el entero 10.
+	}
+	return retorno;
+}
+
+
+
+
+
+
+
+
+
+
+// Verificar que en la cadena haya números.
+// Este tipo de función devuelve verdadero (1) o falso (0).
+static int esNumerica(char* cadena)
+{
+	int retorno = 1; // Inicializo el retorno en 1, VERDADERO.
+	int i = 0;
+
+	// CASO PARTICULAR:
+	// Si estoy en la primer posición del array, es válido tener un número negativo, pero SOLO en la primera, por eso hago el if a continuación:
+
+	if(cadena[0] == '-') // Si cadena en la posición 0 es igual a un negativo...
+	{
+		i = 1; // ...haremos que la cuenta arranque a partir de uno.
+	}
+	// Tengo que iterar hasta el \0.
+	for( ; cadena[i] != '\0' ; i++) // Mientras que cadena en posición i sea distinto a \0, que siga iterando e incrementando la i.
+	{ // Si es distinto a \0, entro al for.
+		if(cadena[i] > '9' || cadena[i] < 0) // Si cadena en la posición i, estoy en ERROR. Si lo que encontré en la cadena es más grande que 9, rompo, si lo que encontré es más chico que 0, rompo.
+		{
+			retorno = 0; // Coloco el retorno en 0, o sea FALSO.
+			break; // Y hago un break.
+		}
+	}
+	return retorno;
+}
+
+static int myGets(char* cadena, int longitud)
+{
+	fflush(stdin);
+	// fgets nos permite leer de un archivo una cadena de caracteres.
+	// Leo del stdin una cadena de caracteres.
+	// Como primer parámetro quiere saber dónde dejar la información, como segundo parámetro quiere la longitud, y como tercero quiere saber de dónde leer, en este caso stdin.
+	fgets(cadena, longitud, stdin);
+	cadena[strlen(cadena)-1] = '\0';
+	// strncpy guarda el destino, el origen y el tamaño que no puedo desbordar.
+	// strncpy(cadena, buffer, longitud);
+	return 0;
+}
 
 int sumar(float operadorA, float operadorB, float *pResultado) {
 
@@ -90,39 +165,6 @@ int getFloat(float *pResultado, char *mensaje,char *mensajeError,int reintentos)
 	return retorno;
 }
 
-int getInt(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
-{
-	int retorno = -1;
-	int bufferInt; // Variable para guardar el dato que obtengo de scanf
-	int resultadoScanf; // Acá guardo lo que obtiene scanf
-
-	// Evaluar todos los parámetros, desconfiar siempre de lo que ingresa el usuario.
-	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >= 0)
-	{
-
-		do // Hago esto...
-		{
-			printf("%s", mensaje);
-			fflush(stdin); // __fpurge(stdin) en Linux.
-			resultadoScanf = scanf("%d", &bufferInt); // Podría ponerse directamente scanf("%d", &bufferInt) == 1 en el if en vez de crear la variable resultadoScanf.
-			if(resultadoScanf == 1 && bufferInt >= minimo && bufferInt <= maximo) // Si cumple esto, estará todo bien.
-			{
-				retorno = 0;
-				*pResultado = bufferInt;
-				break; // Hago la sentencia break porque tengo que romper el bucle. Ya conseguí lo que tenía que conseguir.
-			}
-			else
-			{
-				 // ERROR.
-				printf("%s", mensajeError);
-				reintentos--; // Cada vez que haya un error, decremento la cantidad de intentos.
-			}
-
-		}while(reintentos >= 0); // Mientras que reintentos sea mayor o igual a 0. Pongo mayor o igual a 0 porque ya antes de llegar acá lo estoy decrementando en el do.
-	}
-	return retorno;
-}
-
 int utn_getCharacter(char* pResultado, char* mensaje, char* mensajeError, char minimo, char maximo, int reintentos)
 {
 	int retorno = -1;
@@ -151,13 +193,12 @@ int utn_getCharacter(char* pResultado, char* mensaje, char* mensajeError, char m
 	return retorno;
 }
 
-// Devuelve un 0 si se pudo ingresar el valor correctamente.
-// Devuelve un 1 si se ingresó un valor incorrecto.
+
 int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
 {
 
 	int retorno = -1;
-	int bufferInt;
+	int buffer;
 
 	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >= 0)
 	{
@@ -165,17 +206,16 @@ int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo
 		{
 			printf("%s\n", mensaje);
 			fflush(stdin);
-			scanf("%d", &bufferInt);
-			if(bufferInt >= minimo && bufferInt <= maximo)
+			// getInt() Pretende que yo le de un lugar donde dejarme el resultado. Aparte ya me devuelve si salió bien o mal.
+			// getInt() Tiene que asegurarme que si me devuelve un 0 es porque obtuvo un entero, si no puede obtener un entero, no me devuelve un 0.
+			if(getInt(&buffer) == 0 && buffer >= minimo && buffer <= maximo)
 			{
+				*pResultado = buffer;
 				retorno = 0;
-				*pResultado = bufferInt;
 				break; // Si logre conseguir el número que estaba buscando, tengo que cortar. Si no hago esto, ingresaría el 1000 y seguiría pidiendo números.
 			}
-			else{
-				printf("%s\n", mensajeError);
-				reintentos--;
-			}
+			reintentos--;
+			printf("%s\n", mensajeError);
 		}while(reintentos >= 0);
 	}
 	return retorno;

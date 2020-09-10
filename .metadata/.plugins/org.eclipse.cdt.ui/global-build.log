@@ -1,69 +1,97 @@
-Info: Nothing to build for TP_1_Propio
-Info: Nothing to build for TP_1_Propio
-21:37:20 **** Incremental Build of configuration Debug for project TP_1_Propio ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:37:24 **** Incremental Build of configuration Debug for project TP_1_Propio ****
-Info: Internal Builder is used for build
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-21:37:54 **** Incremental Build of configuration Debug for project TP_1_Propio ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-Info: Nothing to build for TP_1_Propio
-21:39:11 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+17:15:27 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+..\src\utn.c: In function 'getInt':
+..\src\utn.c:28:5: warning: implicit declaration of function 'myGets' [-Wimplicit-function-declaration]
+   28 |  if(myGets(buffer,sizeof(buffer)) == 0 && esNumerica(buffer)) // Si myGets me devuelve un 0 es porque lo que la mandé a hacer lo hizo bien, y si es numérica, entro al código. La función esNumerica me indica que lo que hay en buffer son números.
+      |     ^~~~~~
+..\src\utn.c: At top level:
+..\src\utn.c:73:12: error: static declaration of 'myGets' follows non-static declaration
+   73 | static int myGets(char* cadena, int longitud)
+      |            ^~~~~~
+..\src\utn.c:28:5: note: previous implicit declaration of 'myGets' was here
+   28 |  if(myGets(buffer,sizeof(buffer)) == 0 && esNumerica(buffer)) // Si myGets me devuelve un 0 es porque lo que la mandé a hacer lo hizo bien, y si es numérica, entro al código. La función esNumerica me indica que lo que hay en buffer son números.
+      |     ^~~~~~
+..\src\utn.c: In function 'myGets':
+..\src\utn.c:76:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fflush'
+   76 |  fflush(stdin);
+      |  ^~~~~~
+..\src\utn.c:77:13: error: 'buffer' undeclared (first use in this function)
+   77 |  scanf("%s",buffer);
+      |             ^~~~~~
+..\src\utn.c:77:13: note: each undeclared identifier is reported only once for each function it appears in
+At top level:
+..\src\utn.c:73:12: warning: 'myGets' defined but not used [-Wunused-function]
+   73 | static int myGets(char* cadena, int longitud)
+      |            ^~~~~~
+17:15:44 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'myGets':
+..\src\utn.c:77:2: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'fflush'
+   77 |  fflush(stdin);
+      |  ^~~~~~
+..\src\utn.c:78:13: error: 'buffer' undeclared (first use in this function)
+   78 |  scanf("%s",buffer);
+      |             ^~~~~~
+..\src\utn.c:78:13: note: each undeclared identifier is reported only once for each function it appears in
+17:15:53 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_06_Ej1.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-21:39:13 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+17:15:56 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
 Info: Internal Builder is used for build
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-Info: Nothing to build for TP_1_Propio
-Info: Nothing to build for TP_1_Propio
-Info: Nothing to build for TP_1_Propio
-21:51:30 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06_Ej1
+17:16:27 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06_Ej1
+17:19:14 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'myGets':
+..\src\utn.c:80:8: warning: passing argument 1 of 'fgets' from incompatible pointer type [-Wincompatible-pointer-types]
+   80 |  fgets(stdin, longitud, cadena);
+      |        ^~~~~
+      |        |
+      |        FILE * {aka struct _iobuf *}
+In file included from ..\src\utn.c:8:
+c:\mingw\include\stdio.h:706:41: note: expected 'char *' but argument is of type 'FILE *' {aka 'struct _iobuf *'}
+  706 | _CRTIMP __cdecl __MINGW_NOTHROW  char * fgets (char *, int, FILE *);
+      |                                         ^~~~~
+..\src\utn.c:80:25: warning: passing argument 3 of 'fgets' from incompatible pointer type [-Wincompatible-pointer-types]
+   80 |  fgets(stdin, longitud, cadena);
+      |                         ^~~~~~
+      |                         |
+      |                         char *
+In file included from ..\src\utn.c:8:
+c:\mingw\include\stdio.h:706:41: note: expected 'FILE *' {aka 'struct _iobuf *'} but argument is of type 'char *'
+  706 | _CRTIMP __cdecl __MINGW_NOTHROW  char * fgets (char *, int, FILE *);
+      |                                         ^~~~~
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_06_Ej1.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-21:51:36 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+17:19:17 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
 Info: Internal Builder is used for build
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-Info: Nothing to build for TP_1_Propio
-21:52:23 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+17:20:56 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06_Ej1
+Info: Nothing to build for Clase_06_Ej1
+Info: Nothing to build for Clase_06_Ej1
+17:23:44 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_06_Ej1.exe: Permission denied
 collect2.exe: error: ld returned 1 exit status
-21:52:24 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+17:23:46 **** Incremental Build of configuration Debug for project Clase_06_Ej1 ****
 Info: Internal Builder is used for build
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-21:55:02 **** Incremental Build of configuration Debug for project TP_1_Propio ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
-..\src\TP_1_Propio.c: In function 'main':
-..\src\TP_1_Propio.c:153:6: warning: implicit declaration of function 'print'; did you mean 'printf'? [-Wimplicit-function-declaration]
-  153 |      print("No se calcularon los resultados, ingrese la opcion 3");
-      |      ^~~~~
-      |      printf
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:55:06 **** Incremental Build of configuration Debug for project TP_1_Propio ****
-Info: Internal Builder is used for build
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TP_1_Propio.o: in function `main':
-C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\TP_1_Propio\Debug/../src/TP_1_Propio.c:153: undefined reference to `print'
-collect2.exe: error: ld returned 1 exit status
-21:55:14 **** Incremental Build of configuration Debug for project TP_1_Propio ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
-gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
-Info: Nothing to build for TP_1_Propio
+gcc -o Clase_06_Ej1.exe "src\\Clase_06_Ej1.o" "src\\utn.o" 
+Info: Nothing to build for Clase_06_Ej1

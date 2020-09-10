@@ -49,7 +49,6 @@ int main(void)
 	int respuestaFactorial;
 	int respuestaFactorialDos;
 
-	// En vez de numeroUno y numeroDos debería hacer un array..
 	int numeroUno;
 	int numeroDos;
 

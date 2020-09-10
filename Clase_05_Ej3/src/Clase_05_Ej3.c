@@ -39,7 +39,7 @@ int main(void)
 	// Esto es para la segunda versión de la función, por referencia:
 	promediarArrayIntV2(&promedioEdad,edades,EDADESSIZE);
 
-	printf("Promedio de edades:%f" ,promedioEdad);
+	printf("Promedio de edades:%f",promedioEdad);
 	return EXIT_SUCCESS;
 }
 
