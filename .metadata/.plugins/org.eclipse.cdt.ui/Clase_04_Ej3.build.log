@@ -1,7 +1,1 @@
-20:12:30 **** Incremental Build of configuration Debug for project Clase_04_Ej3 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_04_Ej3.o" "..\\src\\Clase_04_Ej3.c" 
-gcc -o Clase_04_Ej3.exe "src\\Clase_04_Ej3.o" 
-
-20:12:30 Build Finished. 0 errors, 0 warnings. (took 357ms)
-
+Info: Nothing to build for Clase_04_Ej3

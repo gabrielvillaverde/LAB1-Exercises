@@ -1,5 +1,69 @@
-20:57:16 **** Incremental Build of configuration Debug for project Clase_Repaso_Ej1 ****
+Info: Nothing to build for TP_1_Propio
+Info: Nothing to build for TP_1_Propio
+21:37:20 **** Incremental Build of configuration Debug for project TP_1_Propio ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_Repaso_Ej1.o" "..\\src\\Clase_Repaso_Ej1.c" 
-gcc -o Clase_Repaso_Ej1.exe "src\\Clase_Repaso_Ej1.o" 
-Info: Nothing to build for Clase_Repaso_Ej1
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:37:24 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+21:37:54 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+Info: Nothing to build for TP_1_Propio
+21:39:11 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:39:13 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+Info: Nothing to build for TP_1_Propio
+Info: Nothing to build for TP_1_Propio
+Info: Nothing to build for TP_1_Propio
+21:51:30 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:51:36 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+Info: Nothing to build for TP_1_Propio
+21:52:23 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:52:24 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+21:55:02 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
+..\src\TP_1_Propio.c: In function 'main':
+..\src\TP_1_Propio.c:153:6: warning: implicit declaration of function 'print'; did you mean 'printf'? [-Wimplicit-function-declaration]
+  153 |      print("No se calcularon los resultados, ingrese la opcion 3");
+      |      ^~~~~
+      |      printf
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP_1_Propio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:55:06 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\TP_1_Propio.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\TP_1_Propio\Debug/../src/TP_1_Propio.c:153: undefined reference to `print'
+collect2.exe: error: ld returned 1 exit status
+21:55:14 **** Incremental Build of configuration Debug for project TP_1_Propio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP_1_Propio.o" "..\\src\\TP_1_Propio.c" 
+gcc -o TP_1_Propio.exe "src\\TP_1_Propio.o" "src\\utn.o" 
+Info: Nothing to build for TP_1_Propio

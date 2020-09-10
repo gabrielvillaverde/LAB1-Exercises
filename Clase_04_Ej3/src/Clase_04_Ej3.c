@@ -10,6 +10,7 @@ Explicación de & y *
 void otraFuncion(float* direccion);
 
 int main(void) {
+	setbuf(stdout,NULL);
 	// & : La direccion de mem de la variable que tiene a la derecha.
 	// int* b;  Indico que la variable va a guardar direcciones de mem.
 	// *puntero : Accedo a la direccion y leo o escribo

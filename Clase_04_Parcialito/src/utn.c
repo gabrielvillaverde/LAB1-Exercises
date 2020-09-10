@@ -8,32 +8,29 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
+int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos)
 {
 
 	int retorno = -1;
 	int bufferInt;
-	int contadorIntentos = 0;
 
-	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL){
-		do{
-			if(contadorIntentos == reintentos){
-				retorno = -2;
-				break;
-			}
+	if(pResultado != NULL && mensaje != NULL && mensajeError != NULL && minimo <= maximo && reintentos >= 0)
+	{
+		do
+		{
 			printf("%s\n", mensaje);
 			scanf("%d", &bufferInt);
-			if(bufferInt >= minimo && minimo && bufferInt <= maximo)
+			if(bufferInt >= minimo && bufferInt <= maximo)
 			{
 				retorno = 0;
 				*pResultado = bufferInt;
-				break;
+				break; // Si logre conseguir el número que estaba buscando, tengo que cortar. Si no hago esto, ingresaría el 1000 y seguiría pidiendo números.
 			}
 			else{
 				printf("%s\n", mensajeError);
+				reintentos--;
 			}
-			contadorIntentos++;
-		}while(1);
+		}while(reintentos >= 0);
 	}
 	return retorno;
 }

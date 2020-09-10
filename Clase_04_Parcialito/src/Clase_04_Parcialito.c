@@ -14,6 +14,7 @@
 
 int main(void)
 {
+	setbuf(stdout,NULL);
 	int acumulador = 0; // A
 	int numero; // B
 	int contador = 0; // C
@@ -22,7 +23,7 @@ int main(void)
 
 	while(1) // E, el while es infinito hasta que el usuario ingrese el número 1000. Este número no se tiene en cuenta para acumular. La cantidad de reintentos es 2.
 	{
-		respuesta = utn_getNumero(&numero, "Ingrese un numero:\n*,*Error\n",0,1000,2); // F
+		respuesta = utn_getNumero(&numero,"Ingrese un numero, si ingresa 1000 finaliza el ingreso:\n*","*Error\n",0,1000,2); // F
 		if(respuesta == 0 && numero!= 1000) // G, si la respuesta salió bien (0), y el número no es 1000...
 		{
 			acumulador = acumulador + numero; // H...sigo acumulando.

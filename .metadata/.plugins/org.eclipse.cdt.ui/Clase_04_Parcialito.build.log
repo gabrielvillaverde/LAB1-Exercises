@@ -1,14 +1,1 @@
-12:30:13 **** Incremental Build of configuration Debug for project Clase_04_Parcialito ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_04_Parcialito.o" "..\\src\\Clase_04_Parcialito.c" 
-..\src\Clase_04_Parcialito.c: In function 'main':
-..\src\Clase_04_Parcialito.c:25:15: error: too few arguments to function 'utn_getNumero'
-   25 |   respuesta = utn_getNumero(&numero, "Ingrese un numero:\n*,*Error\n",0,1000,2); // F
-      |               ^~~~~~~~~~~~~
-In file included from ..\src\Clase_04_Parcialito.c:13:
-..\src\utn.h:11:5: note: declared here
-   11 | int utn_getNumero(int* pResultado, char* mensaje, char* mensajeError, int minimo, int maximo, int reintentos);
-      |     ^~~~~~~~~~~~~
-
-12:30:13 Build Failed. 1 errors, 0 warnings. (took 151ms)
-
+Info: Nothing to build for Clase_04_Parcialito

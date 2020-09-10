@@ -19,8 +19,8 @@ int main(void) {
 
 	int edad;
 
-	if(utn_getNumero(&edad,1,120, "Ingrese edad: ", "Ingrese una edad correcta.",2) == 0){
-		printf("Ingresaste: %d", edad);
+	if(utn_getNumero(&edad,1,120, "Ingrese edad: ", "ERROR. Ingrese una edad correcta.",2) == 0){
+		printf("La edad es: %d", edad);
 	}
 
 	return EXIT_SUCCESS;

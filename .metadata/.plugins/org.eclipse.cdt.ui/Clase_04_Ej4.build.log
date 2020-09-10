@@ -1,12 +1,1 @@
-19:39:34 **** Rebuild of configuration Debug for project Clase_04_Ej4 ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_04_Ej4.o" "..\\src\\Clase_04_Ej4.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-..\src\utn.c: In function 'utn_getNumero':
-..\src\utn.c:44:1: warning: control reaches end of non-void function [-Wreturn-type]
-   44 | }
-      | ^
-gcc -o Clase_04_Ej4.exe "src\\Clase_04_Ej4.o" "src\\utn.o" 
-
-19:39:34 Build Finished. 0 errors, 1 warnings. (took 908ms)
-
+Info: Nothing to build for Clase_04_Ej4
