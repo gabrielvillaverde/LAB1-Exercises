@@ -1,10 +1,10 @@
 /*
  ============================================================================
-Cadenas de caracteres
+ Cadenas de caracteres
 
-Un string en C es un array de caracteres.
-\0 = Indica que un texto terminó.
-Si quiero un texto de 10 letras, tengo que hacer un array de 11.
+ Un string en C es un array de caracteres.
+ \0 = Indica que un texto terminó.
+ Si quiero un texto de 10 letras, tengo que hacer un array de 11.
  ============================================================================
  */
 
@@ -14,7 +14,7 @@ Si quiero un texto de 10 letras, tengo que hacer un array de 11.
 
 int main(void) {
 
-	setbuf(stdout,NULL);
+	setbuf(stdout, NULL);
 	int auxInt;
 	// char nombre[11]= "ZZZZZZZZZZZ"; // Este array es capaz de guardar 10 caracteres como máximo. La posición 11 está reservada para el \0.
 	// char apellido[11]="PEREZ";
@@ -47,11 +47,10 @@ int main(void) {
 
 	// printf("\nSIZE Nombre mide %d y auxiliar mide %d",sizeof(nombre),sizeof(auxiliar));
 
-	while(1) // Me va a pedir números hasta el infinito, solo para probar el programa.
+	while (1) // Me va a pedir números hasta el infinito, solo para probar el programa.
 	{
 		// Si esta función me devolvió 0, está todo bien y hago un printf.
-		if(utn_getNumero(&auxInt,"NUMERO?\n","ERROR\n",-2,2,2) == 0)
-		{
+		if (utn_getNumero(&auxInt, "NUMERO?\n", "ERROR\n", -2, 2, 2) == 0) {
 			printf("El número es %d", auxInt);
 		}
 	}

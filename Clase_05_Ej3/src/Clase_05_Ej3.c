@@ -35,16 +35,16 @@ int main(void)
 		}
 	}
 	// Esto es para la primer versión de la función, por valor de retorno: promedioEdad = promediarArrayInt(edades, EDADESSIZE);
-
-	// Esto es para la segunda versión de la función, por referencia:
-	promediarArrayIntV2(&promedioEdad,edades,EDADESSIZE);
+	promedioEdad = promediarArrayInt(edades,EDADESSIZE); // Llamo a la función del array y le asigno la dirección de memoria del array edades, y además el tamaño.
+	// Esto es para la segunda versión de la función, por referencia (tira un warning, solucionar):
+	//promediarArrayIntV2(&promedioEdad,edades,EDADESSIZE); (TIRA WARNING)
 
 	printf("Promedio de edades:%f",promedioEdad);
 	return EXIT_SUCCESS;
 }
 
 // Primer versión de devolver la función, por valor de retorno.
-float promediarArrayInt(int arrayInt[], int len)
+float promediarArrayInt(int arrayInt[], int len) // Además de tener como primer argumento el array, tengo que tener el tamaño.
 {
 	int i;
 	float resultado;

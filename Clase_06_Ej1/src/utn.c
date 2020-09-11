@@ -36,15 +36,6 @@ static int getInt(int* pResultado)
 	return retorno;
 }
 
-
-
-
-
-
-
-
-
-
 // Verificar que en la cadena haya números.
 // Este tipo de función devuelve verdadero (1) o falso (0).
 static int esNumerica(char* cadena)

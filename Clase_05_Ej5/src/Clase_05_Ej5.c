@@ -59,25 +59,22 @@ int ordernarArrayInt(int* pArray, int limite)
 
 	if(pArray != NULL && limite >= 0)
 	{
-		do
+		do // Hacer...
 		{
-			flagSwap = 0;
-			for(i=0;i<limite-1;i++)
+			flagSwap = 0; // Pongo el flag en 0 y hago una pasada, si NUNCA SWAPEO el flag me queda en 0 y eso significa que está ordenado.
+			for(i=0;i<limite-1;i++) // Para hacer una pasada
 			{
 				if(pArray[i] < pArray[i+1])
 				{
-					flagSwap = 1;
-					buffer = pArray[i];
+					flagSwap = 1; // Lo pone en 1 si está desordenado.
+					buffer = pArray[i]; // Creo buffer como variable auxiliar para guardar lo de la posición 0, sino lo pierdo.
 					pArray[i] = pArray[i+1];
 					pArray[i+1] = buffer;
 				}
 				contador++;
 			}
-		}while(flagSwap);
+		}while(flagSwap); // ...mientras que está desordenado. Poner (flagSwap) es lo mismo que poner flagSwap == 1
 		retorno = contador; // Si salió todo bien, imprimimos lo que tiene el contador.
 	}
 	return retorno;
 }
-
-
-
