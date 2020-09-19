@@ -1,2 +1,6 @@
-Info: Nothing to build for Clase_06_Ej1
-Info: Nothing to build for Clase_06_Ej1
+20:24:27 **** Rebuild of configuration Debug for project Clase_08_Ej6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ej6.o" "..\\src\\Clase_08_Ej6.c" 
+gcc -o Clase_08_Ej6.exe "src\\Clase_08_Ej6.o" "src\\utn.o" 
+Info: Nothing to build for Clase_08_Ej6
