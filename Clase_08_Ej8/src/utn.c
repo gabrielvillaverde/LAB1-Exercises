@@ -23,11 +23,17 @@ static int getFloat(float* pResultado);
  * \return Retorna 0 (EXITO) si se obtiene una cadena y -1 (ERROR) si no
  *
  */
+
 int myGets(char* cadena, int longitud)
 {
+	// Chequeo que cadena sea distinto de NULL (siempre valido punteros).
+	// Chequeo que la longitud sea positiva, es decir, mayor a 0. ¿Para qué quiero una longitud de 0 o negativa?
+	// fgets recibe tres parámetros: 1° Parámetro: espacio de memoria en el cuál quiero que me deje el resultado.
+	                              // 2° Parámetro: cantidad de caracteres que quiere recibir, el tamaño.
+	                              // 3° Parámetro: el archivo de texto de donde va a sacar la información: por ahora es stdin.
 	if(cadena != NULL && longitud >0 && fgets(cadena,longitud,stdin)==cadena)
 	{
-		fflush(stdin); // fflush o __fpurge
+		fflush(stdin); // Lo que hace es limpiar, me aseguro de que no hay nada y que lo que voy a leer es lo que ingresará el usuario a continuación.
 		if(cadena[strlen(cadena)-1] == '\n')
 		{
 			cadena[strlen(cadena)-1] = '\0';
@@ -218,4 +224,3 @@ int utn_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError, 
 	}
 	return retorno;
 }
-

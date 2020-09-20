@@ -1,6 +1,16 @@
-20:24:27 **** Rebuild of configuration Debug for project Clase_08_Ej6 ****
+22:42:52 **** Incremental Build of configuration Debug for project Clase_08_Ej9_Funciones ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ej6.o" "..\\src\\Clase_08_Ej6.c" 
-gcc -o Clase_08_Ej6.exe "src\\Clase_08_Ej6.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ej6
+gcc -o Clase_08_Ej9_Funciones.exe "src\\Clase_08_Ej9_Funciones.o" "src\\utn.o" 
+22:43:13 **** Incremental Build of configuration Debug for project Clase_08_Ej9_Funciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_08_Ej9_Funciones.exe "src\\Clase_08_Ej9_Funciones.o" "src\\utn.o" 
+Info: Nothing to build for Clase_08_Ej9_Funciones
+22:57:00 **** Incremental Build of configuration Debug for project Clase_08_Ej9_Funciones ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ej9_Funciones.o" "..\\src\\Clase_08_Ej9_Funciones.c" 
+gcc -o Clase_08_Ej9_Funciones.exe "src\\Clase_08_Ej9_Funciones.o" "src\\utn.o" 
+Info: Nothing to build for Clase_08_Ej9_Funciones
+Info: Nothing to build for Clase_08_Ej9_Funciones
