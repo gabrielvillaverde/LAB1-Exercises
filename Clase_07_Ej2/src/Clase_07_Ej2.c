@@ -22,12 +22,12 @@ Utilizar la función utn_getNumeroFloat() de la biblioteca utn.h
 #include <string.h>
 #include "utn.h"
 
-#define TAMAÑO 31
+#define TAMANO 31
 
 int main(void)
 {
 	setbuf(stdout,NULL);
-	float temperaturasDias[TAMAÑO]; // Si tiene 31 posiciones, el índice valido es de 0 a 30.
+	float temperaturasDias[TAMANO]; // Si tiene 31 posiciones, el índice valido es de 0 a 30.
 	int opcionesMenu;
 	int i;
 	int dia;
@@ -43,7 +43,7 @@ int main(void)
 			{
 				// En vez del código de abajo, podría haber hecho una función que reciba el array y lo imprima.
 				case 1: // Imprimir el array
-					for(i=0 ; i<TAMAÑO ; i++) // For desde 0 hasta el tamaño del array (en este caso 31)
+					for(i=0 ; i<TAMANO ; i++) // For desde 0 hasta el tamaño del array (en este caso 31)
 					{
 						printf("Indice: %d -- Valor: %.df\n", i, temperaturasDias[i]); // Al índice le pasa el valor de i, y al valor le pasó el valor del array en la posición i
 						// Si yo quisiera imprimir en vez del valor del índice, el valor del día, sería así...

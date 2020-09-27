@@ -1,16 +1,49 @@
-22:42:52 **** Incremental Build of configuration Debug for project Clase_08_Ej9_Funciones ****
+01:17:15 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -o Clase_08_Ej9_Funciones.exe "src\\Clase_08_Ej9_Funciones.o" "src\\utn.o" 
-22:43:13 **** Incremental Build of configuration Debug for project Clase_08_Ej9_Funciones ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:234:1: warning: "/*" within comment [-Wcomment]
+  234 | /* \brief Sort the elements in the array of employees, the argument order
+      |  
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+01:17:26 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -o Clase_08_Ej9_Funciones.exe "src\\Clase_08_Ej9_Funciones.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ej9_Funciones
-22:57:00 **** Incremental Build of configuration Debug for project Clase_08_Ej9_Funciones ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+01:19:04 **** Incremental Build of configuration Debug for project TP2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_08_Ej9_Funciones.o" "..\\src\\Clase_08_Ej9_Funciones.c" 
-gcc -o Clase_08_Ej9_Funciones.exe "src\\Clase_08_Ej9_Funciones.o" "src\\utn.o" 
-Info: Nothing to build for Clase_08_Ej9_Funciones
-Info: Nothing to build for Clase_08_Ej9_Funciones
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:234:1: warning: "/*" within comment [-Wcomment]
+  234 | /* \brief Sort the elements in the array of employees, the argument order
+      |  
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:19:09 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+21:46:29 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:234:1: warning: "/*" within comment [-Wcomment]
+  234 | /* \brief Sort the elements in the array of employees, the argument order
+      |  
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+21:47:01 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:47:03 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
