@@ -23,12 +23,13 @@ typedef struct
 
 int employee_initEmployees(Employee* list, int len);
 int employee_addEmployee(Employee* pArrayList, int len, int index);
-int employee_removeEmployee(Employee* pArrayList, int len, int index);
+int employee_removeEmployee(Employee* pArrayList, int len, int id);
 int employee_findEmpty(Employee* pArrayList, int len, int* pIndex);
 int employee_modifyEmployee(Employee* pArrayList, int len, int index);
 int employee_findEmployeeById(Employee* pArrayList, int len, int* pIndex, int id);
 int employee_printEmployees(Employee* pArrayList, int len);
 int employee_sortEmployees(Employee* pArrayList, int len, int order);
+int employee_calculateTotalAndAverageSalary(Employee* pArrayList, int len, float* pTotalSalary, float* pAverageSalary, int *pGreaterThanAverage);
 
 #endif /* ARRAYEMPLOYEES_H_ */
 

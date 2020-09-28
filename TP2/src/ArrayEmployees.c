@@ -19,6 +19,7 @@
 
 // Prototipo:
 static int generateNewId(void);
+static int compareElements(Employee employee1, Employee employee2, int order, int sort);
 
 /* Función employee_initEmployees:
  * Para indicar que todas las posiciones del array están vacías, esta función pone la
@@ -244,10 +245,12 @@ indicate UP or DOWN order*
 int employee_sortEmployees(Employee* pArrayList, int len, int order)
 {
 	int sort;
-	if(order == 1) {
+	if(order == 1)
+	{
 		sort = 1;
 	}
-	else {
+	else if(order == 0)
+	{
 		sort = -1;
 	}
 
@@ -265,23 +268,17 @@ int employee_sortEmployees(Employee* pArrayList, int len, int order)
 			flagSwap = 0;
 			for(i=0;i<newLen;i++)
 			{
-				//if(strncmp(pArrayAlumno[i].nombre, pArrayAlumno[i+1].nombre, limite) == 1)
-				//printf("Indice: %d - Nombre: %s - Legajo: %d - eMPTY: %d\n",i ,pArrayAlumno[i].nombre, pArrayAlumno[i].legajo, pArrayAlumno[i].isEmpty);
 				if(pArrayList[i+1].isEmpty == 0)
 				{
-					//if(pArrayAlumno[i].nombre < pArrayAlumno[i+1].nombre)
-					if(strcmp(pArrayList[i].lastName, pArrayList[i+1].lastName)== sort)
-						/*
-						strcmp(A=97, B=98)==(-1)
-						strcmp(A=98, B=98)==(0)
-						strcmp(A=97, B=96)==(1)
-						*/
+
+					if(compareElements(pArrayList[i], pArrayList[i+1], order, sort))
 					{
 						flagSwap = 1;
 						bufferEmployee=pArrayList[i];
 						pArrayList[i]=pArrayList[i+1];
 						pArrayList[i+1]=bufferEmployee;
 					}
+
 				}
 			}
 			newLen--;
@@ -289,5 +286,80 @@ int employee_sortEmployees(Employee* pArrayList, int len, int order)
 		}while(flagSwap);
 	}
 	return retorno;
-//return 0;
+}
+
+static int compareElements(Employee employee1, Employee employee2, int order, int sort)
+{
+	if(strcmp(employee1.lastName, employee2.lastName) == sort)
+	{
+		return 1;
+	}
+	else if(strcmp(employee1.lastName, employee2.lastName) == 0)
+	{
+		if(order)
+		{
+			if(employee1.sector > employee2.sector)
+			{
+				return 1;
+			}
+			else
+			{
+			return 0;
+			}
+		}
+		else
+		{
+			if(employee1.sector < employee2.sector)
+			{
+				return 1;
+			}
+			else
+			{
+				return 0;
+			}
+		}
+	}
+	else
+	{
+	return 0;
+	}
+}
+
+int employee_calculateTotalAndAverageSalary(Employee* pArrayList, int len, float* pTotalSalary, float* pAverageSalary, int *pGreaterThanAverage)
+{
+	int i;
+	int retorno = -1;
+	int counter = 0;
+	int aboveAverageCounter = 0;
+	int salaryAcumulator = 0;
+
+	if(pArrayList != NULL && pTotalSalary != NULL && pAverageSalary != NULL && len > 0)
+	{
+
+		for(i=0;i<len;i++)
+		{
+			if(!pArrayList[i].isEmpty)
+			{
+				salaryAcumulator += pArrayList[i].salary;
+				counter++;
+			}
+		}
+		*pTotalSalary = salaryAcumulator;
+		*pAverageSalary = (float)salaryAcumulator / counter;
+
+		for(i=0;i<len;i++)
+		{
+			if(!pArrayList[i].isEmpty)
+			{
+				if(pArrayList[i].salary > *pAverageSalary)
+				{
+					aboveAverageCounter++;
+				}
+			}
+		}
+		*pGreaterThanAverage = aboveAverageCounter;
+		printf("Average wages: %f - Total wages: %f - Quantity of employees that are above the average wage: %d\n",*pAverageSalary,*pTotalSalary,*pGreaterThanAverage);
+		retorno = 0;
+	}
+return retorno;
 }
