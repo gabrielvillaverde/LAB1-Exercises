@@ -82,12 +82,7 @@ int myGets(char* cadena, int longitud)
 }
 */
 
-/**
- * \brief Se encarga de obtener un número entero
- * \param pResultado Puntero al espacio de memoria donde se dejara el resultado de la funcion
- * \return Retorna 0 (EXITO) si se obtiene un numero entero y -1 (ERROR) si no
- *
- */
+
 
 static int getInt(int* pResultado)
 {

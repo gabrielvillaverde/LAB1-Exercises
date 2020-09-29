@@ -1,35 +1,34 @@
 /*
  * utn.c
- *      Author:
+ *
+ *  Created on: 9 sep. 2020
+ *      Author: Hzkr
  */
-
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
 static int isNumber(char cadena[]);
-static int isPhone(char cadena[]);
-static int isAlphNum(char cadena[]);
-static int isOnlyLettersAndSpace(char cadena[]);
 static int getInt(int* pResultado);
 static int myGets(char array[], int longitud);
 static int utn_itIsAValidName(char array[], int limite);
+static int isOnlyLettersAndSpace(char cadena[]);
+static int isAlphNum(char cadena[]);
 static int getFloat(float* pResultado);
 static int isNumberFloat(char cadena[]);
-static int isAlphNum(char cadena[]);
 
 #define LIMITE_BUFFER_STRING 1000
 
 /**
- * \brief Solicita un entero al usuario, luego de verificar devuelve el resultado
- * \param char* pMensaje, Es el mensaje mostrado al usuario
- * \param char* pMensajeError, Es el mensaje de error a ser mostrado al usuario
- * \param int* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
- * \param int reintentos, cantidad de oportunidades para ingresar el dato
- * \param int minimo, valor minimo admitido
- * \param int maximo, valor maximo admitido
- * \return (-1) Error / (0) Ok
+ * \brief Función que obtiene un número entero
+ *\param mensaje es el puntero del mensaje que se le pide al usuario.
+ *\param mensajeError es el puntero del mensaje de error que se le muestra al usuario.
+ *\param pResultado es el puntero que guarda lo escrito en buffer y lo escribe en la dirección de memoria de una variable externa de la función
+ *\param minimo es el valor mínimo entre todas las opciones que el usuario tiene para ingresar.
+ *\param maximo es el valor maximo entre todas las opciones que el usuario tiene para ingresar.
+ *\param reintentos es la cantidad de reintentos que el usuario tiene para hacer.
+ *\return retorna como valor por defecto un -1 para indicar error, si el número ingresado está entre el rango del mínimo y el máximo, devuelve un return en 0.
  */
 int utn_getNumberInt(char* pMensaje, char* pMensajeError, int* pResultado, int reintentos, int minimo, int maximo)
 {
@@ -50,7 +49,7 @@ int utn_getNumberInt(char* pMensaje, char* pMensajeError, int* pResultado, int r
 			{
 				*pResultado = buffer;
 				retorno = 0;
-				break; // Para terminar el bucle del do while
+				break;
 			}
 			else
 			{
@@ -61,15 +60,15 @@ int utn_getNumberInt(char* pMensaje, char* pMensajeError, int* pResultado, int r
 		while(reintentos >= 0);
 		if(reintentos < 0)
 		{
-			printf("No quedan más intentos\n");
+			printf("No attempts left.\n");
 		}
 	}
 	return retorno;
 }
 /**
- * \brief
- * \param pResultado Puntero al espacio de memoria donde se dejata el resultado de la funcion
- * \return Retorno 0 Exito si obtiene un numero entero / (-1) ERROR
+ * \brief Se encarga de obtener un número entero
+ * \param pResultado Puntero al espacio de memoria donde se dejara el resultado de la funcion
+ * \return Retorna 0 (EXITO) si se obtiene un numero entero y -1 (ERROR) si no
  */
 static int getInt(int* pResultado)
 {
@@ -88,9 +87,9 @@ static int getInt(int* pResultado)
 }
 
 /**
- * \brief Verifica si la cadena ingresada es numerica
+ * \brief Verifica si la cadena ingresada es numérica
  * \param cadena Cadena de caracteres a ser analizada
- * \return 1 EXITO / (0) ERROR
+ * \return Retorna 1 (vardadero) si la cadena es numerica y 0 (falso) si no lo es
  */
 static int isNumber(char cadena[])
 {
@@ -113,15 +112,15 @@ static int isNumber(char cadena[])
 }
 
 /**
-* \brief Solicita un float al usuario
-* \param char* pMensaje, Es el mensaje mostrado al usuario
-* \param char* pMensajeError, Es el mensaje de error a ser mostrado al usuario
-* \param float* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
-* \param int reintentos, cantidad de oportunidades para ingresar el dato
-* \param float minimo, valor minimo admitido
-* \param float maximo, valor maximo admitido
-* \return (-1) Error / (0) Ok
-*/
+* \brief Función que obtiene un número flotante
+ *\param mensaje es el puntero del mensaje que se le pide al usuario.
+ *\param mensajeError es el puntero del mensaje de error que se le muestra al usuario.
+ *\param pResultado es el puntero que guarda lo escrito en buffer y lo escribe en la dirección de memoria de una variable externa de la función
+ *\param minimo es el valor mínimo entre todas las opciones que el usuario tiene para ingresar.
+ *\param maximo es el valor maximo entre todas las opciones que el usuario tiene para ingresar.
+ *\param reintentos es la cantidad de reintentos que el usuario tiene para hacer.
+ *\return retorna como valor por defecto un -1 para indicar error, si el número ingresado está entre el rango del mínimo y el máximo, devuelve un return en 0.
+ */
 int utn_getNumberFloat(char* pMensaje, char* pMensajeError, float* pResultado, int reintentos, float minimo, float maximo)
 {
 	int retorno = -1;
@@ -147,16 +146,17 @@ int utn_getNumberFloat(char* pMensaje, char* pMensajeError, float* pResultado, i
 		}while(reintentos >= 0);
 		if(reintentos < 0)
 		{
-			printf("No quedan más intentos\n");
+			printf("No attempts left.\n");
 		}
 	}
 	return retorno;
 }
 
 /**
- * \brief
- * \param float* pResultado Puntero al espacio de memoria donde se dejata el resultado de la funcion
- * \return Retorno 0 Exito si obtiene un numero entero / (-1) ERROR
+ * \brief Verifica si la cadena ingresada es flotante
+ * \param pResultado Puntero al espacio de memoria donde se dejara el resultado de la funcion
+ * \return Retorna 0 (EXITO) si se obtiene un numero flotante y -1 (ERROR) si no
+ *
  */
 static int getFloat(float* pResultado)
 {
@@ -175,8 +175,8 @@ static int getFloat(float* pResultado)
 }
 
 /**
- * \brief Verifica si la cadena ingresada es numerica y puede contener signo en el primer indice o ningun o 1 punto.
- * \param cadena Cadena de caracteres a ser analizada
+ * \brief Verifica si la cadena ingresada es numerica, y puede contener un signo/punto en el primer índice
+ * \param cadena char Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */
 static int isNumberFloat(char cadena[])
@@ -209,14 +209,13 @@ static int isNumberFloat(char cadena[])
 	return retorno;
 }
 
-
-/*
-* \brief Solicita un nombre al usuario
-* \param char* pMensaje, Es el mensaje mostrado al usuario
-* \param char* pMensajeError, Es el mensaje de error a ser mostrado al usuario
-* \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
-* \param int reintentos, cantidad de oportunidades para ingresar el dato
-* \param limite indica la cantidad maxima del nombre
+/**
+* \brief Función que solicita un nombre al usuario
+* \param char* pMensaje es el mensaje que se le muestra al usuario
+* \param char* pMensajeError es el mensaje de error que se le muestra al usuario
+* \param char* pResultado es el puntero al espacio de memoria donde se dejará el valor obtenido
+* \param int reintentos es la cantidad de oportunidades que tiene el usuario para ingresar el dato
+* \param limite indica la cantidad máxima de caracteres que puede recibir el nombre
  * return (-1) ERROR / 0 OK
  */
 int utn_getName(char* pMensaje, char* pMensajeError, char* pResultado, int reintentos, int limite)
@@ -244,16 +243,15 @@ int utn_getName(char* pMensaje, char* pMensajeError, char* pResultado, int reint
 		}while(reintentos>=0);
 		if(reintentos < 0)
 		{
-			printf("No quedan más intentos\n");
+			printf("No attempts left.\n");
 		}
 	}
 	return retorno;
 }
 
 /**
- * \brief Lee de stdin hasta que encuentra un '\n' o hasta que haya copiado en cadena
- * 			un maximo de 'longitud -1' caracteres.
- * \param pResultado Puntero al espacio de memoria donde se copiara la cadena obtenida
+ * \brief Lee de stdin hasta que encuentra un '\n' o hasta que haya copiado en cadena un maximo de 'longitud -1' caracteres.
+ * \param pResultado Puntero al espacio de memoria donde se copiará la cadena obtenida
  * \param longitud Define el tamaño de cadena
  * \return Retorna 0 EXITO / (-1) ERROR
  */
@@ -266,7 +264,7 @@ static int myGets(char array[], int longitud)
 	return 0;
 }
 
-/*
+/**
 * \brief Verifica una cadena como parametro para determinar si es nombre valido
 * \param char cadena[], cadena a analizar
 * \param limite indica la cantidad maxima del nombre
@@ -312,7 +310,6 @@ static int isOnlyLettersAndSpace(char cadena[])
 	return retorno;
 }
 
-
 /*
 * \brief Solicita un char al usuario
 * \param char* pMensaje, Es el mensaje mostrado al usuario
@@ -350,77 +347,6 @@ int utn_getChar(char* pMensaje, char* pMensajeError, char* pResultado, int reint
 		{
 			printf("No quedan más intentos\n");
 		}
-	}
-	return retorno;
-}
-
-/*
-* \brief Solicita numeros y 1 o ningun guión
-* \param char* pMensaje, Es el mensaje mostrado al usuario
-* \param char* pMensajeError, Es el mensaje de error a ser mostrado al usuario
-* \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
-* \param int reintentos, cantidad de oportunidades para ingresar el dato
-* \param int limite, cantidad de espacio que puede almacenar la variable
- * return (-1) ERROR / 0 OK
- */
-int utn_getPhone(char* pMensaje, char* pMensajeError, char* pResultado, int reintentos, int limite)
-{
-	int retorno = -1;
-	char bufferString[LIMITE_BUFFER_STRING];
-
-	if(pMensaje != NULL && pResultado != NULL && pMensajeError != NULL && reintentos >= 0 && limite > 0 )
-	{
-		do
-		{
-			printf("%s", pMensaje);
-			if(	(myGets(bufferString, LIMITE_BUFFER_STRING)== 0) &&
-				(strnlen(bufferString, sizeof(bufferString)-1) <= limite) &&
-				(isPhone(bufferString)==1))
-			{
-				strncpy(pResultado, bufferString, limite);
-				retorno = 0;
-				break;
-			}
-			else
-			{
-				printf("%s", pMensajeError);
-				reintentos--;
-			}
-		}while(reintentos >= 0);
-		if(reintentos < 0)
-		{
-			printf("Se quedo sin intentos");
-		}
-	}
-	return retorno;
-}
-
-/**
- * \brief Verifica si la cadena ingresada es numerica o si contiene menos de 2 guiones
- * \param cadena Cadena de caracteres a ser analizada
- * \return 1 EXITO / (0) ERROR
- */
-static int isPhone(char cadena[])
-{
-	int retorno = 1;
-	int i;
-	int flagGuion = 0;
-
-	for(i=0; cadena[i] != '\0'; i++)
-	{
-		if((cadena[i] < '0' || cadena[i] > '9') && (cadena[i] != '-'))
-		{
-			retorno = 0;
-			break;
-		}
-		if(cadena[i] == '-')
-		{
-			flagGuion++;
-		}
-	}
-	if(flagGuion > 1)
-	{
-		retorno = 0;
 	}
 	return retorno;
 }
@@ -467,7 +393,7 @@ int utn_getAlphaNum(char* pMensaje, char* pMensajeError, char* pResultado, int r
 }
 
 /**
- * \brief Verifica si la cadena son numeros, letras con o sin tilde y espacio
+ * \brief Verifica si la cadena son numeros, letras con o sin tilde y un espacio
  * \param cadena Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */

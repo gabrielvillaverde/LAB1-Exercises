@@ -1084,3 +1084,832 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
 gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
 Info: Nothing to build for TP2
+21:44:00 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+21:50:13 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+21:56:07 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:10:48 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:155:5: error: conflicting types for 'employee_findEmployeeById'
+  155 | int employee_findEmployeeById(Employee* pArrayList, int len, int* pid)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\ArrayEmployees.c:12:
+..\src\ArrayEmployees.h:29:5: note: previous declaration of 'employee_findEmployeeById' was here
+   29 | int employee_findEmployeeById(Employee* pArrayList, int len, int* pIndex, int id);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\ArrayEmployees.c: In function 'employee_findEmployeeById':
+..\src\ArrayEmployees.c:164:28: error: 'id' undeclared (first use in this function); did you mean 'i'?
+  164 |     if(pArrayList[i].id == id) // Estaba poniendo pArrayList[id].id == id, tenía que poner en vez de [id] era [i]
+      |                            ^~
+      |                            i
+..\src\ArrayEmployees.c:164:28: note: each undeclared identifier is reported only once for each function it appears in
+..\src\ArrayEmployees.c:166:7: error: 'pId' undeclared (first use in this function); did you mean 'pid'?
+  166 |      *pId = i;
+      |       ^~~
+      |       pid
+22:11:00 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:155:5: error: conflicting types for 'employee_findEmployeeById'
+  155 | int employee_findEmployeeById(Employee* pArrayList, int len, int* pId)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\ArrayEmployees.c:12:
+..\src\ArrayEmployees.h:29:5: note: previous declaration of 'employee_findEmployeeById' was here
+   29 | int employee_findEmployeeById(Employee* pArrayList, int len, int* pIndex, int id);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\ArrayEmployees.c: In function 'employee_findEmployeeById':
+..\src\ArrayEmployees.c:164:28: error: 'id' undeclared (first use in this function); did you mean 'i'?
+  164 |     if(pArrayList[i].id == id) // Estaba poniendo pArrayList[id].id == id, tenía que poner en vez de [id] era [i]
+      |                            ^~
+      |                            i
+..\src\ArrayEmployees.c:164:28: note: each undeclared identifier is reported only once for each function it appears in
+22:11:14 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_findEmployeeById':
+..\src\ArrayEmployees.c:164:28: error: 'id' undeclared (first use in this function); did you mean 'i'?
+  164 |     if(pArrayList[i].id == id) // Estaba poniendo pArrayList[id].id == id, tenía que poner en vez de [id] era [i]
+      |                            ^~
+      |                            i
+..\src\ArrayEmployees.c:164:28: note: each undeclared identifier is reported only once for each function it appears in
+22:12:42 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:155:5: error: conflicting types for 'employee_findEmployeeById'
+  155 | int employee_findEmployeeById(Employee* pArrayList, int len, int* pIndex, int id)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\ArrayEmployees.c:12:
+..\src\ArrayEmployees.h:29:5: note: previous declaration of 'employee_findEmployeeById' was here
+   29 | int employee_findEmployeeById(Employee* pArrayList, int len, int* pId);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~
+22:13:00 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:13:39 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:14:54 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:16:21 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:18:43 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:18:46 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:20:42 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+22:21:52 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:24:59 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+..\src\TP2.c: In function 'main':
+..\src\TP2.c:38:6: warning: unused variable 'idCounter' [-Wunused-variable]
+   38 |  int idCounter = 0;
+      |      ^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:25:06 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:26:16 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+22:34:49 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+22:40:28 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:110:13: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  110 |   pArrayList[i].id--;
+      |             ^
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+22:40:37 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:44:48 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+..\src\TP2.c: In function 'main':
+..\src\TP2.c:32:6: warning: unused variable 'idToRemove' [-Wunused-variable]
+   32 |  int idToRemove;
+      |      ^~~~~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:44:55 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:44:58 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:48:55 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+22:51:44 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:53:00 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:53:49 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:55:32 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:21:12: error: storage class specified for parameter 'generateNewId'
+   21 | static int generateNewId(void);
+      |            ^~~~~~~~~~~~~
+..\src\ArrayEmployees.c:22:12: error: storage class specified for parameter 'compareElements'
+   22 | static int compareElements(Employee employee1, Employee employee2, int order, int sort);
+      |            ^~~~~~~~~~~~~~~
+..\src\ArrayEmployees.c:37:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   37 | {
+      | ^
+..\src\ArrayEmployees.c:68:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   68 | {
+      | ^
+..\src\ArrayEmployees.c:104:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  104 | {
+      | ^
+..\src\ArrayEmployees.c:117:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  117 | {
+      | ^
+..\src\ArrayEmployees.c:127:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  127 | {
+      | ^
+..\src\ArrayEmployees.c:154:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  154 | {
+      | ^
+..\src\ArrayEmployees.c:184:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  184 | {
+      | ^
+..\src\ArrayEmployees.c:214:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  214 | {
+      | ^
+..\src\ArrayEmployees.c:244:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  244 | {
+      | ^
+..\src\ArrayEmployees.c:290:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  290 | {
+      | ^
+..\src\ArrayEmployees.c:327:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  327 | {
+      | ^
+In file included from ..\src\ArrayEmployees.c:12:
+..\src\ArrayEmployees.h:26:5: error: old-style parameter declarations in prototyped function definition
+   26 | int employee_removeEmployee(Employee* pArrayList, int len, int index, int id)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\ArrayEmployees.c:364: error: expected '{' at end of input
+..\src\ArrayEmployees.c:363:1: warning: control reaches end of non-void function [-Wreturn-type]
+  363 | }
+      | ^
+22:56:24 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+22:59:25 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'releaseId':
+..\src\ArrayEmployees.c:131:2: error: 'id' undeclared (first use in this function)
+  131 |  id = id-1;
+      |  ^~
+..\src\ArrayEmployees.c:131:2: note: each undeclared identifier is reported only once for each function it appears in
+..\src\ArrayEmployees.c:133:1: warning: control reaches end of non-void function [-Wreturn-type]
+  133 | }
+      | ^
+At top level:
+..\src\ArrayEmployees.c:127:12: warning: 'releaseId' defined but not used [-Wunused-function]
+  127 | static int releaseId(void)
+      |            ^~~~~~~~~
+22:59:43 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:127:12: warning: 'releaseId' defined but not used [-Wunused-function]
+  127 | static int releaseId(void)
+      |            ^~~~~~~~~
+..\src\ArrayEmployees.c: In function 'releaseId':
+..\src\ArrayEmployees.c:131:6: warning: 'id' is used uninitialized in this function [-Wuninitialized]
+  131 |  int id = id-1;
+      |      ^~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:59:47 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+23:01:13 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:106:11: warning: variable 'bufferEmployee' set but not used [-Wunused-but-set-variable]
+  106 |  Employee bufferEmployee;
+      |           ^~~~~~~~~~~~~~
+..\src\ArrayEmployees.c: In function 'releaseId':
+..\src\ArrayEmployees.c:131:6: warning: 'id' is used uninitialized in this function [-Wuninitialized]
+  131 |  int id = id-1;
+      |      ^~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+23:01:51 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:106:11: warning: variable 'bufferEmployee' set but not used [-Wunused-but-set-variable]
+  106 |  Employee bufferEmployee;
+      |           ^~~~~~~~~~~~~~
+..\src\ArrayEmployees.c: In function 'releaseId':
+..\src\ArrayEmployees.c:131:6: warning: 'id' is used uninitialized in this function [-Wuninitialized]
+  131 |  int id = id-1;
+      |      ^~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+23:06:10 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:107:11: warning: variable 'bufferEmployee' set but not used [-Wunused-but-set-variable]
+  107 |  Employee bufferEmployee;
+      |           ^~~~~~~~~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:06:18 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+23:21:20 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:108:11: warning: variable 'bufferEmployee' set but not used [-Wunused-but-set-variable]
+  108 |  Employee bufferEmployee;
+      |           ^~~~~~~~~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:21:23 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+23:24:22 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:108:11: warning: unused variable 'bufferEmployee' [-Wunused-variable]
+  108 |  Employee bufferEmployee;
+      |           ^~~~~~~~~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:24:25 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+23:42:14 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:108:11: warning: unused variable 'bufferEmployee' [-Wunused-variable]
+  108 |  Employee bufferEmployee;
+      |           ^~~~~~~~~~~~~~
+..\src\ArrayEmployees.c: At top level:
+..\src\ArrayEmployees.c:134:12: error: conflicting types for 'releaseId'
+  134 | static int releaseId(int idToRelease)
+      |            ^~~~~~~~~
+..\src\ArrayEmployees.c:22:12: note: previous declaration of 'releaseId' was here
+   22 | static int releaseId(void);
+      |            ^~~~~~~~~
+..\src\ArrayEmployees.c:22:12: warning: 'releaseId' used but never defined
+..\src\ArrayEmployees.c:24:12: warning: array 'freeIds' assumed to have one element
+   24 | static int freeIds[];
+      |            ^~~~~~~
+..\src\ArrayEmployees.c:134:12: warning: 'releaseId' defined but not used [-Wunused-function]
+  134 | static int releaseId(int idToRelease)
+      |            ^~~~~~~~~
+23:42:49 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'releaseId':
+..\src\ArrayEmployees.c:23:12: error: storage class specified for parameter 'compareElements'
+   23 | static int compareElements(Employee employee1, Employee employee2, int order, int sort);
+      |            ^~~~~~~~~~~~~~~
+..\src\ArrayEmployees.c:24:12: error: storage class specified for parameter 'freeIds'
+   24 | static int freeIds[];
+      |            ^~~~~~~
+..\src\ArrayEmployees.c:25:12: error: storage class specified for parameter 'len'
+   25 | static int len = 0;
+      |            ^~~
+..\src\ArrayEmployees.c:25:1: error: parameter 'len' is initialized
+   25 | static int len = 0;
+      | ^~~~~~
+..\src\ArrayEmployees.c:40:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   40 | {
+      | ^
+..\src\ArrayEmployees.c:71:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   71 | {
+      | ^
+..\src\ArrayEmployees.c:107:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  107 | {
+      | ^
+..\src\ArrayEmployees.c:122:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  122 | {
+      | ^
+..\src\ArrayEmployees.c:135:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  135 | {
+      | ^
+..\src\ArrayEmployees.c:142:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  142 | {
+      | ^
+..\src\ArrayEmployees.c:169:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  169 | {
+      | ^
+..\src\ArrayEmployees.c:199:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  199 | {
+      | ^
+..\src\ArrayEmployees.c:229:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  229 | {
+      | ^
+..\src\ArrayEmployees.c:259:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  259 | {
+      | ^
+..\src\ArrayEmployees.c:305:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  305 | {
+      | ^
+..\src\ArrayEmployees.c:342:1: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  342 | {
+      | ^
+..\src\ArrayEmployees.c:22:12: error: old-style parameter declarations in prototyped function definition
+   22 | static int releaseId(int idToRelease)
+      |            ^~~~~~~~~
+..\src\ArrayEmployees.c:379: error: expected '{' at end of input
+..\src\ArrayEmployees.c:378:1: warning: no return statement in function returning non-void [-Wreturn-type]
+  378 | }
+      | ^
+..\src\ArrayEmployees.c: At top level:
+..\src\ArrayEmployees.c:21:12: warning: 'generateNewId' declared 'static' but never defined [-Wunused-function]
+   21 | static int generateNewId(void);
+      |            ^~~~~~~~~~~~~
+..\src\ArrayEmployees.c:22:12: warning: 'releaseId' defined but not used [-Wunused-function]
+   22 | static int releaseId(int idToRelease)
+      |            ^~~~~~~~~
+23:42:54 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'employee_removeEmployee':
+..\src\ArrayEmployees.c:114:3: error: too few arguments to function 'releaseId'
+  114 |   releaseId();
+      |   ^~~~~~~~~
+..\src\ArrayEmployees.c:22:12: note: declared here
+   22 | static int releaseId(int idToRelease);
+      |            ^~~~~~~~~
+..\src\ArrayEmployees.c:108:11: warning: unused variable 'bufferEmployee' [-Wunused-variable]
+  108 |  Employee bufferEmployee;
+      |           ^~~~~~~~~~~~~~
+..\src\ArrayEmployees.c: At top level:
+..\src\ArrayEmployees.c:24:12: warning: array 'freeIds' assumed to have one element
+   24 | static int freeIds[];
+      |            ^~~~~~~
+23:43:37 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:24:12: warning: array 'freeIds' assumed to have one element
+   24 | static int freeIds[];
+      |            ^~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+23:48:33 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:24:12: warning: array 'freeIds' assumed to have one element
+   24 | static int freeIds[];
+      |            ^~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+23:50:25 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:24:12: warning: array 'freeIds' assumed to have one element
+   24 | static int freeIds[];
+      |            ^~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+23:52:17 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:24:12: warning: array 'freeIds' assumed to have one element
+   24 | static int freeIds[];
+      |            ^~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:52:34 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+23:53:04 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+23:56:25 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:02:54 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'generateNewId':
+..\src\ArrayEmployees.c:129:13: warning: implicit declaration of function 'returnId' [-Wimplicit-function-declaration]
+  129 |   int aux = returnId();
+      |             ^~~~~~~~
+..\src\ArrayEmployees.c: In function 'returnId':
+..\src\ArrayEmployees.c:147:19: warning: comparison of constant '1000' with boolean expression is always true [-Wbool-compare]
+  147 |  if(1 <freeIds[0] < 1000) {
+      |                   ^
+..\src\ArrayEmployees.c:147:7: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  147 |  if(1 <freeIds[0] < 1000) {
+      |     ~~^~~~~~~~~~~
+..\src\ArrayEmployees.c:149:20: warning: comparison of constant '1000' with boolean expression is always true [-Wbool-compare]
+  149 |   if(1 <freeIds[1] < 1000) {
+      |                    ^
+..\src\ArrayEmployees.c:149:8: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  149 |   if(1 <freeIds[1] < 1000) {
+      |      ~~^~~~~~~~~~~
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+00:04:32 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'returnId':
+..\src\ArrayEmployees.c:149:20: warning: comparison of constant '1000' with boolean expression is always true [-Wbool-compare]
+  149 |   if(1 <freeIds[1] < QTY_EMPLOYEES) {
+      |                    ^
+..\src\ArrayEmployees.c:149:8: warning: comparisons like 'X<=Y<=Z' do not have their mathematical meaning [-Wparentheses]
+  149 |   if(1 <freeIds[1] < QTY_EMPLOYEES) {
+      |      ~~^~~~~~~~~~~
+..\src\ArrayEmployees.c:156:1: warning: control reaches end of non-void function [-Wreturn-type]
+  156 | }
+      | ^
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+00:05:21 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'returnId':
+..\src\ArrayEmployees.c:149:3: warning: implicit declaration of function 'iff' [-Wimplicit-function-declaration]
+  149 |   iff(1 < freeIds[0] && freeIds[0] < QTY_EMPLOYEES) {
+      |   ^~~
+..\src\ArrayEmployees.c:149:52: error: expected ';' before '{' token
+  149 |   iff(1 < freeIds[0] && freeIds[0] < QTY_EMPLOYEES) {
+      |                                                    ^~
+      |                                                    ;
+..\src\ArrayEmployees.c:148:7: warning: unused variable 'aux' [-Wunused-variable]
+  148 |   int aux = freeIds[0];
+      |       ^~~
+..\src\ArrayEmployees.c:156:1: warning: control reaches end of non-void function [-Wreturn-type]
+  156 | }
+      | ^
+00:05:28 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'returnId':
+..\src\ArrayEmployees.c:156:1: warning: control reaches end of non-void function [-Wreturn-type]
+  156 | }
+      | ^
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+00:05:40 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c: In function 'returnId':
+..\src\ArrayEmployees.c:148:7: warning: unused variable 'aux' [-Wunused-variable]
+  148 |   int aux = freeIds[0];
+      |       ^~~
+..\src\ArrayEmployees.c:155:9: error: 'aux' undeclared (first use in this function)
+  155 |  return aux;
+      |         ^~~
+..\src\ArrayEmployees.c:155:9: note: each undeclared identifier is reported only once for each function it appears in
+..\src\ArrayEmployees.c:157:1: warning: control reaches end of non-void function [-Wreturn-type]
+  157 | }
+      | ^
+00:06:00 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+00:20:43 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+..\src\TP2.c: In function 'main':
+..\src\TP2.c:23:26: error: 'QTY_EMPLOYEES' undeclared (first use in this function)
+   23 |  Employee arrayEmployees[QTY_EMPLOYEES];
+      |                          ^~~~~~~~~~~~~
+..\src\TP2.c:23:26: note: each undeclared identifier is reported only once for each function it appears in
+..\src\TP2.c:23:11: warning: unused variable 'arrayEmployees' [-Wunused-variable]
+   23 |  Employee arrayEmployees[QTY_EMPLOYEES];
+      |           ^~~~~~~~~~~~~~
+00:21:17 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+..\src\ArrayEmployees.c:25:20: error: 'QTY_EMPLOYEES' undeclared here (not in a function)
+   25 | static int freeIds[QTY_EMPLOYEES];
+      |                    ^~~~~~~~~~~~~
+..\src\ArrayEmployees.c:25:12: warning: 'freeIds' defined but not used [-Wunused-variable]
+   25 | static int freeIds[QTY_EMPLOYEES];
+      |            ^~~~~~~
+00:21:29 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:21:36 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+00:22:08 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+00:43:47 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+00:43:49 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+00:47:29 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+00:47:44 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+01:16:01 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+..\src\TP2.c: In function 'main':
+..\src\TP2.c:49:4: error: expected expression before '{' token
+   49 |    {
+      |    ^
+..\src\TP2.c:40:6: warning: unused variable 'counterEmployee' [-Wunused-variable]
+   40 |  int counterEmployee = 0;
+      |      ^~~~~~~~~~~~~~~
+..\src\TP2.c:37:6: warning: unused variable 'greaterThanAverage' [-Wunused-variable]
+   37 |  int greaterThanAverage;
+      |      ^~~~~~~~~~~~~~~~~~
+..\src\TP2.c:36:8: warning: unused variable 'averageSalary' [-Wunused-variable]
+   36 |  float averageSalary;
+      |        ^~~~~~~~~~~~~
+..\src\TP2.c:35:8: warning: unused variable 'totalSalary' [-Wunused-variable]
+   35 |  float totalSalary;
+      |        ^~~~~~~~~~~
+..\src\TP2.c:32:6: warning: unused variable 'index' [-Wunused-variable]
+   32 |  int index; // No tengo claro esto
+      |      ^~~~~
+..\src\TP2.c:31:6: warning: unused variable 'idToModify' [-Wunused-variable]
+   31 |  int idToModify; // No tengo claro esto
+      |      ^~~~~~~~~~
+..\src\TP2.c:30:6: warning: unused variable 'freeIndex' [-Wunused-variable]
+   30 |  int freeIndex; // No tengo claro esto
+      |      ^~~~~~~~~
+..\src\TP2.c:29:6: warning: unused variable 'orderOption' [-Wunused-variable]
+   29 |  int orderOption;
+      |      ^~~~~~~~~~~
+..\src\TP2.c:28:6: warning: unused variable 'reportOption' [-Wunused-variable]
+   28 |  int reportOption;
+      |      ^~~~~~~~~~~~
+01:16:18 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+01:16:21 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+02:21:51 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+02:24:13 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+02:26:38 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+03:02:08 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+03:14:59 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'utn_itIsAValidName':
+..\src\utn.c:277:6: warning: implicit declaration of function 'isOnlyLettersAndSpace' [-Wimplicit-function-declaration]
+  277 |   if(isOnlyLettersAndSpace(array) == 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+..\src\utn.c: At top level:
+..\src\utn.c:291:12: error: static declaration of 'isOnlyLettersAndSpace' follows non-static declaration
+  291 | static int isOnlyLettersAndSpace(char cadena[])
+      |            ^~~~~~~~~~~~~~~~~~~~~
+..\src\utn.c:277:6: note: previous implicit declaration of 'isOnlyLettersAndSpace' was here
+  277 |   if(isOnlyLettersAndSpace(array) == 0)
+      |      ^~~~~~~~~~~~~~~~~~~~~
+..\src\utn.c: In function 'utn_getPhone':
+..\src\utn.c:374:6: warning: implicit declaration of function 'isPhone' [-Wimplicit-function-declaration]
+  374 |     (isPhone(bufferString)==1))
+      |      ^~~~~~~
+..\src\utn.c: At top level:
+..\src\utn.c:399:12: error: static declaration of 'isPhone' follows non-static declaration
+  399 | static int isPhone(char cadena[])
+      |            ^~~~~~~
+..\src\utn.c:374:6: note: previous implicit declaration of 'isPhone' was here
+  374 |     (isPhone(bufferString)==1))
+      |      ^~~~~~~
+..\src\utn.c: In function 'utn_getAlphaNum':
+..\src\utn.c:445:6: warning: implicit declaration of function 'isAlphNum' [-Wimplicit-function-declaration]
+  445 |     (isAlphNum(bufferString)==1))
+      |      ^~~~~~~~~
+..\src\utn.c: At top level:
+..\src\utn.c:470:12: error: static declaration of 'isAlphNum' follows non-static declaration
+  470 | static int isAlphNum(char cadena[])
+      |            ^~~~~~~~~
+..\src\utn.c:445:6: note: previous implicit declaration of 'isAlphNum' was here
+  445 |     (isAlphNum(bufferString)==1))
+      |      ^~~~~~~~~
+..\src\utn.c:470:12: warning: 'isAlphNum' defined but not used [-Wunused-function]
+  470 | static int isAlphNum(char cadena[])
+      |            ^~~~~~~~~
+..\src\utn.c:399:12: warning: 'isPhone' defined but not used [-Wunused-function]
+  399 | static int isPhone(char cadena[])
+      |            ^~~~~~~
+..\src\utn.c:291:12: warning: 'isOnlyLettersAndSpace' defined but not used [-Wunused-function]
+  291 | static int isOnlyLettersAndSpace(char cadena[])
+      |            ^~~~~~~~~~~~~~~~~~~~~
+03:15:13 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'utn_getPhone':
+..\src\utn.c:375:6: warning: implicit declaration of function 'isPhone' [-Wimplicit-function-declaration]
+  375 |     (isPhone(bufferString)==1))
+      |      ^~~~~~~
+..\src\utn.c: At top level:
+..\src\utn.c:400:12: error: static declaration of 'isPhone' follows non-static declaration
+  400 | static int isPhone(char cadena[])
+      |            ^~~~~~~
+..\src\utn.c:375:6: note: previous implicit declaration of 'isPhone' was here
+  375 |     (isPhone(bufferString)==1))
+      |      ^~~~~~~
+..\src\utn.c: In function 'utn_getAlphaNum':
+..\src\utn.c:446:6: warning: implicit declaration of function 'isAlphNum' [-Wimplicit-function-declaration]
+  446 |     (isAlphNum(bufferString)==1))
+      |      ^~~~~~~~~
+..\src\utn.c: At top level:
+..\src\utn.c:471:12: error: static declaration of 'isAlphNum' follows non-static declaration
+  471 | static int isAlphNum(char cadena[])
+      |            ^~~~~~~~~
+..\src\utn.c:446:6: note: previous implicit declaration of 'isAlphNum' was here
+  446 |     (isAlphNum(bufferString)==1))
+      |      ^~~~~~~~~
+..\src\utn.c:471:12: warning: 'isAlphNum' defined but not used [-Wunused-function]
+  471 | static int isAlphNum(char cadena[])
+      |            ^~~~~~~~~
+..\src\utn.c:400:12: warning: 'isPhone' defined but not used [-Wunused-function]
+  400 | static int isPhone(char cadena[])
+      |            ^~~~~~~
+03:15:23 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'utn_getPhone':
+..\src\utn.c:376:6: warning: implicit declaration of function 'isPhone' [-Wimplicit-function-declaration]
+  376 |     (isPhone(bufferString)==1))
+      |      ^~~~~~~
+..\src\utn.c: At top level:
+..\src\utn.c:401:12: error: static declaration of 'isPhone' follows non-static declaration
+  401 | static int isPhone(char cadena[])
+      |            ^~~~~~~
+..\src\utn.c:376:6: note: previous implicit declaration of 'isPhone' was here
+  376 |     (isPhone(bufferString)==1))
+      |      ^~~~~~~
+..\src\utn.c:401:12: warning: 'isPhone' defined but not used [-Wunused-function]
+  401 | static int isPhone(char cadena[])
+      |            ^~~~~~~
+03:16:02 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+03:17:17 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
+Info: Nothing to build for TP2
+03:23:05 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ArrayEmployees.o" "..\\src\\ArrayEmployees.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+03:30:58 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+03:36:12 **** Incremental Build of configuration Debug for project TP2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\TP2.o" "..\\src\\TP2.c" 
+gcc -o TP2.exe "src\\ArrayEmployees.o" "src\\TP2.o" "src\\utn.o" 
+Info: Nothing to build for TP2
