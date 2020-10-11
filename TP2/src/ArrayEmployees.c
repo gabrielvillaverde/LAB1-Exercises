@@ -14,8 +14,8 @@
 #define TRUE 1
 #define FALSE 0
 
-#define LONG_NAME 51
-#define LONG_LASTNAME 51
+#define SIZE_NOMBRE 51
+#define SIZE_LASTNAME 51
 #define QTY_EMPLOYEES 1000
 
 // Prototipos:

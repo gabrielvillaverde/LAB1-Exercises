@@ -48,4 +48,3 @@ int main(void) {
 	}while(opcionIngresada!=3);
 return EXIT_SUCCESS;
 }
-

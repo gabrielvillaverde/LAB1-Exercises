@@ -9,9 +9,9 @@ e imprima los datos del item de esa posicion, si es que tiene datos validos.
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "utn.h"
 #include <string.h>
 #include "alumno.h"
+#include "utn.h"
 
 #define MAX_LEGAJOS 1000
 #define MIN_LEGAJOS 1

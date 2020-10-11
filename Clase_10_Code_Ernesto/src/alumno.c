@@ -22,9 +22,6 @@ static int generarIdNuevo(void);
  *
  */
 
-
-
-
 int alumno_alta(Alumno arrayAlumnos[],int limite,int indice)
 {
 	int retorno = -1;
