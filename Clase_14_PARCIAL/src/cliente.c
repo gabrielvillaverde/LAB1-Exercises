@@ -52,10 +52,11 @@ int cliente_alta (Cliente * pArrayCliente, int limiteCliente)
 		{	// Le solicito los datos al cliente y los guardo en cada campo de bufferCliente.
 			if (utn_getName("\nIngrese el nombre:\n", "Error, ingrese un nombre válido:\n", bufferCliente.nombre, 2, SIZE_NOMBRE) == 0 &&
 				utn_getName("\nIngrese el apellido:\n", "Error, ingrese un apellido válido.\n", bufferCliente.apellido, 2, SIZE_APELLIDO) == 0 &&
-				utn_getAlphaNum("\nIngrese el CUIT:\n", "Error, ingrese un CUIT válido.\n", bufferCliente.cuit, 2, SIZE_CUIT) == 0)
+				utn_getCuit("\nIngrese el CUIT:\n", "Error, ingrese un CUIT válido.\n", bufferCliente.cuit, 2, SIZE_CUIT) == 0)
 			{	// Si obtuve los datos...
 				pArrayCliente[indice] = bufferCliente; // DEEP COPY: Copio el buffer en la posición indicada.
 				pArrayCliente[indice].idCliente = cliente_generarNuevoId(); // Genero un nuevo ID.
+				printf("\nEl ID generado para este cliente es el: %d\n",pArrayCliente[indice].idCliente);
 				pArrayCliente[indice].isEmpty = FALSE; // Indico que dicha posición ya no está vacía.
 				printf("\nSe ha cargado el cliente correctamente.\n");
 				retorno = 0;
@@ -139,7 +140,7 @@ int cliente_modificar (Cliente * pArrayCliente, int limiteCliente)
 
 				if (utn_getName("\nIngrese el nuevo nombre:\n", "Error, ingrese un nombre válido:\n", bufferCliente.nombre, 2, SIZE_NOMBRE) == 0 &&
 					utn_getName("\nIngrese el nuevo apellido:\n", "Error, ingrese un apellido válido.\n", bufferCliente.apellido, 2, SIZE_APELLIDO) == 0 &&
-					utn_getAlphaNum("\nIngrese el nuevo CUIT:\n", "Error, ingrese un CUIT válido.\n", bufferCliente.cuit, 2, SIZE_CUIT) == 0)
+					utn_getCuit("\nIngrese el nuevo CUIT:\n", "Error, ingrese un CUIT válido.\n", bufferCliente.cuit, 2, SIZE_CUIT) == 0)
 				{
 					pArrayCliente[indiceAModificar] = bufferCliente; // Copio en el índice a modificar del array lo que contiene bufferCliente.
 					retorno = 0;

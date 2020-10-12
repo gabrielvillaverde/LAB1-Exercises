@@ -13,9 +13,11 @@
 #include "utn.h"
 #include "cliente.h"
 #include "aviso.h"
+#include "clienteAviso.h"
+#include "informes.h"
 
 #define QTY_CLIENTES 100
-#define QTY_AVISOS 10000
+#define QTY_AVISOS 1000
 
 int main(void) {
 
@@ -27,6 +29,7 @@ int main(void) {
 	int opcion;
 	int opcionSubMenu;
 	int contadorClientes = 4; // Después modificar y poner en 0 cuando haya borrado la función de altaForzada (ya que dicha función es para ya tener datos cargados)
+	int indiceAvisos = 4;
 
 	// Inventos
 
@@ -40,13 +43,10 @@ int main(void) {
 	cliente_altaForzada(arrayCliente, QTY_CLIENTES, "Huevo", "Diaz", "20-38542751-9");
 	cliente_altaForzada(arrayCliente, QTY_CLIENTES, "Facundo", "Colavini", "20-37472450-9");
 
-	aviso_altaForzada(arrayAviso, QTY_AVISOS, 1, "Busco empleados para mi negocio.", 57);
-	aviso_altaForzada(arrayAviso, QTY_AVISOS, 2, "Necesito mecánico para mi coche.", 60);
-	aviso_altaForzada(arrayAviso, QTY_AVISOS, 3, "Compro muebles.", 132);
-	aviso_altaForzada(arrayAviso, QTY_AVISOS, 4, "Urgente: Se solicita niñera para cuidar a Vampi", 70);
-
-	// Fuerzo a tener una publicacion activa
-	arrayAviso[0].estado = AVISO_ACTIVO;
+	aviso_altaForzada(arrayAviso, QTY_AVISOS, 50, "Busco empleados para mi negocio.", 1, AVISO_ACTIVO);
+	aviso_altaForzada(arrayAviso, QTY_AVISOS, 60, "Necesito mecánico para mi coche.", 2, AVISO_ACTIVO);
+	aviso_altaForzada(arrayAviso, QTY_AVISOS, 70, "Compro muebles.", 3, AVISO_ACTIVO);
+	aviso_altaForzada(arrayAviso, QTY_AVISOS, 80, "Urgente: Se solicita niñera para cuidar a Vampi", 4, AVISO_ACTIVO);
 
 	do
 	{
@@ -77,7 +77,7 @@ int main(void) {
 				if(contadorClientes > 0 )
 				{
 					// La función debería llamarse clienteAviso_baja o algo así.
-					aviso_baja(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES);
+					aviso_baja(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES); // Cambiar por clienteAviso_baja
 					contadorClientes--;
 				}
 				else
@@ -90,7 +90,7 @@ int main(void) {
 				if(contadorClientes > 0)
 				{
 					printf("\nUsted quiere publicar un nuevo aviso.\n");
-					aviso_alta(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES);
+					aviso_alta(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, &indiceAvisos);
 				}
 				else
 				{
@@ -107,17 +107,18 @@ int main(void) {
 				break;
 			case 7:
 				printf("\nUsted quiere imprimir el listado de los clientes junto con la cantidad de avisos activos que cada uno posee.\n");
-				aviso_imprimir(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES);
+				clienteAviso_imprimir(arrayCliente, QTY_CLIENTES, arrayAviso, QTY_AVISOS);
 				break;
 			case 8:
 				do
 				{
-					if(utn_getNumberInt("\nUsted está en el submenú de informes, seleccione una opción: \n\n1 - Cliente con más avisos.\n2 - Cantidad de avisos pausados.\n3 - Rubro con más avisos.\n", "\nError. Seleccione una opción válida (1-3)\n", &opcionSubMenu, 2, 0, 3) == 0)
+					if(utn_getNumberInt("\nUsted está en el submenú de informes, seleccione una opción: \n\n1 - Cliente con más avisos.\n2 - Cantidad de avisos pausados.\n3 - Rubro con más avisos.\n4 - Salir del submenú de informes.\n", "\nError. Seleccione una opción válida (1-4)\n", &opcionSubMenu, 2, 0, 4) == 0)
 					{
 						switch(opcionSubMenu)
 						{
 						case 1:
 							printf("\nUsted quiere un informe del cliente con más avisos.\n");
+							informes_calcularClienteConMasAvisos(arrayCliente, QTY_CLIENTES, arrayAviso, QTY_AVISOS);
 							break;
 						case 2:
 							printf("\nUsted quiere un informe de la cantidad de avisos pausados.\n");
@@ -147,11 +148,11 @@ int main(void) {
 				{
 					if(opcionEstado == 1)
 					{
-						aviso_imprimirPorEstado(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, 0);
+						aviso_imprimirPorEstado(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, AVISO_PAUSADO);
 					}
 					else if(opcionEstado == 2)
 					{
-						aviso_imprimirPorEstado(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, 1);
+						aviso_imprimirPorEstado(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, AVISO_ACTIVO);
 					}
 				}
 				break;

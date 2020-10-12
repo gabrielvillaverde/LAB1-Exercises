@@ -8,6 +8,9 @@
 #ifndef INFORMES_H_
 #define INFORMES_H_
 
+#include "cliente.h"
+#include "aviso.h"
 
+int informes_calcularClienteConMasAvisos (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
 
 #endif /* INFORMES_H_ */

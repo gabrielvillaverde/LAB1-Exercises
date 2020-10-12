@@ -21,7 +21,7 @@ typedef struct
 	char cuit [SIZE_CUIT];
 	int idCliente;
 	int isEmpty;
-	int indiceAvisos;
+	int indiceAvisos [100][20]; // ???
 } Cliente;
 
 int cliente_init(Cliente * pArrayCliente, int limiteCliente);

@@ -17,7 +17,7 @@ static int isOnlyLettersAndSpace(char cadena[]);
 static int isAlphNum(char cadena[]);
 static int getFloat(float* pResultado);
 static int isNumberFloat(char cadena[]);
-static int isCuit(char* pResultado);
+static int isCuit(char cadena[]);
 
 #define LIMITE_BUFFER_STRING 1000
 
@@ -540,182 +540,21 @@ int utn_calculateAverage(int pArray[], int cantidadElementos, float* pResultado)
 	return retorno;
 }
 
-
-/**
- * \brief Imprime a modo de DEBUG la info de un array de enteros
- * \param int pArray[] es el puntero al array a ser ordenado
- * \param int limite Es la longitud del array
- * \return 0 si OK o -1 para indicar error
- */
-int utn_printArrayInt(int pArray[], int limite)
-{
-	int retorno = -1;
-	int i;
-	if(pArray != NULL && limite >= 0)
-	{
-		retorno = 0;
-		for(i=0; pArray[i] != '\0'; i++)
-		{
-			printf("[DEBUG] Indice: %d - Valor: %d\n", i, pArray[i]);
-		}
-		printf("\n");
-	}
-	return retorno;
-}
-
-/**
- * \brief Ordena un array de enteros de manera DESCENDENTE
- * \param int pArray[] es el puntero al array a ser ordenado
- * \param int limite Es la longitud del array
- * \return la cantidad de iteraciones si OK o -1 para indicar error
- */
-int utn_sortArrayInt(int pArray[], int limite)
-{
-	int flagSwap;
-	int i;
-	int contador = 0;
-	int retorno = -1;
-	int buffer;
-	int nuevoLimite;
-
-	if(pArray != NULL && limite >= 0)
-	{
-		do
-		{
-			nuevoLimite = limite -1;
-			flagSwap = 0;
-			for(i = 0; i < nuevoLimite; i++)
-			{
-				contador++;
-				if(pArray[i] < pArray[i+1])
-				{
-					flagSwap = 1;
-					buffer = pArray[i];
-					pArray[i] = pArray[i + 1];
-					pArray[i + 1] = buffer;
-				}
-			}
-			nuevoLimite--;
-			retorno = contador;
-		}while(flagSwap);
-	}
-	return retorno;
-}
-
-/**
- * \brief Cuenta cuantos elementos pasados como 3er parametro se encuentran dentro del array
- * 			e imprime msj con el valor contado o que no hay ninguno
- * \param int pArray[] es el puntero al array a ser analizado
- * \param int limite Es la longitud del array
- * \param int numero es el numero a ser contado dentro del array
- * \return 0 OK / -1 para indicar error
- */
-int utn_countInt(int pArray[], int limite, int numero)
-{
-	int retorno = -1;
-	int i;
-	int contadorNumero = 0;
-
-	if(pArray != NULL && limite > 0)
-	{
-		for(i=0; pArray[i] != '\0'; i++)
-		{
-
-			if(pArray[i] == numero)
-			{
-				contadorNumero++;
-			}
-		}
-		retorno = 0;
-		if(contadorNumero > 0)
-		{
-			printf("La cantidad de %d es: %d\n",numero, contadorNumero);
-		}
-		else
-		{
-			printf("No hubo ocurrencias con el elemento %d\n", numero);
-		}
-	}
-	return retorno;
-}
-
-
-/**
- * \brief Cuenta cuantos elementos pasados como 3er parametro se encuentran dentro del array
- * 		   y los devuelve por referencia a una direccion de memoria
- * \param int pArray[] es el puntero al array a ser analizado
- * \param int limite Es la longitud del array
- * \param int numero es el numero a ser contado dentro del array
- * \param int* pDireccion puntero a la direccion de memoria de la variable a ser guardada
- * \return 0 OK / -1 para indicar error
- */
-int utn_countIntByReference(int pArray[], int limite, int numero, int* pDireccion)
-{
-	int retorno = -1;
-	int i;
-	int contadorNumero = 0;
-
-	if(pArray != NULL && limite > 0 && pDireccion != NULL )
-	{
-		for(i=0; pArray[i] != '\0'; i++)
-		{
-
-			if(pArray[i] == numero)
-			{
-				contadorNumero++;
-			}
-		}
-		*pDireccion = contadorNumero;
-		retorno = 0;
-	}
-	return retorno;
-}
-
-/**
- * \brief Cuenta cuantos elementos pasados como 3er parametro se encuentran dentro del array
- * 		   y los devuelve por referencia a una direccion de memoria
- * \param char pArray[] es el puntero al array a ser analizado
- * \param int limite Es la longitud del array
- * \param char elemento es el elemento a ser contado dentro del array
- * \param int* pDireccion puntero a la direccion de memoria de la variable a ser guardada
- * \return 0 OK / -1 para indicar error
- */
-int utn_countCharByReference(char pArray[], char elemento, int* pElemento)
-{
-	int retorno = -1;
-	int i;
-	int contadorElemento = 0;
-
-	if(pArray != NULL && pElemento != NULL)
-	{
-		for(i=0; pArray[i] != '\0'; i++)
-		{
-			if(pArray[i] == elemento)
-			{
-				contadorElemento++;
-			}
-		}
-		*pElemento = contadorElemento;
-		retorno = 0;
-	}
-	return retorno;
-}
-
-int utn_getCuit(char* pMensaje, char* pMensajeError, int* pResultado, int reintentos)
+int utn_getCuit(char* pMensaje, char* pMensajeError, char* pResultado, int reintentos, int limite)
 {
 	int retorno = -1;
 	char bufferString[LIMITE_BUFFER_STRING];
-	int bufferInt;
 
-	if(pMensaje != NULL && pMensajeError != NULL && pResultado != NULL && reintentos >= 0 )
+	if(pMensaje != NULL && pResultado != NULL && pMensajeError != NULL && reintentos >= 0 && limite > 0 )
 	{
 		do
 		{
 			printf("%s", pMensaje);
-			if(	(myGets(bufferString, LIMITE_BUFFER_STRING) == 0) && isCuit(bufferString) == 1)
+			if(	(myGets(bufferString, LIMITE_BUFFER_STRING) == 0) &&
+				(strnlen(bufferString, sizeof(bufferString)-1) <= limite) &&
+				(isCuit(bufferString) == 1))
 			{
-				bufferInt = atoi(bufferString);
-				*pResultado = bufferInt;
+				strncpy(pResultado, bufferString, limite);
 				retorno = 0;
 				break;
 			}
@@ -733,20 +572,23 @@ int utn_getCuit(char* pMensaje, char* pMensajeError, int* pResultado, int reinte
 	return retorno;
 }
 
-static int isCuit(char* pResultado)
+/**
+ * \brief Verifica si la cadena son numeros, letras con o sin tilde y un espacio
+ * \param cadena Cadena de caracteres a ser analizada
+ * \return 1 EXITO / (0) ERROR
+ */
+static int isCuit(char cadena[])
 {
 	int retorno = 1; // Todo OK.
 	int i;
-	if(pResultado != NULL)
+
+	for(i=0 ; cadena[i] != '\0' ; i++)
 	{
-		for(i=0 ; pResultado[i] != '\0' ; i++)
+		if(	(cadena[i] != '-') &&
+			(cadena[i] < '0' || cadena[i] > '9'))
 		{
-			// Si no hay un guión, y los números no están entre el rango del 0 o el 9, retorna 0.
-			if(pResultado[i] != '-' && (pResultado[i] < '0' || pResultado[i] > '9'))
-			{
-				retorno = 0;
-				break;
-			}
+			retorno = 0; // ERROR.
+			break;
 		}
 	}
 	return retorno;
