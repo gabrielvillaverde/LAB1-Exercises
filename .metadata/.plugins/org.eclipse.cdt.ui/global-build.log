@@ -810,3 +810,34 @@ Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+21:45:22 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+21:46:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+..\src\aviso.c: In function 'aviso_baja':
+..\src\aviso.c:188:215: warning: 'indiceCliente' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  188 |    printf("\nID: %d - Nombre del cliente: %s - Apellido del cliente: %s - CUIT: %s\n",pArrayCliente[indiceCliente].idCliente,pArrayCliente[indiceCliente].nombre, pArrayCliente[indiceCliente].apellido, pArrayCliente[indiceCliente].cuit);
+      |                                                                                                                                                                                                                       ^
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+21:47:13 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+..\src\aviso.c: In function 'aviso_baja':
+..\src\aviso.c:178:6: warning: unused variable 'indiceCliente' [-Wunused-variable]
+  178 |  int indiceCliente;
+      |      ^~~~~~~~~~~~~
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+21:47:17 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL

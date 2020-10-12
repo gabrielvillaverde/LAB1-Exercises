@@ -184,7 +184,7 @@ int aviso_baja (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, i
 				cliente_buscarIndicePorId(pArrayCliente, limiteCliente, idABorrar, &indiceABorrar) != -1)
 		{
 			printf("\nA continuación se listan los avisos que corresponden al ID seleccionado:\n"); // CORREGIR, no muestra todos los avisos correspondientes a ese ID.
-			if(clienteAviso_imprimir(pArrayCliente, limiteCliente, pArrayAviso, limiteAviso) == 0)
+			if(aviso_imprimirAvisoPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idABorrar) == 0)
 			{
 				if(utn_getNumberInt("\n¿Desea borrar este cliente junto con todas sus publicaciones? [1 - SI] - [2 - NO]\n", "Error, ingrese: [1 - SI] - [2 - NO].\n", &opcionDeEliminar, 2, 1, 2) == 0)
 				{
