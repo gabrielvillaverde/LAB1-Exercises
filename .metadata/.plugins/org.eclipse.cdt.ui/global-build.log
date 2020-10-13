@@ -1,843 +1,357 @@
-17:15:03 **** Rebuild of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-17:20:25 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:13:04 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-17:21:50 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-17:25:33 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-..\src\Clase_14_PARCIAL.c: In function 'main':
-..\src\Clase_14_PARCIAL.c:43:2: error: too few arguments to function 'aviso_altaForzada'
-   43 |  aviso_altaForzada(arrayAviso, QTY_AVISOS, 1, "Busco empleados para mi negocio.", 57);
-      |  ^~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase_14_PARCIAL.c:15:
-..\src\aviso.h:32:5: note: declared here
-   32 | int aviso_altaForzada(Aviso * pArrayAviso, int limiteAviso, int numeroDeRubro, char * textoDelAviso, int idCliente, int estadoAviso);
-      |     ^~~~~~~~~~~~~~~~~
-..\src\Clase_14_PARCIAL.c:44:2: error: too few arguments to function 'aviso_altaForzada'
-   44 |  aviso_altaForzada(arrayAviso, QTY_AVISOS, 2, "Necesito mecánico para mi coche.", 60);
-      |  ^~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase_14_PARCIAL.c:15:
-..\src\aviso.h:32:5: note: declared here
-   32 | int aviso_altaForzada(Aviso * pArrayAviso, int limiteAviso, int numeroDeRubro, char * textoDelAviso, int idCliente, int estadoAviso);
-      |     ^~~~~~~~~~~~~~~~~
-..\src\Clase_14_PARCIAL.c:45:2: error: too few arguments to function 'aviso_altaForzada'
-   45 |  aviso_altaForzada(arrayAviso, QTY_AVISOS, 3, "Compro muebles.", 132);
-      |  ^~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase_14_PARCIAL.c:15:
-..\src\aviso.h:32:5: note: declared here
-   32 | int aviso_altaForzada(Aviso * pArrayAviso, int limiteAviso, int numeroDeRubro, char * textoDelAviso, int idCliente, int estadoAviso);
-      |     ^~~~~~~~~~~~~~~~~
-..\src\Clase_14_PARCIAL.c:46:2: error: too few arguments to function 'aviso_altaForzada'
-   46 |  aviso_altaForzada(arrayAviso, QTY_AVISOS, 4, "Urgente: Se solicita niñera para cuidar a Vampi", 70);
-      |  ^~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase_14_PARCIAL.c:15:
-..\src\aviso.h:32:5: note: declared here
-   32 | int aviso_altaForzada(Aviso * pArrayAviso, int limiteAviso, int numeroDeRubro, char * textoDelAviso, int idCliente, int estadoAviso);
-      |     ^~~~~~~~~~~~~~~~~
-17:25:59 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-17:27:54 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-17:29:18 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-17:36:13 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-17:36:57 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-17:39:00 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-17:41:17 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-18:02:52 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-18:39:31 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-18:40:30 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-18:52:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-..\src\utn.c:742:12: error: redefinition of 'isAlphNum'
-  742 | static int isAlphNum(char cadena[])
-      |            ^~~~~~~~~
-..\src\utn.c:402:12: note: previous definition of 'isAlphNum' was here
-  402 | static int isAlphNum(char cadena[])
-      |            ^~~~~~~~~
-..\src\utn.c:20:12: warning: 'isCuit' declared 'static' but never defined [-Wunused-function]
-   20 | static int isCuit(char* pResultado);
-      |            ^~~~~~
-..\src\utn.c:742:12: warning: 'isAlphNum' defined but not used [-Wunused-function]
-  742 | static int isAlphNum(char cadena[])
-      |            ^~~~~~~~~
-18:53:25 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-..\src\utn.c:742:12: warning: 'isCuit' defined but not used [-Wunused-function]
-  742 | static int isCuit(char cadena[])
-      |            ^~~~~~
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-18:53:39 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-18:53:53 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-18:54:43 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-18:57:22 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-19:16:29 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-In file included from ..\src\aviso.c:13:
-..\src\aviso.h:32:5: error: conflicting types for 'aviso_alta'
-   32 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int * indiceAvisos);
-      |     ^~~~~~~~~~
-..\src\aviso.h:31:5: note: previous declaration of 'aviso_alta' was here
-   31 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente);
-      |     ^~~~~~~~~~
-..\src\aviso.c:72:5: error: conflicting types for 'aviso_alta'
-   72 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int * indiceAvisos)
-      |     ^~~~~~~~~~
-In file included from ..\src\aviso.c:13:
-..\src\aviso.h:31:5: note: previous declaration of 'aviso_alta' was here
-   31 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente);
-      |     ^~~~~~~~~~
-19:17:17 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-In file included from ..\src\Clase_14_PARCIAL.c:15:
-..\src\aviso.h:32:5: error: conflicting types for 'aviso_alta'
-   32 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int * indiceAvisos);
-      |     ^~~~~~~~~~
-..\src\aviso.h:31:5: note: previous declaration of 'aviso_alta' was here
-   31 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente);
-      |     ^~~~~~~~~~
-19:17:43 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-In file included from ..\src\Clase_14_PARCIAL.c:15:
-..\src\aviso.h:32:5: error: conflicting types for 'aviso_alta'
-   32 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int * indiceAvisos);
-      |     ^~~~~~~~~~
-..\src\aviso.h:31:5: note: previous declaration of 'aviso_alta' was here
-   31 | int aviso_alta (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente);
-      |     ^~~~~~~~~~
-19:18:09 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-19:21:24 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-19:26:26 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-19:28:42 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-19:35:32 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-19:35:46 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-19:36:34 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-19:37:50 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-19:38:44 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-19:50:12 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c:10:23: error: unknown type name 'Cliente'
-   10 | int cliente_imprimir (Cliente * pArrayCliente , int limiteCliente)
-      |                       ^~~~~~~
-19:50:27 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c:10:23: error: unknown type name 'Cliente'
-   10 | int cliente_imprimir (Cliente * pArrayCliente , int limiteCliente)
-      |                       ^~~~~~~
-19:50:41 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c:10:28: error: unknown type name 'Cliente'
-   10 | int clienteAviso_imprimir (Cliente * pArrayCliente , int limiteCliente)
-      |                            ^~~~~~~
-19:51:35 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c:10:28: error: unknown type name 'Cliente'
-   10 | int clienteAviso_imprimir (Cliente * pArrayCliente , int limiteCliente)
-      |                            ^~~~~~~
-19:51:45 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-19:52:50 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c:10:28: error: unknown type name 'Cliente'
-   10 | int clienteAviso_imprimir (Cliente * pArrayCliente , int limiteCliente)
-      |                            ^~~~~~~
-19:53:48 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_imprimir':
-..\src\clienteAviso.c:29:25: error: 'pArrayAviso' undeclared (first use in this function)
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso)
-      |                         ^~~~~~~~~~~
-..\src\clienteAviso.c:29:25: note: each undeclared identifier is reported only once for each function it appears in
-..\src\clienteAviso.c:29:38: error: 'limiteAviso' undeclared (first use in this function)
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso)
-      |                                      ^~~~~~~~~~~
-..\src\clienteAviso.c:29:81: error: 'idAviso' undeclared (first use in this function); did you mean 'Aviso'?
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso)
-      |                                                                                 ^~~~~~~
-      |                                                                                 Aviso
-..\src\clienteAviso.c:29:89: error: expected ';' before '}' token
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso)
-      |                                                                                         ^
-      |                                                                                         ;
-   30 |    }
-      |    ~                                                                                     
-19:53:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_imprimir':
-..\src\clienteAviso.c:29:25: error: 'pArrayAviso' undeclared (first use in this function)
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso);
-      |                         ^~~~~~~~~~~
-..\src\clienteAviso.c:29:25: note: each undeclared identifier is reported only once for each function it appears in
-..\src\clienteAviso.c:29:38: error: 'limiteAviso' undeclared (first use in this function)
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso);
-      |                                      ^~~~~~~~~~~
-..\src\clienteAviso.c:29:81: error: 'idAviso' undeclared (first use in this function); did you mean 'Aviso'?
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso);
-      |                                                                                 ^~~~~~~
-      |                                                                                 Aviso
-19:55:32 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_imprimir':
-..\src\clienteAviso.c:29:25: error: 'pArrayAviso' undeclared (first use in this function)
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso);
-      |                         ^~~~~~~~~~~
-..\src\clienteAviso.c:29:25: note: each undeclared identifier is reported only once for each function it appears in
-..\src\clienteAviso.c:29:38: error: 'limiteAviso' undeclared (first use in this function)
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso);
-      |                                      ^~~~~~~~~~~
-..\src\clienteAviso.c:29:81: error: 'idAviso' undeclared (first use in this function); did you mean 'Aviso'?
-   29 |     aviso_imprimirPorId(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idAviso);
-      |                                                                                 ^~~~~~~
-      |                                                                                 Aviso
-19:56:52 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-19:57:30 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-..\src\Clase_14_PARCIAL.c: In function 'main':
-..\src\Clase_14_PARCIAL.c:109:27: warning: passing argument 1 of 'clienteAviso_imprimir' from incompatible pointer type [-Wincompatible-pointer-types]
-  109 |     clienteAviso_imprimir(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, AVISO_ACTIVO);
-      |                           ^~~~~~~~~~
-      |                           |
-      |                           Aviso * {aka struct <anonymous> *}
-In file included from ..\src\Clase_14_PARCIAL.c:16:
-..\src\clienteAviso.h:14:38: note: expected 'Cliente *' {aka 'struct <anonymous> *'} but argument is of type 'Aviso *' {aka 'struct <anonymous> *'}
-   14 | int clienteAviso_imprimir (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
-      |                            ~~~~~~~~~~^~~~~~~~~~~~~
-..\src\Clase_14_PARCIAL.c:109:51: warning: passing argument 3 of 'clienteAviso_imprimir' from incompatible pointer type [-Wincompatible-pointer-types]
-  109 |     clienteAviso_imprimir(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, AVISO_ACTIVO);
-      |                                                   ^~~~~~~~~~~~
-      |                                                   |
-      |                                                   Cliente * {aka struct <anonymous> *}
-In file included from ..\src\Clase_14_PARCIAL.c:16:
-..\src\clienteAviso.h:14:80: note: expected 'Aviso *' {aka 'struct <anonymous> *'} but argument is of type 'Cliente *' {aka 'struct <anonymous> *'}
-   14 | int clienteAviso_imprimir (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
-      |                                                                        ~~~~~~~~^~~~~~~~~~~
-..\src\Clase_14_PARCIAL.c:109:5: error: too many arguments to function 'clienteAviso_imprimir'
-  109 |     clienteAviso_imprimir(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES, AVISO_ACTIVO);
-      |     ^~~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\Clase_14_PARCIAL.c:16:
-..\src\clienteAviso.h:14:5: note: declared here
-   14 | int clienteAviso_imprimir (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
-      |     ^~~~~~~~~~~~~~~~~~~~~
-19:58:08 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-..\src\Clase_14_PARCIAL.c: In function 'main':
-..\src\Clase_14_PARCIAL.c:109:27: warning: passing argument 1 of 'clienteAviso_imprimir' from incompatible pointer type [-Wincompatible-pointer-types]
-  109 |     clienteAviso_imprimir(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES);
-      |                           ^~~~~~~~~~
-      |                           |
-      |                           Aviso * {aka struct <anonymous> *}
-In file included from ..\src\Clase_14_PARCIAL.c:16:
-..\src\clienteAviso.h:14:38: note: expected 'Cliente *' {aka 'struct <anonymous> *'} but argument is of type 'Aviso *' {aka 'struct <anonymous> *'}
-   14 | int clienteAviso_imprimir (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
-      |                            ~~~~~~~~~~^~~~~~~~~~~~~
-..\src\Clase_14_PARCIAL.c:109:51: warning: passing argument 3 of 'clienteAviso_imprimir' from incompatible pointer type [-Wincompatible-pointer-types]
-  109 |     clienteAviso_imprimir(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES);
-      |                                                   ^~~~~~~~~~~~
-      |                                                   |
-      |                                                   Cliente * {aka struct <anonymous> *}
-In file included from ..\src\Clase_14_PARCIAL.c:16:
-..\src\clienteAviso.h:14:80: note: expected 'Aviso *' {aka 'struct <anonymous> *'} but argument is of type 'Cliente *' {aka 'struct <anonymous> *'}
-   14 | int clienteAviso_imprimir (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
-      |                                                                        ~~~~~~~~^~~~~~~~~~~
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-19:58:29 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:16:48 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-20:00:18 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:20:24 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:01:40 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:02:32 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:02:36 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:04:33 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:04:44 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:05:01 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:07:53 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:09:27 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:10:24 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:14:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:17:16 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:18:02 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:21:43 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c: In function 'aviso_imprimirPorId':
-..\src\aviso.c:403:5: error: expected '}' before 'else'
-  403 |     else if(pArrayAviso[i].idCliente == idCliente && pArrayAviso[i].estado == AVISO_PAUSADO) {
-      |     ^~~~
-20:22:19 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_14_PARCIAL.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-20:22:24 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:24:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-20:29:12 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+17:25:01 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-20:31:01 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:28:12 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_imprimir':
-..\src\clienteAviso.c:30:5: warning: implicit declaration of function 'aviso_imprimirPorIdCliente'; did you mean 'aviso_imprimirAvisoPorIdCliente'? [-Wimplicit-function-declaration]
-   30 |     aviso_imprimirPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, pArrayCliente[i].idCliente);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
-      |     aviso_imprimirAvisoPorIdCliente
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\aviso.o: in function `aviso_baja':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_14_PARCIAL\Debug/../src/aviso.c:185: undefined reference to `aviso_imprimirAvisoPorIdCliente'
 c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\clienteAviso.o: in function `clienteAviso_imprimir':
-C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_14_PARCIAL\Debug/../src/clienteAviso.c:30: undefined reference to `aviso_imprimirPorIdCliente'
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_14_PARCIAL\Debug/../src/clienteAviso.c:30: undefined reference to `aviso_imprimirAvisoPorIdCliente'
 collect2.exe: error: ld returned 1 exit status
-20:31:21 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:33:53 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c: In function 'aviso_imprimirAvisoPorIdCliente':
-..\src\aviso.c:406:6: warning: unused variable 'contadorAvisosPausados' [-Wunused-variable]
-  406 |  int contadorAvisosPausados = 0;
-      |      ^~~~~~~~~~~~~~~~~~~~~~
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:33:58 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:28:57 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-20:41:23 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c: In function 'aviso_contarAvisosPorIdCliente':
-..\src\aviso.c:432:6: warning: unused variable 'retorno' [-Wunused-variable]
-  432 |  int retorno = -1;
-      |      ^~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:44:40 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:46:12 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:51:103: warning: passing argument 6 of 'aviso_contarAvisosPorIdCliente' makes pointer from integer without a cast [-Wint-conversion]
-   51 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idCliente, pContadorAvisos)
-      |                                                                                                       ^~~~~~~~~~~~~~~
-      |                                                                                                       |
-      |                                                                                                       int
-In file included from ..\src\clienteAviso.h:12,
-                 from ..\src\clienteAviso.c:13:
-..\src\aviso.h:42:140: note: expected 'int *' but argument is of type 'int'
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |                                                                                                                                      ~~~~~~^~~~~~~~~~~~~~~
-..\src\clienteAviso.c:51:119: error: expected ';' before '}' token
-   51 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idCliente, pContadorAvisos)
-      |                                                                                                                       ^
-      |                                                                                                                       ;
-   52 |    }
-      |    ~                                                                                                                   
-20:46:18 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:51:103: warning: passing argument 6 of 'aviso_contarAvisosPorIdCliente' makes pointer from integer without a cast [-Wint-conversion]
-   51 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idCliente, pContadorAvisos);
-      |                                                                                                       ^~~~~~~~~~~~~~~
-      |                                                                                                       |
-      |                                                                                                       int
-In file included from ..\src\clienteAviso.h:12,
-                 from ..\src\clienteAviso.c:13:
-..\src\aviso.h:42:140: note: expected 'int *' but argument is of type 'int'
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |                                                                                                                                      ~~~~~~^~~~~~~~~~~~~~~
-..\src\clienteAviso.c:51:5: warning: 'pContadorAvisos' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   51 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idCliente, pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\clienteAviso.c:51:5: warning: 'idCliente' may be used uninitialized in this function [-Wmaybe-uninitialized]
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:46:38 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:51:5: warning: 'idCliente' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   51 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idCliente, &pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:48:32 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:50:92: warning: passing argument 5 of 'aviso_contarAvisosPorIdCliente' makes integer from pointer without a cast [-Wint-conversion]
-   50 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, &pContadorAvisos);
-      |                                                                                            ^~~~~~~~~~~~~~~~
-      |                                                                                            |
-      |                                                                                            int *
-In file included from ..\src\clienteAviso.h:12,
-                 from ..\src\clienteAviso.c:13:
-..\src\aviso.h:42:123: note: expected 'int' but argument is of type 'int *'
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |                                                                                                                       ~~~~^~~~~~~~~
-..\src\clienteAviso.c:50:5: error: too few arguments to function 'aviso_contarAvisosPorIdCliente'
-   50 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, &pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\clienteAviso.h:12,
-                 from ..\src\clienteAviso.c:13:
-..\src\aviso.h:42:5: note: declared here
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20:49:08 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c:430:5: error: conflicting types for 'aviso_contarAvisosPorIdCliente'
-  430 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int * pContadorAvisos)
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\aviso.c:13:
-..\src\aviso.h:42:5: note: previous declaration of 'aviso_contarAvisosPorIdCliente' was here
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\aviso.c: In function 'aviso_contarAvisosPorIdCliente':
-..\src\aviso.c:440:35: error: 'idCliente' undeclared (first use in this function); did you mean 'Cliente'?
-  440 |    if(pArrayAviso[i].idCliente == idCliente && pArrayAviso[i].estado == AVISO_ACTIVO)
-      |                                   ^~~~~~~~~
-      |                                   Cliente
-..\src\aviso.c:440:35: note: each undeclared identifier is reported only once for each function it appears in
-20:51:03 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:50:92: warning: passing argument 5 of 'aviso_contarAvisosPorIdCliente' makes integer from pointer without a cast [-Wint-conversion]
-   50 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, &pContadorAvisos);
-      |                                                                                            ^~~~~~~~~~~~~~~~
-      |                                                                                            |
-      |                                                                                            int *
-In file included from ..\src\clienteAviso.h:12,
-                 from ..\src\clienteAviso.c:13:
-..\src\aviso.h:42:123: note: expected 'int' but argument is of type 'int *'
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |                                                                                                                       ~~~~^~~~~~~~~
-..\src\clienteAviso.c:50:5: error: too few arguments to function 'aviso_contarAvisosPorIdCliente'
-   50 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, &pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\clienteAviso.h:12,
-                 from ..\src\clienteAviso.c:13:
-..\src\aviso.h:42:5: note: declared here
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-20:52:03 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:50:92: error: 'idCliente' undeclared (first use in this function); did you mean 'Cliente'?
-   50 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idCliente, &pContadorAvisos);
-      |                                                                                            ^~~~~~~~~
-      |                                                                                            Cliente
-..\src\clienteAviso.c:50:92: note: each undeclared identifier is reported only once for each function it appears in
-20:52:12 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:30:16 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:51:5: warning: 'idCliente' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   51 |     aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, idCliente, &pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:52:39 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:43:6: warning: unused variable 'idCliente' [-Wunused-variable]
-   43 |  int idCliente;
-      |      ^~~~~~~~~
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-20:52:51 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-21:03:21 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:53:14: error: too few arguments to function 'aviso_contarAvisosPorIdCliente'
-   53 |     buffer = aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, pArrayCliente[i].idCliente);
-      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\clienteAviso.h:12,
-                 from ..\src\clienteAviso.c:13:
-..\src\aviso.h:42:5: note: declared here
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-..\src\clienteAviso.c:42:6: warning: unused variable 'ContadorAvisos' [-Wunused-variable]
-   42 |  int ContadorAvisos;
-      |      ^~~~~~~~~~~~~~
-21:05:07 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c:430:5: error: conflicting types for 'aviso_contarAvisosPorIdCliente'
-  430 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente)
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-In file included from ..\src\aviso.c:13:
-..\src\aviso.h:42:5: note: previous declaration of 'aviso_contarAvisosPorIdCliente' was here
-   42 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente, int * pContadorAvisos);
-      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-21:06:00 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-..\src\clienteAviso.c: In function 'clienteAviso_calcularClienteConMasAvisos':
-..\src\clienteAviso.c:42:6: warning: unused variable 'ContadorAvisos' [-Wunused-variable]
-   42 |  int ContadorAvisos;
-      |      ^~~~~~~~~~~~~~
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-21:06:11 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-21:09:13 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_14_PARCIAL.exe: Permission denied
-collect2.exe: error: ld returned 1 exit status
-21:09:19 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-21:10:50 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-21:12:24 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-21:14:09 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-21:15:10 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-21:18:46 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase_14_PARCIAL.o: in function `main':
-C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_14_PARCIAL\Debug/../src/Clase_14_PARCIAL.c:120: undefined reference to `clienteAviso_calcularClienteConMasAvisos'
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_14_PARCIAL\Debug/../src/Clase_14_PARCIAL.c:91: undefined reference to `aviso_baja'
 collect2.exe: error: ld returned 1 exit status
-21:19:15 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:30:27 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-21:20:31 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+17:36:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+17:42:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+..\src\Clase_14_PARCIAL.c: In function 'main':
+..\src\Clase_14_PARCIAL.c:45:6: warning: unused variable 'opcionEstado' [-Wunused-variable]
+   45 |  int opcionEstado;
+      |      ^~~~~~~~~~~~
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+17:43:02 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+17:43:25 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-21:21:36 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Nothing to build for Clase_14_PARCIAL
+18:04:58 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_14_PARCIAL.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:05:03 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+18:11:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+18:12:16 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+..\src\aviso.c: In function 'aviso_imprimirPorEstado':
+..\src\aviso.c:336:1: warning: statement with no effect [-Wunused-value]
+  336 | 5
+      | ^
+..\src\aviso.c:336:2: error: expected ';' before '}' token
+  336 | 5
+      |  ^
+      |  ;
+  337 | 
+  338 |    }
+      |    ~
+18:12:18 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+..\src\aviso.c: In function 'aviso_imprimirPorEstado':
+..\src\aviso.c:336:1: warning: statement with no effect [-Wunused-value]
+  336 | 5
+      | ^
+..\src\aviso.c:336:2: error: expected ';' before '}' token
+  336 | 5
+      |  ^
+      |  ;
+  337 | 
+  338 |    }
+      |    ~
+18:12:24 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+18:16:52 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+18:18:13 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_14_PARCIAL.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:18:15 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+18:19:45 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+18:37:13 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+..\src\aviso.c: In function 'aviso_activar':
+..\src\aviso.c:570:1: error: expected declaration or statement at end of input
+  570 | }
+      | ^
+..\src\aviso.c:570:1: warning: control reaches end of non-void function [-Wreturn-type]
+  570 | }
+      | ^
+At top level:
+..\src\aviso.c:559:5: warning: 'aviso_borrarPorId' defined but not used [-Wunused-function]
+  559 | int aviso_borrarPorId(Aviso * pArrayAviso, int limiteAviso, int idABorrar) {
+      |     ^~~~~~~~~~~~~~~~~
+..\src\aviso.c:539:5: warning: 'aviso_buscarIndicePorId' defined but not used [-Wunused-function]
+  539 | int aviso_buscarIndicePorId (Aviso * pArrayAviso, int limiteAviso, int idBuscado, int * pIndice)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+..\src\aviso.c:523:5: warning: 'aviso_buscarLibreRef' defined but not used [-Wunused-function]
+  523 | int aviso_buscarLibreRef (Aviso * pArrayAviso, int limiteAviso, int * pIndice){
+      |     ^~~~~~~~~~~~~~~~~~~~
+..\src\aviso.c:508:5: warning: 'aviso_buscarLibre' defined but not used [-Wunused-function]
+  508 | int aviso_buscarLibre (Aviso * pArrayAviso, int limiteAviso){
+      |     ^~~~~~~~~~~~~~~~~
+..\src\aviso.c:490:5: warning: 'aviso_contarAvisosPausados' defined but not used [-Wunused-function]
+  490 | int aviso_contarAvisosPausados (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int estadoAviso)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\aviso.c:473:5: warning: 'aviso_contarAvisosPorIdCliente' defined but not used [-Wunused-function]
+  473 | int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\aviso.c:442:5: warning: 'aviso_imprimirTodosLosAvisosPorIdCliente' defined but not used [-Wunused-function]
+  442 | int aviso_imprimirTodosLosAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\aviso.c:413:5: warning: 'aviso_imprimirAvisoPorIdCliente' defined but not used [-Wunused-function]
+  413 | int aviso_imprimirAvisoPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\aviso.c:392:5: warning: 'aviso_imprimirPorId' defined but not used [-Wunused-function]
+  392 | int aviso_imprimirPorId (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idAviso)
+      |     ^~~~~~~~~~~~~~~~~~~
+..\src\aviso.c:364:5: warning: 'aviso_imprimir' defined but not used [-Wunused-function]
+  364 | int aviso_imprimir (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente)
+      |     ^~~~~~~~~~~~~~
+..\src\aviso.c:312:5: warning: 'aviso_imprimirPorEstado' defined but not used [-Wunused-function]
+  312 | int aviso_imprimirPorEstado (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int estadoAviso)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+18:37:18 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_14_PARCIAL.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:37:57 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+18:38:18 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+18:43:54 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\clienteAviso.o: in function `clienteAviso_imprimir':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_14_PARCIAL\Debug/../src/clienteAviso.c:73: undefined reference to `aviso_imprimirAvisoPorIdCliente'
+collect2.exe: error: ld returned 1 exit status
+18:44:40 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
-..\src\informes.c:55:1: error: expected '=', ',', ';', 'asm' or '__attribute__' at end of input
-   55 | informes_
-      | ^~~~~~~~~
-21:21:37 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+18:45:44 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+18:46:36 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Clase_14_PARCIAL.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_14_PARCIAL\Debug/../src/Clase_14_PARCIAL.c:121: undefined reference to `clienteAviso_avisosActivosImprimir'
+collect2.exe: error: ld returned 1 exit status
+18:46:55 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+..\src\clienteAviso.c:60:5: error: two or more data types in declaration specifiers
+   60 | int int clienteAviso_avisosActivosImprimir (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso)
+      |     ^~~
+18:47:02 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+18:48:17 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+18:50:12 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
-..\src\informes.c:55:1: error: expected '=', ',', ';', 'asm' or '__attribute__' at end of input
-   55 | informes_
-      | ^~~~~~~~~
-21:21:43 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+18:53:01 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+..\src\informes.c: In function 'informes_calcularCantidadDeAvisosPausados':
+..\src\informes.c:58:64: error: lvalue required as left operand of assignment
+   58 |    if(pArrayAviso[i].isEmpty == FALSE && pArrayAviso[i].estado = AVISO_PAUSADO)
+      |                                                                ^
+18:53:04 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+..\src\informes.c: In function 'informes_calcularCantidadDeAvisosPausados':
+..\src\informes.c:58:64: error: lvalue required as left operand of assignment
+   58 |    if(pArrayAviso[i].isEmpty == FALSE && pArrayAviso[i].estado = AVISO_PAUSADO)
+      |                                                                ^
+18:53:25 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-21:22:47 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+18:56:06 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+18:56:26 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+19:30:17 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-21:29:09 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+..\src\Clase_14_PARCIAL.c: In function 'main':
+..\src\Clase_14_PARCIAL.c:141:59: error: expected ')' before numeric constant
+  141 |        int informes_calcularRubroConMasAvisos (arrayAviso, QTY_AVISOS);
+      |                                                           ^
+      |                                                           )
+19:30:33 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-21:36:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+19:31:50 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c: In function 'aviso_baja':
-..\src\aviso.c:186:7: warning: implicit declaration of function 'clienteAviso_imprimir'; did you mean 'cliente_imprimir'? [-Wimplicit-function-declaration]
-  186 |    if(clienteAviso_imprimir(pArrayCliente, limiteCliente, pArrayAviso, limiteAviso) == 0)
-      |       ^~~~~~~~~~~~~~~~~~~~~
-      |       cliente_imprimir
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-21:37:09 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+19:42:39 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-Info: Nothing to build for Clase_14_PARCIAL
-21:45:22 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+19:51:40 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+20:01:31 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+20:20:53 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-21:46:56 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+20:25:19 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c: In function 'aviso_baja':
-..\src\aviso.c:188:215: warning: 'indiceCliente' may be used uninitialized in this function [-Wmaybe-uninitialized]
-  188 |    printf("\nID: %d - Nombre del cliente: %s - Apellido del cliente: %s - CUIT: %s\n",pArrayCliente[indiceCliente].idCliente,pArrayCliente[indiceCliente].nombre, pArrayCliente[indiceCliente].apellido, pArrayCliente[indiceCliente].cuit);
-      |                                                                                                                                                                                                                       ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
-21:47:13 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Nothing to build for Clase_14_PARCIAL
+20:25:45 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-..\src\aviso.c: In function 'aviso_baja':
-..\src\aviso.c:178:6: warning: unused variable 'indiceCliente' [-Wunused-variable]
-  178 |  int indiceCliente;
-      |      ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
-21:47:17 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
-gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL

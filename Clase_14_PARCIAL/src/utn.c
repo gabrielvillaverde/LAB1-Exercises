@@ -75,7 +75,7 @@ int utn_getNumberInt(char* pMensaje, char* pMensajeError, int* pResultado, int r
 		while(reintentos >= 0);
 		if(reintentos < 0)
 		{
-			printf("No attempts left.\n");
+			printf("\nNo quedan intentos.\n");
 		}
 	}
 	return retorno;

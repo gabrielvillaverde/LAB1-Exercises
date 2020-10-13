@@ -22,7 +22,6 @@ typedef struct
 	char textoDelAviso [SIZE_TEXTO_AVISO];
 	int isEmpty;
 	int estado;
-	int isActive;
 	int idAviso;
 	int idCliente; // Nos permite relacionar con la otra entidad
 } Aviso;
@@ -38,12 +37,15 @@ int aviso_activar (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente
 int aviso_imprimir (Aviso * pArrayAviso , int limiteAviso, Cliente * pArrayCliente, int limiteCliente);
 int aviso_imprimirPorId (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idAviso);
 int aviso_imprimirPorEstado (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int estadoAviso);
-int aviso_imprimirAvisoPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente);
+int aviso_imprimirAvisoActivoPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente);
+int aviso_imprimirTodosLosAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente);
 int aviso_contarAvisosPorIdCliente (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int idCliente);
+int aviso_contarAvisosPausados (Aviso * pArrayAviso, int limiteAviso, Cliente * pArrayCliente, int limiteCliente, int estadoAviso);
 int aviso_buscarLibre (Aviso * pArrayAviso, int limiteAviso);
 int aviso_buscarLibreRef (Aviso * pArrayAviso, int limiteAviso, int * pIndice);
 int aviso_buscarIndicePorId (Aviso * pArrayAviso, int limiteAviso, int idBuscado, int * pIndice);
 int aviso_buscarIndicePorCuit (Aviso * pArrayAviso, int limiteAviso, int cuitBuscar, int * pIndice);
 int aviso_ordenarPorNombre (Aviso * pArrayAviso, int limiteAviso , int orden);
+int aviso_borrarPorId(Aviso * pArrayAviso, int limiteAviso, int idABorrar);
 
 #endif /* AVISO_H_ */
