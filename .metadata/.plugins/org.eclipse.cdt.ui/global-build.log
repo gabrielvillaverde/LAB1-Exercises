@@ -498,3 +498,11 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\C
 gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
 Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
+05:24:26 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
