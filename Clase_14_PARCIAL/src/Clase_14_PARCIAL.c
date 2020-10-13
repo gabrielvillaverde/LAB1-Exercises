@@ -8,14 +8,6 @@
  ============================================================================
  */
 
-/* Errores:
- * Cuando quiero pausar un aviso, debería mostrarme solo 3 del hardcodeo que están activos, y en cambio muestra TODOS como activos.
- * Cuando quiero reanudar un aviso, no toma en cuenta los hardcodeos que hice, debería mostrar dos avisos pausados.
- * Cuando quiero reanudar un aviso, y elijo una ID inexistente, crashea el programa.
- * En el punto 7, el imprimir avisos activos también imprime los que están hardcodeados como pausados.
- *
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include "utn.h"
@@ -36,12 +28,8 @@ int main(void) {
 
 	int opcion;
 	int opcionSubMenu;
-	int contadorClientes = 4; // Después modificar y poner en 0 cuando haya borrado la función de altaForzada (ya que dicha función es para ya tener datos cargados)
+	int contadorClientes = 4;
 	int indiceAvisos = 6;
-
-	// Inventos
-
-	// int opcionEstado;
 
 	cliente_init(arrayCliente, QTY_CLIENTES); // Inicializo el array de clientes con todos los valores de isEmpty en TRUE, es decir, todo el array está vacío.
 	aviso_init(arrayAviso, QTY_AVISOS); // Inicializo el array de avisos con todos los valores de isEmpty en TRUE, es decir, todo el array está vacío.
@@ -52,17 +40,17 @@ int main(void) {
 	cliente_altaForzada(arrayCliente, QTY_CLIENTES, "Facundo", "Colavini", "20-37472450-9");
 
 	aviso_altaForzada(arrayAviso, QTY_AVISOS, 50, "Busco empleados para mi negocio.", 1, AVISO_ACTIVO);
-	aviso_altaForzada(arrayAviso, QTY_AVISOS, 900, "Necesito clases particulares de programación.", 1, AVISO_PAUSADO);
+	aviso_altaForzada(arrayAviso, QTY_AVISOS, 900, "Necesito clases particulares de cocina.", 1, AVISO_PAUSADO);
 	aviso_altaForzada(arrayAviso, QTY_AVISOS, 60, "Necesito mecánico para mi coche.", 2, AVISO_ACTIVO);
 	aviso_altaForzada(arrayAviso, QTY_AVISOS, 70, "Compro muebles.", 3, AVISO_ACTIVO);
-	aviso_altaForzada(arrayAviso, QTY_AVISOS, 80, "Urgente: Se solicita niñera para cuidar a Vampi", 4, AVISO_PAUSADO);
-	aviso_altaForzada(arrayAviso, QTY_AVISOS, 80, "Urgente: Se solicita compañero para jugar al Dead Space 3", 4, AVISO_PAUSADO);
+	aviso_altaForzada(arrayAviso, QTY_AVISOS, 80, "Urgente: Se solicita niñera.", 4, AVISO_PAUSADO);
+	aviso_altaForzada(arrayAviso, QTY_AVISOS, 80, "Urgente: Se buscan jugadores de fútbol.", 4, AVISO_PAUSADO);
 
 	do
 	{
 		if(utn_getNumberInt("Bienvenido al sistema, seleccione una opción: \n\n1 - Alta de cliente\n2 - Modificar datos de cliente\n3 - Baja de cliente\n"
 		"4 - Publicar un nuevo aviso\n5 - Pausar publicación\n6 - Reanudar publicación\n7 - Imprimir clientes\n8 - Informar\n"
-		"8 - Salir del sistema","\nError. Seleccione una opción válida (1-8)\n", &opcion, 2, 1, 8)==0)
+		"8 - Salir del sistema","\nError. Seleccione una opción válida (1-8)\n", &opcion, 2, 1, 8) == 0)
 		{
 			switch(opcion)
 			{
@@ -86,7 +74,6 @@ int main(void) {
 				printf("\nUsted quiere dar de baja un cliente, por favor elija cuál desea eliminar:.\n");
 				if(contadorClientes > 0 )
 				{
-					// La función debería llamarse clienteAviso_baja o algo así.
 					cliente_imprimir(arrayCliente, QTY_CLIENTES);
 					clienteAviso_baja(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES); // Cambiar por clienteAviso_baja
 					contadorClientes--;
@@ -109,8 +96,8 @@ int main(void) {
 				}
 				break;
 			case 5:
-				printf("\nUsted quiere pausar una publicación.\n");
-				aviso_pausar(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES);
+					printf("\nUsted quiere pausar una publicación.\n");
+					aviso_pausar(arrayAviso, QTY_AVISOS, arrayCliente, QTY_CLIENTES);
 				break;
 			case 6:
 				printf("\nUsted quiere reanudar una publicación.\n");
@@ -133,7 +120,7 @@ int main(void) {
 							break;
 						case 2:
 							printf("\nUsted quiere un informe de la cantidad de avisos pausados.\n");
-							informes_calcularCantidadDeAvisosPausados(arrayCliente, QTY_CLIENTES, arrayAviso, QTY_AVISOS);
+							informes_calcularCantidadDeAvisosPausados(arrayAviso, QTY_AVISOS);
 							break;
 						case 3:
 							printf("\nUsted quiere un informe del rubro con más avisos.\n");

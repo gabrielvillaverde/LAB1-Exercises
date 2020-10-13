@@ -16,6 +16,14 @@
 
 #define SIZE_RUBROS 1000
 
+/**
+* Función que calcula el cliente con más avisos
+* \param pArrayCliente, recibe el array de clientes
+* \param limiteCliente, recibe el limite de los clientes
+* \param pArrayAviso, recibe el array de avisos
+* \param limiteAviso, recibe el limite de los avisos
+ * return (-1) ERROR / 0 OK
+ */
 int informes_calcularClienteConMasAvisos (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso)
 {
 	int retorno = -1;
@@ -28,9 +36,9 @@ int informes_calcularClienteConMasAvisos (Cliente * pArrayCliente, int limiteCli
 	{
 		for (int i = 0 ; i < limiteCliente ; i++)
 		{
-			if(pArrayCliente[i].isEmpty == FALSE) // Si la posición "i" del array NO está vacía.
+			if(pArrayCliente[i].isEmpty == FALSE) // Si la posición "i" del array de clientes NO está vacía...
 			{
-				buffer = aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, pArrayCliente[i].idCliente);
+				buffer = aviso_contarAvisosPorIdCliente(pArrayAviso, limiteAviso, pArrayCliente, limiteCliente, pArrayCliente[i].idCliente); // Me guardo en buffer lo que devuelve la función de contar avisos por ID
 				if(flag == FALSE) {
 					flag = TRUE;
 					nuevoMaximo = buffer;
@@ -48,7 +56,13 @@ int informes_calcularClienteConMasAvisos (Cliente * pArrayCliente, int limiteCli
 	return retorno;
 }
 
-int informes_calcularCantidadDeAvisosPausados (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso)
+/**
+* Función que calcula la cantidad de avisos pausados
+* \param pArrayAviso, recibe el array de avisos
+* \param limiteAviso, recibe el limite de los avisos
+ * return (-1) ERROR / 0 OK
+ */
+int informes_calcularCantidadDeAvisosPausados (Aviso * pArrayAviso, int limiteAviso)
 {
 	int retorno = -1;
 	int contadorAvisosPausados = 0;
@@ -68,6 +82,13 @@ int informes_calcularCantidadDeAvisosPausados (Cliente * pArrayCliente, int limi
 	return retorno;
 }
 
+
+/**
+* Función que calcula el rubro con más avisos
+* \param pArrayAviso, recibe el array de avisos
+* \param limiteAviso, recibe el limite de los avisos
+ * return (-1) ERROR / 0 OK
+ */
 int informes_calcularRubroConMasAvisos (Aviso * pArrayAviso, int limiteAviso)
 {
 	int retorno = -1;

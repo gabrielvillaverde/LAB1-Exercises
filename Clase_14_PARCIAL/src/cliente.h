@@ -26,13 +26,11 @@ typedef struct
 int cliente_init(Cliente * pArrayCliente, int limiteCliente);
 int cliente_alta (Cliente * pArrayCliente, int limiteCliente);
 int cliente_altaForzada(Cliente * pArrayCliente, int limiteCliente, char * nombre, char * apellido, char * cuit);
-int cliente_baja (Cliente * pArrayCliente, int limiteCliente);
+//int cliente_baja (Cliente * pArrayCliente, int limiteCliente);
 int cliente_modificar (Cliente * pArrayCliente, int limiteCliente);
 int cliente_imprimir (Cliente * pArrayCliente , int limiteCliente);
 int cliente_buscarLibre (Cliente * pArrayCliente, int limiteCliente);
 int cliente_buscarLibreRef (Cliente * pArrayCliente, int limiteCliente, int * pIndice);
 int cliente_buscarIndicePorId (Cliente * pArrayCliente, int limiteCliente, int idBuscado, int * pIndice);
-int cliente_ordenarPorNombre (Cliente * pArrayCliente, int limiteCliente , int orden);
-int cliente_ordenarPorNombreLuegoPorIdMauricio (Cliente * pArrayCliente, int limiteCliente);
 
 #endif /* CLIENTE_H_ */

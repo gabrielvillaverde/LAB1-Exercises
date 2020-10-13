@@ -14,6 +14,10 @@
 
 static int cliente_generarNuevoId (void); // Prototipo
 
+/**
+* Función que genera un nuevo ID para cada cliente.
+* \return ID del cliente.
+*/
 static int cliente_generarNuevoId (void)
 {
 	static int id = 0;
@@ -21,42 +25,49 @@ static int cliente_generarNuevoId (void)
 	return id;
 }
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.
-Recorre todo el array, e indica que el campo isEmpty está todo vacío.*/
+/**
+* Función que inicializa el array de clientes
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \return (-1) ERROR / 0 OK
+*/
 int cliente_init(Cliente * pArrayCliente, int limiteCliente)
 {
 	int retorno = -1;
-	if (pArrayCliente != NULL && limiteCliente >0)
+	if (pArrayCliente != NULL && limiteCliente > 0)
 	{
 		for (int i = 0 ; i < limiteCliente ; i++)
 		{
-			pArrayCliente[i].isEmpty = TRUE; // Indico que están vacías todas las posiciones del array.
+			pArrayCliente[i].isEmpty = TRUE; // Indico que están vacías TODAS las posiciones del array de clientes.
 		}
 		retorno = 0;
 	}
 	return retorno;
 }
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.*/
+/**
+* Función que da de alta un cliente
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \return (-1) ERROR / 0 OK
+*/
 int cliente_alta (Cliente * pArrayCliente, int limiteCliente)
 {
 	int retorno = -1;
 	int indice;
 
-	Cliente bufferCliente; // Creo una variable auxiliar del tipo de dato Cliente, para cargar los datos ahí.
+	Cliente bufferCliente; // Creo una variable auxiliar del tipo de dato Cliente, para cargar los datos que obtendré más abajo ahí.
 	if (pArrayCliente != NULL && limiteCliente > 0)
 	{
-		if (cliente_buscarLibreRef (pArrayCliente, limiteCliente, &indice) == 0)
-		{	// Le solicito los datos al cliente y los guardo en cada campo de bufferCliente.
-			if (utn_getName("\nIngrese el nombre:\n", "Error, ingrese un nombre válido:\n", bufferCliente.nombre, 2, SIZE_NOMBRE) == 0 &&
+		if (cliente_buscarLibreRef (pArrayCliente, limiteCliente, &indice) == 0) // Si encontré un lugar libre en el array de clientes...
+		{
+			if (utn_getName("\nIngrese el nombre:\n", "Error, ingrese un nombre válido:\n", bufferCliente.nombre, 2, SIZE_NOMBRE) == 0 && // Le solicito los datos al usuario y los guardo en cada campo de bufferCliente.
 				utn_getName("\nIngrese el apellido:\n", "Error, ingrese un apellido válido.\n", bufferCliente.apellido, 2, SIZE_APELLIDO) == 0 &&
 				utn_getCuit("\nIngrese el CUIT:\n", "Error, ingrese un CUIT válido.\n", bufferCliente.cuit, 2, SIZE_CUIT) == 0)
 			{	// Si obtuve los datos...
-				pArrayCliente[indice] = bufferCliente; // DEEP COPY: Copio el buffer en la posición indicada.
-				pArrayCliente[indice].idCliente = cliente_generarNuevoId(); // Genero un nuevo ID.
-				printf("\nEl ID generado para este cliente es el: %d\n",pArrayCliente[indice].idCliente);
+				pArrayCliente[indice] = bufferCliente; // DEEP COPY: Asigno los valores de bufferCliente en la posición del índice correspondiente.
+				pArrayCliente[indice].idCliente = cliente_generarNuevoId(); // Genero un nuevo ID correspondiente a ese índice.
+				printf("\nEl ID generado para este cliente es el: %d\n",pArrayCliente[indice].idCliente); // Muestro por consola el ID que se generó para ese cliente.
 				pArrayCliente[indice].isEmpty = FALSE; // Indico que dicha posición ya no está vacía.
 				printf("\nSe ha cargado el cliente correctamente.\n");
 				retorno = 0;
@@ -70,26 +81,39 @@ int cliente_alta (Cliente * pArrayCliente, int limiteCliente)
 	return retorno;
 }
 
-// La explicación de esta función es en el minuto 19:15 de la clase.
+/**
+* Función de hardcode. Obligo a mi programa a que inicialice con valores cargados por mí previamente.
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \param nombre, recibe el nombre del cliente
+* \param apellido, recibe el apellido del cliente
+* \param cuit, recibe el cuit del cliente
+* \return (-1) ERROR / 0 OK
+*/
 int cliente_altaForzada(Cliente * pArrayCliente, int limiteCliente, char * nombre, char * apellido, char * cuit)
 {
 	int retorno = -1;
 	int indice;
 
-	if(cliente_buscarLibreRef(pArrayCliente, limiteCliente, &indice) == 0)
+	if(cliente_buscarLibreRef(pArrayCliente, limiteCliente, &indice) == 0) // Si hay un lugar libre en mi array de clientes...
 	{
-		strncpy(pArrayCliente[indice].nombre, nombre, SIZE_NOMBRE);
+		strncpy(pArrayCliente[indice].nombre, nombre, SIZE_NOMBRE); // Uso la función de strncpy para copiar en el índice del array de clientes, el nombre, apellido y CUIT.
 		strncpy(pArrayCliente[indice].apellido, apellido, SIZE_APELLIDO);
 		strncpy(pArrayCliente[indice].cuit, cuit, SIZE_CUIT);
-		pArrayCliente[indice].idCliente = cliente_generarNuevoId();
-		pArrayCliente[indice].isEmpty = FALSE;
+		pArrayCliente[indice].idCliente = cliente_generarNuevoId(); // Genero un nuevo ID.
+		pArrayCliente[indice].isEmpty = FALSE; // Indico que ese índice ya no está vacío.
 		retorno = 0;
 	}
 	return retorno;
 }
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.*/
+/**
+* Función que da de baja un cliente
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \return (-1) ERROR / 0 OK
+*/
+/*
 int cliente_baja (Cliente * pArrayCliente, int limiteCliente)
 {
 	int retorno = -1;
@@ -117,34 +141,39 @@ int cliente_baja (Cliente * pArrayCliente, int limiteCliente)
 	}
 	return retorno;
 }
+*/
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.*/
+/**
+* Función que modifica los clientes
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \return (-1) ERROR / 0 OK
+*/
 int cliente_modificar (Cliente * pArrayCliente, int limiteCliente)
 {
 	int retorno = -1;
 	int idBuscado;
 	int indiceAModificar;
 
-	Cliente bufferCliente;
-	if (pArrayCliente != NULL && limiteCliente> 0)
+	Cliente bufferCliente; // Me creo una variable auxiliar del tipo de dato Cliente, donde voy a guardar luego los datos que solicito al usuario para modificar los campos correspondientes.
+	if (pArrayCliente != NULL && limiteCliente > 0)
 	{
 		printf("\nA continuación se listan los clientes que usted puede modificar:\n");
-		cliente_imprimir(pArrayCliente, limiteCliente);
+		cliente_imprimir(pArrayCliente, limiteCliente); // Llamo a la función para modificar clientes.
 
-		if(utn_getNumberInt("\nIngrese el ID del cliente que desea modificar:\n","\nError.\n",&idBuscado,2,0,9999)==0)
+		if(utn_getNumberInt("\nIngrese el ID del cliente que desea modificar:\n","\nError.\n",&idBuscado,2,0,9999) == 0) // Llamo a la función que obtiene un número para guardarme el ID en idBuscado.
 		{
-			if(cliente_buscarIndicePorId(pArrayCliente, limiteCliente,idBuscado,&indiceAModificar)==0)
+			if(cliente_buscarIndicePorId(pArrayCliente, limiteCliente,idBuscado,&indiceAModificar) == 0) // Llamo a la función que busca el índice a modificar por ID.
 			{
-				bufferCliente = pArrayCliente[indiceAModificar]; // Importante.
+				bufferCliente = pArrayCliente[indiceAModificar]; // Me guardo en mi variable auxiliar el índice que voy a modificar.
 
-				if (utn_getName("\nIngrese el nuevo nombre:\n", "Error, ingrese un nombre válido:\n", bufferCliente.nombre, 2, SIZE_NOMBRE) == 0 &&
+				if (utn_getName("\nIngrese el nuevo nombre:\n", "Error, ingrese un nombre válido:\n", bufferCliente.nombre, 2, SIZE_NOMBRE) == 0 && // Le pido los datos al usuario y los voy guardando en bufferCliente.
 					utn_getName("\nIngrese el nuevo apellido:\n", "Error, ingrese un apellido válido.\n", bufferCliente.apellido, 2, SIZE_APELLIDO) == 0 &&
 					utn_getCuit("\nIngrese el nuevo CUIT:\n", "Error, ingrese un CUIT válido.\n", bufferCliente.cuit, 2, SIZE_CUIT) == 0)
 				{
-					pArrayCliente[indiceAModificar] = bufferCliente; // Copio en el índice a modificar del array lo que contiene bufferCliente.
-					retorno = 0;
+					pArrayCliente[indiceAModificar] = bufferCliente; // Copio en el índice a modificar del array lo que contiene bufferCliente ya con los datos nuevos.
 					printf("\nCliente modificado correctamente.\n");
+					retorno = 0;
 				}
 			}
 			else
@@ -156,19 +185,23 @@ int cliente_modificar (Cliente * pArrayCliente, int limiteCliente)
 	return retorno;
 }
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.*/
+/**
+* Función que imprime los clientes
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \return (-1) ERROR / 0 OK
+*/
 int cliente_imprimir (Cliente * pArrayCliente , int limiteCliente)
 {
 	int retorno = -1;
 
 	if (pArrayCliente != NULL && limiteCliente > 0)
 	{
-		for (int i = 0 ; i < limiteCliente ; i++) // Recorro el array de elementos
+		for (int i = 0 ; i < limiteCliente ; i++) // Recorro el array de clientes
 		{
-			if(pArrayCliente[i].isEmpty == FALSE) // Si la posición "i" del array NO está vacía.
+			if(pArrayCliente[i].isEmpty == FALSE) // Si la posición "i" del array de clientes NO está vacía.
 			{
-				// Estoy en condiciones de poder imprimir.
+				// Estoy en condiciones de poder imprimir cada elemento del tipo de dato Cliente.
 				printf("\nID: %d - Nombre del cliente: %s - Apellido del cliente: %s - CUIT: %s\n",pArrayCliente[i].idCliente,pArrayCliente[i].nombre, pArrayCliente[i].apellido, pArrayCliente[i].cuit);
 			}
 		}
@@ -177,8 +210,11 @@ int cliente_imprimir (Cliente * pArrayCliente , int limiteCliente)
 	return retorno;
 }
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0. Retorna el valor del índice por valor, NO por referencia.
+/**
+* Función que busca un lugar libre en el array de clientes, devuelve el índice por valor de retorno.
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \return (-1) ERROR / 0 OK
 */
 int cliente_buscarLibre (Cliente * pArrayCliente, int limiteCliente)
 {
@@ -199,9 +235,13 @@ int cliente_buscarLibre (Cliente * pArrayCliente, int limiteCliente)
 	return retorno;
 }
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.
-Recibe también el puntero del índice, devuelve el índice por referencia.*/
+/**
+* Función que busca un lugar libre en el array de clientes, devuelve el valor por referencia
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \param pIndice, es el puntero al índice que se está buscando, devuelve el índice por valor de referencia.
+* \return (-1) ERROR / 0 OK
+*/
 int cliente_buscarLibreRef (Cliente * pArrayCliente, int limiteCliente, int * pIndice)
 {
 	int retorno = -1;
@@ -211,7 +251,7 @@ int cliente_buscarLibreRef (Cliente * pArrayCliente, int limiteCliente, int * pI
 	{
 		for (i = 0 ; i < limiteCliente ; i++)
 		{
-			if(pArrayCliente[i].isEmpty == TRUE) // Si el elemento i en el array está vacío...
+			if(pArrayCliente[i].isEmpty == TRUE) // Si el elemento i en el array de clientes está vacío...
 			{
 				*pIndice = i; // Retorno el valor por referencia.
 				retorno = 0;
@@ -222,10 +262,14 @@ int cliente_buscarLibreRef (Cliente * pArrayCliente, int limiteCliente, int * pI
 	return retorno;
 }
 
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.
-Recibe el parámetro del ID a buscar.
-Recibe también el puntero del índice, devuelve el índice por referencia.*/
+/**
+* Función que busca el índice en el array de clientes por ID.
+* \param pArrayCliente, recibe el array de clientes.
+* \param limiteCliente, recibe el limite de los clientes.
+* \param idBuscado, recibe el ID que se está buscando.
+* \param pIndice, es el puntero al índice que se está buscando, devuelve el índice por valor de referencia.
+* \return (-1) ERROR / 0 OK
+*/
 int cliente_buscarIndicePorId (Cliente * pArrayCliente, int limiteCliente, int idBuscado, int * pIndice)
 {
 	int retorno = -1;
@@ -233,156 +277,15 @@ int cliente_buscarIndicePorId (Cliente * pArrayCliente, int limiteCliente, int i
 
 	if (pArrayCliente != NULL && limiteCliente > 0 && pIndice != NULL && idBuscado >= 0)
 	{
-		for (i = 0 ; i < limiteCliente ; i++)
+		for (i = 0 ; i < limiteCliente ; i++) // Recorro el array de clientes
 		{
-			if(pArrayCliente[i].isEmpty == FALSE && pArrayCliente[i].idCliente == idBuscado)
+			if(pArrayCliente[i].isEmpty == FALSE && pArrayCliente[i].idCliente == idBuscado) // Si la posición i del array no está vacía, y además coincide en el campo idCliente con el idBuscado...
 			{
-				*pIndice = i;
+				*pIndice = i; // Devuelvo i por valor de referencia.
 				retorno = 0;
 				break;
 			}
 		}
-	}
-	return retorno;
-}
-
-/*Recibe como parámetro un puntero al array del tipo de dato Cliente y un límite.
-Devuelve un entero, -1 y 0.
-Si ordena por nombre, tiene que recibir el parámetro de orden. */
-int cliente_ordenarPorNombre (Cliente * pArrayCliente, int limiteCliente , int orden)
-{
-	int retorno = -1;
-	int estadoDesordenado = 1;
-	Cliente aux; // El tipo de dato del buffer/auxiliar siempre tiene que ser el mismo tipo de dato del array que estoy ordenando.
-
-	if (pArrayCliente != NULL && limiteCliente > 0 && (orden == 1 || orden == 0))
-	{
-		while(estadoDesordenado) // Mientras esté desordenado
-		{
-			estadoDesordenado = 0; // Indico que no está desordenado.
-			for(int i = 0 ; i < (limiteCliente - 1) ; i++)
-			{
-				if( (orden == 1 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) > 0)
-						||
-					(orden == 0 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) < 0) )
-				{
-					aux = pArrayCliente[i]; // Copio en mi variable auxiliar lo que hay en el elemento i.
-					pArrayCliente[i] = pArrayCliente[i + 1];
-					pArrayCliente[i + 1] = aux;
-					estadoDesordenado = 1;
-					retorno = 0;
-				}
-			}
-		}
-	}
-	return retorno;
-}
-
-// Esta función ordena por más de un criterio.
-/*int cliente_ordenarPorNombreLuegoPorId (Cliente * pArrayCliente, int limiteCliente , int orden)
-{
-	int retorno = -1;
-	int estadoDesordenado = 1;
-	Cliente buffer; // El tipo de dato del buffer/auxiliar siempre tiene que ser el mismo tipo de dato del array que estoy ordenando.
-
-	if (pArrayCliente != NULL && limiteCliente > 0 && (orden == 1 || orden == 0))
-	{
-		while(estadoDesordenado) // Mientras esté desordenado
-		{
-			estadoDesordenado = 0; // Indico que no está desordenado.
-			for(int i = 0 ; i < (limiteCliente - 1) ; i++)
-			{
-				if( (orden == 1 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) > 0)
-						||
-					(orden == 0 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) < 0) )
-				{
-					buffer = pArrayCliente[i]; // Copio en mi variable auxiliar lo que hay en el elemento i.
-					pArrayCliente[i] = pArrayCliente[i + 1];
-					pArrayCliente[i + 1] = buffer;
-					estadoDesordenado = 1;
-					retorno = 0;
-				}
-				else if(strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) == 0)
-				{
-					if(pArrayCliente[i].idCliente < pArrayCliente[i + 1].idCliente)
-					{
-						buffer = pArrayCliente[i]; // Copio en mi variable auxiliar lo que hay en el elemento i.
-						pArrayCliente[i] = pArrayCliente[i + 1];
-						pArrayCliente[i + 1] = buffer;
-						estadoDesordenado = 1;
-						retorno = 0;
-					}
-				}
-			}
-		}
-	}
-	return retorno;
-}*/
-
-/*int cliente_ordenarPorNombreLuegoPorIdOptimizado (Cliente * pArrayCliente, int limiteCliente , int orden)
-{
-	int retorno = -1;
-	int estadoDesordenado = 1;
-	Cliente buffer; // El tipo de dato del buffer/auxiliar siempre tiene que ser el mismo tipo de dato del array que estoy ordenando.
-
-	if (pArrayCliente != NULL && limiteCliente > 0 && (orden == 1 || orden == 0))
-	{
-		while(estadoDesordenado) // Mientras esté desordenado
-		{
-			estadoDesordenado = 0; // Indico que no está desordenado.
-			for(int i = 0 ; i < (limiteCliente - 1) ; i++)
-			{
-				// CORREGIR Y CORROBORAR
-				if( (orden == 1 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) > 0)
-						||
-					(orden == 0 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) < 0)
-						||
-					(orden == 1 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) == 0 && pArrayCliente[i].idCliente < pArrayCliente[i + 1].idCliente)
-						||
-					(orden == 0 && strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE) == 0 && pArrayCliente[i].idCliente > pArrayCliente[i + 1].idCliente))
-				{
-					buffer = pArrayCliente[i]; // Copio en mi variable auxiliar lo que hay en el elemento i.
-					pArrayCliente[i] = pArrayCliente[i + 1];
-					pArrayCliente[i + 1] = buffer;
-					estadoDesordenado = 1;
-					retorno = 0;
-				}
-			}
-		}
-	}
-	return retorno;
-}*/
-
-int cliente_ordenarPorNombreLuegoPorIdMauricio (Cliente * pArrayCliente, int limiteCliente)
-{
-	int retorno = -1;
-	int flagSwap;
-	int i;
-	Cliente buffer;
-	int auxiliarCmp;
-
-	if(pArrayCliente != NULL && limiteCliente > 0)
-	{
-		do
-		{
-			flagSwap = 0;
-			for(i = 0 ; i < limiteCliente-1 ; i++)
-			{
-				if(pArrayCliente[i].isEmpty || pArrayCliente[i + 1].isEmpty)
-				{
-					continue;
-				}
-				auxiliarCmp = strncmp(pArrayCliente[i].nombre, pArrayCliente[i + 1].nombre, SIZE_NOMBRE);
-				if(auxiliarCmp > 0 || (auxiliarCmp == 0 && pArrayCliente[i].idCliente < pArrayCliente[i + 1].idCliente) )
-				{
-					flagSwap = 1;
-					buffer = pArrayCliente[i];
-					pArrayCliente[i] = pArrayCliente[i + 1];
-					pArrayCliente[i + 1] = buffer;
-				}
-				limiteCliente--;
-			}
-		}while(flagSwap);
 	}
 	return retorno;
 }

@@ -36,7 +36,7 @@ static int myGets(char array[], int longitud)
 }
 
 /**
- * \brief Función que obtiene un número entero
+ * Función que obtiene un número entero
  *\param mensaje es el puntero del mensaje que se le pide al usuario.
  *\param mensajeError es el puntero del mensaje de error que se le muestra al usuario.
  *\param pResultado es el puntero que guarda lo escrito en buffer y lo escribe en la dirección de memoria de una variable externa de la función
@@ -82,7 +82,7 @@ int utn_getNumberInt(char* pMensaje, char* pMensajeError, int* pResultado, int r
 }
 
 /**
- * \brief Se encarga de obtener un número entero
+ * Función que se encarga de obtener un número entero
  * \param pResultado Puntero al espacio de memoria donde se dejara el resultado de la funcion
  * \return Retorna 0 (EXITO) si se obtiene un numero entero y -1 (ERROR) si no
  */
@@ -103,7 +103,7 @@ static int getInt(int* pResultado)
 }
 
 /**
- * \brief Verifica si la cadena ingresada es numérica
+ * Función que verifica si la cadena ingresada es numérica
  * \param cadena Cadena de caracteres a ser analizada
  * \return Retorna 1 (vardadero) si la cadena es numerica y 0 (falso) si no lo es
  */
@@ -128,7 +128,7 @@ static int isNumber(char cadena[])
 }
 
 /**
-* \brief Función que obtiene un número flotante
+ * Función que obtiene un número flotante
  *\param mensaje es el puntero del mensaje que se le pide al usuario.
  *\param mensajeError es el puntero del mensaje de error que se le muestra al usuario.
  *\param pResultado es el puntero que guarda lo escrito en buffer y lo escribe en la dirección de memoria de una variable externa de la función
@@ -169,7 +169,7 @@ int utn_getNumberFloat(char* pMensaje, char* pMensajeError, float* pResultado, i
 }
 
 /**
- * \brief Verifica si la cadena ingresada es flotante
+ * Función que verifica si la cadena ingresada es flotante
  * \param pResultado Puntero al espacio de memoria donde se dejara el resultado de la funcion
  * \return Retorna 0 (EXITO) si se obtiene un numero flotante y -1 (ERROR) si no
  *
@@ -191,7 +191,7 @@ static int getFloat(float* pResultado)
 }
 
 /**
- * \brief Verifica si la cadena ingresada es numerica, y puede contener un signo/punto en el primer índice
+ * Función que verifica si la cadena ingresada es numerica, y puede contener un signo/punto en el primer índice
  * \param cadena char Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */
@@ -226,7 +226,7 @@ static int isNumberFloat(char cadena[])
 }
 
 /**
-* \brief Función que solicita un nombre al usuario
+* Función que solicita un nombre al usuario
 * \param char* pMensaje es el mensaje que se le muestra al usuario
 * \param char* pMensajeError es el mensaje de error que se le muestra al usuario
 * \param char* pResultado es el puntero al espacio de memoria donde se dejará el valor obtenido
@@ -266,7 +266,7 @@ int utn_getName(char* pMensaje, char* pMensajeError, char* pResultado, int reint
 }
 
 /**
-* \brief Verifica una cadena como parametro para determinar si es nombre valido
+* Función que verifica una cadena como parámetro para determinar si es nombre valido
 * \param char cadena[], cadena a analizar
 * \param limite indica la cantidad maxima del nombre
  * return (1) Es válido / (0) No es un nombre valido
@@ -287,7 +287,7 @@ static int utn_itIsAValidName(char array[], int limite)
 }
 
 /**
- * \brief Verifica si la cadena ingresada son letras
+ * Función que verifica si la cadena ingresada son letras
  * \param cadena Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */
@@ -312,7 +312,7 @@ static int isOnlyLettersAndSpace(char cadena[])
 }
 
 /*
-* \brief Solicita un char al usuario
+* Función que solicita un char al usuario
 * \param char* pMensaje, Es el mensaje mostrado al usuario
 * \param char* pMensajeError, Es el mensaje de error a ser mostrado al usuario
 * \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
@@ -353,7 +353,7 @@ int utn_getChar(char* pMensaje, char* pMensajeError, char* pResultado, int reint
 }
 
 /*
-* \brief Solicita numeros, letras y espacio al usuario
+* Función que solicita numeros, letras y espacio al usuario
 * \param char* pMensaje, Es el mensaje mostrado al usuario
 * \param char* pMensajeError, Es el mensaje de error a ser mostrado al usuario
 * \param char* pResultado, puntero al espacio de memoria donde se dejara el valor obtenido
@@ -394,8 +394,8 @@ int utn_getAlphaNum(char* pMensaje, char* pMensajeError, char* pResultado, int r
 }
 
 /**
- * \brief Verifica si la cadena son numeros, letras con o sin tilde y un espacio
- * \param cadena Cadena de caracteres a ser analizada
+ * Función que verifica si la cadena son numeros, letras con o sin tilde y un espacio
+ * \param cadena, Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */
 static int isAlphNum(char cadena[])
@@ -422,124 +422,15 @@ static int isAlphNum(char cadena[])
 	return retorno;
 }
 
-
-/*
-* \brief Ordena el array desde el valor minimo al maximo
-* \param int pArray[], recibe el array a ordenar
-* \param int limite, recibe la cantidad maxima de elementos
-* \return (-1) ERROR / 0 OK
- */
-int utn_sortMin(int pArray[], int limite)
-{
-	int retorno = -1;
-	int bufferInt;
-	int i;
-	int flagOrdenado;
-	if(pArray != NULL && limite > 0)
-	{
-		do
-		{
-			flagOrdenado = 0;
-			for(i = 0; i < (limite - 1); i++)
-			{
-				if(pArray[i] > pArray[i+1])
-				{
-					//Intercambiar (swap)
-					bufferInt = pArray[i];
-					pArray[i] = pArray[i+1];
-					pArray[i+1] = bufferInt;
-					flagOrdenado = 1;
-				}
-			}
-		}while(flagOrdenado);
-		retorno = 0;
-	}
-	return retorno;
-}
-
-
 /**
- * \brief Calcula el numero maximo del Array recibido como parametro
- * \param int pArray[], Array a ser procesado
- * \param int cantidadElementos, cantidad de elementos a ser procesados
- * \param int* pResultado, numero maximo del Array
- * \return (-1) Error / (0) Ok
+ * Función que obtiene un CUIT
+ * \param pMensaje - Es el mensaje que se le muestra al usuario para que ingrese el CUIT
+ * \param pMensajeError - Es el mensaje de error que se le muestra al usuario
+ * \param pResultado - Es el puntero que guarda lo escrito en bufferString y lo escribe en la dirección de memoria de una variable externa de la función
+ * \param reintentos - Es la cantidad de reintentos que tiene el usuario para ingresar el CUIT
+ * \param limite - Indica la cantidad máxima de caracteres que puede recibir
+ * \return - 1 (EXITO) / 0 (ERROR)
  */
-int utn_calculateMaximum(int pArray[], int cantidadElementos, int* pResultado)
-{
-	int retorno = -1;
-	int maximo;
-	if(pArray != NULL && cantidadElementos > 0 && pResultado != NULL)
-	{
-		for(int i = 0; i < cantidadElementos; i++)
-		{
-			if(i == 0 || pArray[i] > maximo)
-			{
-				maximo = pArray[i];
-			}
-		}
-		*pResultado = maximo;
-		retorno = 0;
-	}
-	return retorno;
-}
-
-/**
- * \brief Calcula el numero minimo del Array recibido como parametro
- * \param int pArray[], Array a ser procesado
- * \param int cantidadElementos, cantidad de elementos a ser procesados
- * \param int* pResultado, numero minimo del Array
- * \return (-1) Error / (0) Ok
- */
-int utn_calculateMinimum(int pArray[], int cantidadElementos, int* pResultado)
-{
-	int retorno = -1;
-	int minimo;
-	int i;
-
-	if(pArray != NULL && cantidadElementos > 0 && pResultado != NULL)
-	{
-		for(i = 0; i < cantidadElementos; i++)
-		{
-			if(i == 0 || pArray[i] < minimo)
-			{
-				minimo = pArray[i];
-			}
-		}
-		*pResultado = minimo;
-		retorno = 0;
-	}
-
-	return retorno;
-}
-
-/**
- * \brief Calcula el promedio de los elementos del Array recibido como parametro
- * \param int pArray[], Array a ser procesado
- * \param int cantidadElementos, cantidad de elementos a ser procesados
- * \param float* pResultado, numero promedio del array
- * \return (-1) Error / (0) Ok
- */
-int utn_calculateAverage(int pArray[], int cantidadElementos, float* pResultado)
-{
-	int retorno = -1;
-	int promedio;
-	int i;
-	int suma = 0;
-
-	if(pArray != NULL && cantidadElementos > 0 && pResultado != NULL)
-	{
-		for(i = 0; i < cantidadElementos; i++)
-		{
-			suma += pArray[i];
-		}
-		promedio = (float)suma / i;
-		*pResultado = promedio;
-		retorno = 0;
-	}
-	return retorno;
-}
-
 int utn_getCuit(char* pMensaje, char* pMensajeError, char* pResultado, int reintentos, int limite)
 {
 	int retorno = -1;
@@ -573,9 +464,9 @@ int utn_getCuit(char* pMensaje, char* pMensajeError, char* pResultado, int reint
 }
 
 /**
- * \brief Verifica si la cadena son numeros, letras con o sin tilde y un espacio
- * \param cadena Cadena de caracteres a ser analizada
- * \return 1 EXITO / (0) ERROR
+ * Función que verifica si la cadena son números, y guines
+ * \param cadena - Cadena de caracteres a ser analizada
+ * \return - 1 (EXITO) / 0 (ERROR)
  */
 static int isCuit(char cadena[])
 {

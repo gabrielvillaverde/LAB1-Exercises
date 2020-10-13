@@ -355,3 +355,146 @@ Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
 Info: Nothing to build for Clase_14_PARCIAL
+03:31:15 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+03:33:30 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+03:33:36 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+..\src\informes.c: In function 'informes_calcularCantidadDeAvisosPausados':
+..\src\informes.c:55:2: error: expected identifier or '(' before '}' token
+   55 |  }
+      |  ^
+03:33:39 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+03:34:23 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+03:35:22 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+..\src\informes.c:57:5: error: conflicting types for 'informes_calcularCantidadDeAvisosPausados'
+   57 | int informes_calcularCantidadDeAvisosPausados (Aviso * pArrayAviso, int limiteAviso)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\informes.c:15:
+..\src\informes.h:15:5: note: previous declaration of 'informes_calcularCantidadDeAvisosPausados' was here
+   15 | int informes_calcularCantidadDeAvisosPausados (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+03:35:29 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+..\src\Clase_14_PARCIAL.c: In function 'main':
+..\src\Clase_14_PARCIAL.c:136:50: warning: passing argument 1 of 'informes_calcularCantidadDeAvisosPausados' from incompatible pointer type [-Wincompatible-pointer-types]
+  136 |        informes_calcularCantidadDeAvisosPausados(arrayAviso, QTY_AVISOS);
+      |                                                  ^~~~~~~~~~
+      |                                                  |
+      |                                                  Aviso * {aka struct <anonymous> *}
+In file included from ..\src\Clase_14_PARCIAL.c:25:
+..\src\informes.h:15:58: note: expected 'Cliente *' {aka 'struct <anonymous> *'} but argument is of type 'Aviso *' {aka 'struct <anonymous> *'}
+   15 | int informes_calcularCantidadDeAvisosPausados (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
+      |                                                ~~~~~~~~~~^~~~~~~~~~~~~
+..\src\Clase_14_PARCIAL.c:136:8: error: too few arguments to function 'informes_calcularCantidadDeAvisosPausados'
+  136 |        informes_calcularCantidadDeAvisosPausados(arrayAviso, QTY_AVISOS);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Clase_14_PARCIAL.c:25:
+..\src\informes.h:15:5: note: declared here
+   15 | int informes_calcularCantidadDeAvisosPausados (Cliente * pArrayCliente, int limiteCliente, Aviso * pArrayAviso, int limiteAviso);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+03:35:41 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+03:42:40 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+03:49:00 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+03:51:48 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+04:04:23 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+04:05:21 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+04:12:45 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+04:28:37 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\clienteAviso.o" "..\\src\\clienteAviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\informes.o" "..\\src\\informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+04:30:54 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+05:05:09 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+05:11:42 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\aviso.o" "..\\src\\aviso.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+05:13:52 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
+05:17:42 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+05:18:46 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+..\src\Clase_14_PARCIAL.c: In function 'main':
+..\src\Clase_14_PARCIAL.c:32:6: warning: unused variable 'contadorAvisosPausados' [-Wunused-variable]
+   32 |  int contadorAvisosPausados = 3;
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+05:18:51 **** Incremental Build of configuration Debug for project Clase_14_PARCIAL ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_14_PARCIAL.o" "..\\src\\Clase_14_PARCIAL.c" 
+gcc -o Clase_14_PARCIAL.exe "src\\Clase_14_PARCIAL.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+Info: Nothing to build for Clase_14_PARCIAL
+Info: Nothing to build for Clase_14_PARCIAL
