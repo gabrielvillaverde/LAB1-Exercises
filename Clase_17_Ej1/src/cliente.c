@@ -114,7 +114,7 @@ int cliente_altaForzada(Cliente * pArrayCliente, int limiteCliente, char * nombr
 * \param limiteCliente, recibe el limite de los clientes.
 * \return (-1) ERROR / 0 OK
 */
-/*
+
 int cliente_baja (Cliente * pArrayCliente, int limiteCliente)
 {
 	int retorno = -1;
@@ -141,7 +141,7 @@ int cliente_baja (Cliente * pArrayCliente, int limiteCliente)
 	}
 	return retorno;
 }
-*/
+
 
 /**
 * Función que modifica los clientes
@@ -362,3 +362,279 @@ int cliente_buscarIndicePorId (Cliente * pArrayCliente, int limiteCliente, int i
  * Si la primera cadena es mayor a la segunda, retorna un valor positivo.
  * Si la segunda cadena es mayor a la primera, retorna un valor negativo.
  */
+
+// Encapsular campos (getters y setters)
+// Get para cada dato que necesitemos.
+
+/*
+int cliente_getId(Cliente * pc, int * pValor)
+{
+	int retorno = -1;
+	if(pc != NULL)
+	{
+		*pValor = pc->idCliente;
+		retorno = 0;
+	}
+	return retorno;
+}
+
+cliente_getId(pc);
+
+int cliente_setId(Cliente * pc, int * pValor)
+{
+	int retorno = -1;
+	if(pc != NULL)
+	{
+		pc->idCliente = pValor;
+		retorno = 0;
+	}
+	return retorno;
+}
+*/
+
+/* Estructura de cada entidad:
+ * new
+ * delete
+ * getXXX
+ * setXXX
+ *
+ * initArray
+ * findById
+ * generarId
+ *
+ * alta
+ * baja
+ * modificacion
+ * imprimir
+ */
+
+// Llamo a esta función y me devuelve un elemento del tipo cliente
+Cliente* cliente_new(void)
+{
+	Cliente* puntero; // Si tengo un puntero del tipo Cliente, luego voy a poder acceder a sus campos con -> y cargarle valores.
+	puntero = (Cliente*)malloc(sizeof(Cliente)); // En "puntero" guardo la dirección de memoria de un cliente.
+
+	if(puntero != NULL)
+	{
+		puntero->nombre[0] = '\0';
+		puntero->apellido[0] = '\0';
+		puntero->cuit[0] = '\0';
+		puntero->idCliente = 0;
+		return puntero;
+	}
+	else
+		return NULL; // Es lo mismo que poner return puntero, porque si no encontró memoria, puntero también devolverá NULL.
+}
+
+Cliente* cliente_newConParametros(char* nombre, char* apellido, char* cuit, int idCliente)
+{
+	Cliente* puntero = NULL; // Inicializo el puntero a cliente como NULL.
+
+	if(nombre != NULL && apellido != NULL && cuit != NULL && idCliente > 0)
+	{
+		puntero = (Cliente*)malloc(sizeof(Cliente));
+
+		if(puntero != NULL)
+		{
+			strncpy(puntero->nombre, nombre, sizeof(puntero->nombre));
+			strncpy(puntero->apellido, nombre, sizeof(puntero->apellido));
+			strncpy(puntero->cuit, nombre, sizeof(puntero->cuit));
+			puntero->idCliente = idCliente;
+		}
+	}
+	return puntero;
+}
+
+int cliente_inicializarArrayPunteros(Cliente* arrayPunterosACliente[], int limitePunterosACliente)
+{
+	int retorno = -1;
+
+	if(arrayPunterosACliente != NULL && limitePunterosACliente > 0)
+	{
+		for (int i = 0 ; i < limitePunterosACliente ; i++)
+		{
+			arrayPunterosACliente[i] = NULL; // Es lo mismo poner pArrayCliente[i] = 0;
+		}
+		retorno = 0;
+	}
+	return retorno;
+}
+
+int cliente_borrarIndiceArrayPunteros(Cliente* arrayPunterosACliente[], int limitePunterosACliente, int indiceArrayPunterosACliente)
+{
+	int retorno = -1;
+
+	if(arrayPunterosACliente != NULL && indiceArrayPunterosACliente >= 0 && indiceArrayPunterosACliente < limitePunterosACliente && arrayPunterosACliente[indiceArrayPunterosACliente] != NULL)
+	{
+		{
+			free(arrayPunterosACliente[indiceArrayPunterosACliente]);
+			arrayPunterosACliente[indiceArrayPunterosACliente] = NULL; // En esa posición del array la igualo a NULL para que la próxima vez que la llame, pueda utilizarla para otra tarea.
+		}
+		retorno = 0;
+	}
+	return retorno;
+}
+
+int cliente_buscarIndiceLibreArrayPunteros (Cliente* arrayPunterosACliente[], int limitePunterosACliente)
+{
+	int retorno = -1;
+	int i;
+
+	if(arrayPunterosACliente != NULL && limitePunterosACliente > 0)
+	{
+		for(i = 0 ; i < limitePunterosACliente ; i++)
+		{
+			if(arrayPunterosACliente[i] == NULL) // Si la posición del array vale NULL es porque está libre.
+			{
+				retorno = i;
+				break; // Hago un break porque no tiene sentido que siga iterando, ya encontré el lugar libre.
+			}
+		}
+	}
+	return retorno;
+}
+
+int cliente_buscarIndiceLibreArrayPunterosRef (Cliente* arrayPunterosACliente[], int limitePunterosACliente, int* pIndice)
+{
+	int retorno = -1;
+	int i;
+
+	if(arrayPunterosACliente != NULL && limitePunterosACliente > 0 && pIndice != NULL)
+	{
+		for(i = 0 ; i < limitePunterosACliente ; i++)
+		{
+			if(arrayPunterosACliente[i] == NULL)
+			{
+				*pIndice = i; // Retorno el valor por referencia.
+				retorno = 0;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+
+int cliente_altaArrayPunteros (Cliente* arrayPunterosACliente[], int limitePunterosACliente, int indice, int* idCliente)
+{
+	int retorno = -1;
+
+	Cliente bufferAux; // La defino para guardar los datos que ingresa el usuario en cada uno de sus campos.
+	Cliente* pC;
+
+	if (arrayPunterosACliente != NULL && limitePunterosACliente > 0)
+	{
+		if (utn_getName("\nIngrese el nombre:\n", "Error, ingrese un nombre válido:\n", bufferAux.nombre, 2, SIZE_NOMBRE) == 0 &&
+			utn_getName("\nIngrese el apellido:\n", "Error, ingrese un apellido válido.\n", bufferAux.apellido, 2, SIZE_APELLIDO) == 0 &&
+			utn_getCuit("\nIngrese el CUIT:\n", "Error, ingrese un CUIT válido.\n", bufferAux.cuit, 2, SIZE_CUIT) == 0)
+		{
+			bufferAux.idCliente = *idCliente;
+			pC = cliente_new();
+			if(pC != NULL)
+			{
+				*pC = bufferAux; // Copia los campos de bufferAux en el área dinámica que me devolvió cliente_new, y a la que apunta pC.
+				arrayPunterosACliente[indice] = pC; // Copio la dirección en el array de punteros
+				(*idCliente)++;
+				retorno = 0;
+			}
+		}
+	}
+	return retorno;
+}
+
+int cliente_altaForzadaArrayPunterosACliente(Cliente* arrayPunterosACliente[])
+{
+    int retorno = -1;
+    char bufferNombre[5][SIZE_NOMBRE] =      { "Jorge",          "Luis",          "Domingo",       "Machu",        "Marcos"      };
+    char bufferApellido[5][SIZE_APELLIDO] =  { "Mendez",         "González",      "Sarmiento",     "Pichu",        "Papas"       };
+    char bufferCuit[5][SIZE_CUIT] =          { "20336330972",    "20456787196",   "32689210751",   "29903221487",  "41107389873" };
+    int bufferId[5] =                        { 100,              101,             102,             103,            104           };
+
+    Cliente* puntero;
+
+    if (arrayPunterosACliente != NULL)
+    {
+        for (int i = 0; i < 5; i++)
+        {
+        	// 1) Construyo el cliente
+        	puntero = cliente_newConParametros(bufferNombre[i], bufferApellido[i], bufferCuit[i], bufferId[i]);
+        	// 2) Agrego el cliente al array
+        	arrayPunterosACliente[i] = puntero;
+        }
+        retorno = 0;
+    }
+    return retorno;
+}
+
+int cliente_imprimirArrayPunteros (Cliente* arrayPunterosACliente[], int limitePunterosACliente)
+{
+	int retorno = -1;
+	int i;
+
+	if(arrayPunterosACliente != NULL && limitePunterosACliente > 0)
+	{
+		printf("\n---LISTA DE CLIENTES---\n");
+		for(i = 0 ; i < limitePunterosACliente ; i++)
+		{
+			if(arrayPunterosACliente[i] != NULL) // Si hay un puntero a un cliente en esta posición...
+			{
+				printf("Nombre: %s - Apellido: %s - CUIT: %s - ID: %d\n", arrayPunterosACliente[i]->nombre, arrayPunterosACliente[i]->apellido, arrayPunterosACliente[i]->cuit, arrayPunterosACliente[i]->idCliente);
+			}
+		}
+	}
+	return retorno;
+}
+
+int cliente_buscarIndicePorIdArrayPunteros (Cliente* arrayPunterosACliente[], int limitePunterosACliente, int idBuscado)
+{
+	int retorno = -1;
+
+	if(arrayPunterosACliente != NULL && limitePunterosACliente > 0 && idBuscado >= 0)
+	{
+		retorno = -2;
+		for (int i = 0 ; i < limitePunterosACliente ; i++)
+		{
+			if(arrayPunterosACliente[i] != NULL && arrayPunterosACliente[i]->idCliente == idBuscado)
+			{
+				retorno = i;
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+
+int cliente_borrarIndiceArrayPunterosPorId (Cliente* arrayPunterosACliente[], int limitePunterosACliente, int idBuscado)
+{
+	int retorno = -1;
+	int indiceBorrar;
+
+	if(arrayPunterosACliente != NULL && limitePunterosACliente > 0 && idBuscado >= 0)
+	{
+		indiceBorrar = cliente_buscarIndicePorIdArrayPunteros(arrayPunterosACliente, limitePunterosACliente, idBuscado);
+		if(indiceBorrar >= 0)
+		{
+			if(cliente_borrarIndiceArrayPunteros(arrayPunterosACliente, limitePunterosACliente, indiceBorrar) == 0)
+			{
+				retorno = 0;
+			}
+		}
+	}
+	return retorno;
+}
+
+int cliente_agregarClienteArrayPunteros (Cliente* arrayPunterosACliente[], int limitePunterosACliente, char* nombre, char* apellido, char* cuit, int idCliente)
+{
+	int retorno = -1;
+	int indiceLibre;
+
+	if (arrayPunterosACliente != NULL && limitePunterosACliente > 0 && nombre != NULL && apellido != NULL && cuit != NULL && idCliente >= 0)
+	{
+		indiceLibre = cliente_buscarIndiceLibreArrayPunteros(arrayPunterosACliente, limitePunterosACliente);
+		if(indiceLibre >= 0)
+		{
+			arrayPunterosACliente[indiceLibre] = cliente_newConParametros(nombre, apellido, cuit, idCliente);
+			retorno = indiceLibre;
+		}
+	}
+	return retorno;
+}

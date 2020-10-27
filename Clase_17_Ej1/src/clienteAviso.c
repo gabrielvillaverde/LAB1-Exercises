@@ -87,3 +87,5 @@ int clienteAviso_avisosActivosImprimir (Cliente * pArrayCliente, int limiteClien
 	}
 	return retorno;
 }
+
+
