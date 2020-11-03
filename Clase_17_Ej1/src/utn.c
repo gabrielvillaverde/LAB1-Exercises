@@ -9,16 +9,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-static int isNumber(char cadena[]);
-static int getInt(int* pResultado);
-static int myGets(char array[], int longitud);
-static int utn_itIsAValidName(char array[], int limite);
-static int isOnlyLettersAndSpace(char cadena[]);
-static int isAlphNum(char cadena[]);
-static int getFloat(float* pResultado);
-static int isNumberFloat(char cadena[]);
-static int isCuit(char cadena[]);
-
 #define LIMITE_BUFFER_STRING 1000
 
 /**
@@ -27,7 +17,7 @@ static int isCuit(char cadena[]);
  * \param longitud Define el tamaño de cadena
  * \return Retorna 0 EXITO / (-1) ERROR
  */
-static int myGets(char array[], int longitud)
+int myGets(char array[], int longitud)
 {
 	fflush(stdin);
 	fgets(array, longitud, stdin);
@@ -86,7 +76,7 @@ int utn_getNumberInt(char* pMensaje, char* pMensajeError, int* pResultado, int r
  * \param pResultado Puntero al espacio de memoria donde se dejara el resultado de la funcion
  * \return Retorna 0 (EXITO) si se obtiene un numero entero y -1 (ERROR) si no
  */
-static int getInt(int* pResultado)
+int getInt(int* pResultado)
 {
 	int retorno = -1;
 	char buffer[LIMITE_BUFFER_STRING];
@@ -107,7 +97,7 @@ static int getInt(int* pResultado)
  * \param cadena Cadena de caracteres a ser analizada
  * \return Retorna 1 (vardadero) si la cadena es numerica y 0 (falso) si no lo es
  */
-static int isNumber(char cadena[])
+int isNumber(char cadena[])
 {
 	int retorno = 1;
 	int i = 0;
@@ -116,7 +106,7 @@ static int isNumber(char cadena[])
 	{
 		i = 1;
 	}
-	for( ; cadena[i] != '\0'; i++)
+	for( ; cadena[i] != '\0' ; i++)
 	{
 		if(cadena[i] < '0' || cadena[i] > '9')
 		{
@@ -174,7 +164,7 @@ int utn_getNumberFloat(char* pMensaje, char* pMensajeError, float* pResultado, i
  * \return Retorna 0 (EXITO) si se obtiene un numero flotante y -1 (ERROR) si no
  *
  */
-static int getFloat(float* pResultado)
+int getFloat(float* pResultado)
 {
 	int retorno = -1;
 	char buffer[LIMITE_BUFFER_STRING];
@@ -195,7 +185,7 @@ static int getFloat(float* pResultado)
  * \param cadena char Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */
-static int isNumberFloat(char cadena[])
+int isNumberFloat(char cadena[])
 {
 	int retorno = 1;
 	int i = 0;
@@ -271,11 +261,11 @@ int utn_getName(char* pMensaje, char* pMensajeError, char* pResultado, int reint
 * \param limite indica la cantidad maxima del nombre
  * return (1) Es válido / (0) No es un nombre valido
  */
-static int utn_itIsAValidName(char array[], int limite)
+int utn_itIsAValidName(char array[], int limite)
 {
-	int retorno = 1; // TODO OK
+	int retorno = 1;
 
-	for(int i = 0; i <= limite && array[i] != '\0'; i++)
+	for(int i = 0; i <= limite && array[i] != '\0' ; i++)
 	{
 		if(isOnlyLettersAndSpace(array) == 0)
 		{
@@ -291,7 +281,7 @@ static int utn_itIsAValidName(char array[], int limite)
  * \param cadena Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */
-static int isOnlyLettersAndSpace(char cadena[])
+int isOnlyLettersAndSpace(char cadena[])
 {
 	int retorno = 1;
 	int i;
@@ -398,7 +388,7 @@ int utn_getAlphaNum(char* pMensaje, char* pMensajeError, char* pResultado, int r
  * \param cadena, Cadena de caracteres a ser analizada
  * \return 1 EXITO / (0) ERROR
  */
-static int isAlphNum(char cadena[])
+int isAlphNum(char cadena[])
 {
 	int retorno = 1; // Todo OK.
 	int i;
@@ -468,7 +458,7 @@ int utn_getCuit(char* pMensaje, char* pMensajeError, char* pResultado, int reint
  * \param cadena - Cadena de caracteres a ser analizada
  * \return - 1 (EXITO) / 0 (ERROR)
  */
-static int isCuit(char cadena[])
+int isCuit(char cadena[])
 {
 	int retorno = 1; // Todo OK.
 	int i;

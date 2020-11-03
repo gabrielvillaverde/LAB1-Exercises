@@ -1,6 +1,9 @@
-Info: Nothing to build for Clase_16_Ej7
-Info: Nothing to build for Clase_16_Ej7
-18:35:25 **** Incremental Build of configuration Debug for project Clase_16_Ej7 ****
+03:15:48 **** Incremental Build of configuration Debug for project TP3 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_16_Ej7.o" "..\\src\\Clase_16_Ej7.c" 
-gcc -o Clase_16_Ej7.exe "src\\Clase_16_Ej7.o" "src\\aviso.o" "src\\cliente.o" "src\\clienteAviso.o" "src\\informes.o" "src\\utn.o" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+gcc "-LC:\\Users\\Hzkr\\eclipse-workspace\\Laboratorio_2020_1H_Ejercicios\\TP3" -o TP3.exe Controller.o Employee.o main.o parser.o utn.o -lLinkedList 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file TP3.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+03:16:02 **** Incremental Build of configuration Debug for project TP3 ****
+Info: Internal Builder is used for build
+gcc "-LC:\\Users\\Hzkr\\eclipse-workspace\\Laboratorio_2020_1H_Ejercicios\\TP3" -o TP3.exe Controller.o Employee.o main.o parser.o utn.o -lLinkedList 
