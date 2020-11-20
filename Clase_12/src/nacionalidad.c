@@ -41,7 +41,7 @@ int nacionalidad_alta(Nacionalidad* pArray, int limite, int indice)
 	Nacionalidad bufferNacionalidad;
 	if(pArray != NULL && limite > 0 && indice >= 0 && indice < limite && pArray[indice].isEmpty == TRUE)
 	{
-		if((utn_getName("Nombre:\n","Error\n",&bufferNacionalidad.nombre,2,SIZE_NOMBRE)==0 &&
+		if((utn_getName("Nombre:\n","Error\n",bufferNacionalidad.nombre,2,SIZE_NOMBRE)==0 &&
 			utn_getNumberInt("Legajo:\n", "Error\n", &bufferNacionalidad.legajo, 2, MIN_LEGAJO, MAX_LEGAJO)==0))
 		{
 			bufferNacionalidad.id = nacionalidad_generarNuevoId();
@@ -329,7 +329,7 @@ int nacionalidad_ordenarPorNombre2 (Nacionalidad * pArray, int limite, int order
 			{
 				if
 				((order == 0 && strcmp (pArray[i].nombre, pArray[i + 1].nombre) < 0)||
-				(order == 1 && strcmp (pArray[i].nombre, pArray[i + 1].legajo) > 0) ||
+				(order == 1 && strcmp (pArray[i].nombre, pArray[i + 1].nombre) > 0) ||
 				(0==strcmp (pArray[i].nombre, pArray[i + 1].nombre) &&
 				 (((pArray[i].legajo > pArray[i + 1].legajo)&&(order == 1))
 				 ||((pArray[i].legajo < pArray[i + 1].legajo) &&(order == 0)))))
@@ -370,11 +370,11 @@ int nac_alta (Nac * pArrays, int limite)
 	{
 		if (nac_buscarLibreRef (pArrays, limite, &indice) == 0)
 		{
-				if (utn_getNombre(bufferNac.pais,LONG , "\n pais?", "error",2) == 0 &&
-					utn_getNombre(bufferNac.nombre, LONG, " \n Ingrese nombre","ERROR",3) == 0)
+				if (utn_getName("\n pais?", "error", bufferNac.pais,LONG ,2) == 0 &&
+					utn_getName(" \n Ingrese nombre","ERROR",bufferNac.nombre, LONG, 3) == 0)
 				{
 						pArrays[indice] = bufferNac;
-						pArrays[indice].id = nac_generarNuevoId();
+						pArrays[indice].id = nacionalidad_generarNuevoId();
 						pArrays[indice].isEmpty = FALSE;
 				} else
 					{
@@ -412,7 +412,7 @@ int nac_baja (Nac * pArrays, int limite){
 	if (pArrays != NULL && limite>0)
 	{
 		nac_imprimir(pArrays, limite);
-		if(utn_getNumero(&idABorrar,"Ingrese pais de nac a borrar","Error",0,9999,3)==0)
+		if(utn_getNumberInt("Ingrese pais de nac a borrar","Error",&idABorrar,3,0,9999)==0)
 		{
 			// busco la posicion a borrar
 			if(nac_buscarIndicePorId(pArrays,limite,idABorrar,&indiceABorrar)==0)
@@ -437,15 +437,15 @@ int nac_modificar (Nac * pArrays, int limite)
 	{
 		nac_imprimir(pArrays, limite);
 
-		if(utn_getnumero(&idBuscar,"ID:","ERROR!",0,9999,2)==0)
+		if(utn_getNumberInt("ID:","ERROR!",&idBuscar,3,0,9999)==0)
 		{
 			if(nac_buscarIndicePorId(pArrays, limite,idBuscar,&indiceAModificar)==0)
 			{
 				bufferNac = pArrays[indiceAModificar]; // IMPORTANTE!
 
-				if (utn_getNombre(bufferNac.pais, LONG ,"\n Nuevo pais?", "error",2) == 0)
+				if (utn_getName("\n Nuevo pais?", "error",bufferNac.pais, 2 ,LONG) == 0)
 				{
-					if (utn_getNombre(bufferNac.nombre, LONG, " \n Ingrese nuevo nombre","ERROR",3) == 0)
+					if (utn_getName(" \n Ingrese nuevo nombre","ERROR",bufferNac.nombre, 2, LONG) == 0)
 					{
 						pArrays[indiceAModificar] = bufferNac; // COPIAMOS AL ARRAY
 						retorno = 0;
@@ -490,11 +490,13 @@ int nac_buscarLibreRef (Nac * pArrays, int limite, int * pIndice){
 	return retorno;
 }
 
+/*
 static int nac_generarNuevoId (void) {
 	static int id = 0;
 	id = id+1;
 	return id;
 }
+*/
 
 int nac_buscarIndicePorId (Nac * pArrays, int limite,
 		               int idBuscar,int * pIndice){

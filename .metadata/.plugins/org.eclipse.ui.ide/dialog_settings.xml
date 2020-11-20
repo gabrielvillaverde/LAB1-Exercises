@@ -23,4 +23,19 @@
 			<item value="C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_19_Archivos"/>
 		</list>
 	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\Hzkr\Desktop\tp_laboratorio_1\Trabajo práctico N°4"/>
+			<item value="C:\Users\Hzkr\Desktop\tp_laboratorio_1\Trabajo práctico N°3"/>
+			<item value="F:\Facultad\Programación\Primer año\Laboratorio y programación 1\TP 3\eclipse_tp3_v3\eclipse_tp3_v3\tp3_windows"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
 </section>

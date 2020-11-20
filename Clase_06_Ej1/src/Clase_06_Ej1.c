@@ -11,6 +11,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h> // Para trabajar con strings en el array.
+#include "utn.h"
 
 int main(void) {
 

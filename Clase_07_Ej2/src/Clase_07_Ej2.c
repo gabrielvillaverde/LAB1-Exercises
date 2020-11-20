@@ -35,9 +35,7 @@ int main(void)
 
 	do
 	{
-		printf("Menú de opciones\n", "1 - Imprimir el array\n", "2 - Cargar el array\n", "3 - Salir\n");
-
-		if(utn_getNumero(&opcionesMenu, "Ingrese la opción deseada: ", "ERROR. Elija una opción entre 1 y 3", 1, 3, 2)==0)
+		if(utn_getNumero(&opcionesMenu, "Menú de opciones\n1 - Imprimir el array\n2 - Cargar el array\n3 - Salir\n", "ERROR. Elija una opción entre 1 y 3", 1, 3, 2)==0)
 		{
 			switch(opcionesMenu)
 			{
@@ -45,7 +43,7 @@ int main(void)
 				case 1: // Imprimir el array
 					for(i=0 ; i<TAMANO ; i++) // For desde 0 hasta el tamaño del array (en este caso 31)
 					{
-						printf("Indice: %d -- Valor: %.df\n", i, temperaturasDias[i]); // Al índice le pasa el valor de i, y al valor le pasó el valor del array en la posición i
+						printf("Indice: %d -- Valor: %.2f\n", i, temperaturasDias[i]); // Al índice le pasa el valor de i, y al valor le pasó el valor del array en la posición i
 						// Si yo quisiera imprimir en vez del valor del índice, el valor del día, sería así...
 						// printf("Día: %d -- Valor: %.df\n", i+1, temperaturasDias[i]);
 					}
