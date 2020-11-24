@@ -1,1 +1,8 @@
-Info: Nothing to build for Clase_04_Ej1_ConBibliotecas
+03:29:14 **** Rebuild of configuration Debug for project Clase_04_Ej1_ConBibliotecas ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Clase_04_Ej1_ConBibliotecas.o" "..\\src\\Clase_04_Ej1_ConBibliotecas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_04_Ej1_ConBibliotecas.exe "src\\Clase_04_Ej1_ConBibliotecas.o" "src\\utn.o" 
+
+03:29:14 Build Finished. 0 errors, 0 warnings. (took 579ms)
+

@@ -1,10 +1,475 @@
-04:59:45 **** Rebuild of configuration Debug for project TP3_TP4_Fusionados ****
+21:32:27 **** Rebuild of configuration Debug for project Clase_25_PARCIAL_2 ****
 Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Controller.o" "..\\src\\Controller.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Employee.o" "..\\src\\Employee.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
-gcc -o TP3_TP4_Fusionados.exe "src\\Controller.o" "src\\Employee.o" "src\\LinkedList.o" "src\\main.o" "src\\parser.o" "src\\utn.o" 
-Info: Nothing to build for TP3_TP4_Fusionados
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ventas.o" "..\\src\\ventas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c: In function 'cliente_esCuitRepetido':
+..\src\cliente.c:112:12: warning: passing argument 1 of 'strcmp' makes pointer from integer without a cast [-Wint-conversion]
+  112 |  if(strcmp(cliente_getCuit(pCliente, cuitAuxiliar), cuit) == 0)
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |            |
+      |            int
+In file included from ..\src\cliente.c:10:
+c:\mingw\include\string.h:77:46: note: expected 'const char *' but argument is of type 'int'
+   77 | _CRTIMP __cdecl __MINGW_NOTHROW  int strcmp (const char *, const char *) __MINGW_ATTRIB_PURE;
+      |                                              ^~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+21:33:16 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c: In function 'cliente_esCuitRepetido':
+..\src\cliente.c:112:13: warning: passing argument 1 of 'strncmp' makes pointer from integer without a cast [-Wint-conversion]
+  112 |  if(strncmp(cliente_getCuit(pCliente, cuitAuxiliar), cuit, sizeof(cuitAuxiliar)) == 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             |
+      |             int
+In file included from ..\src\cliente.c:10:
+c:\mingw\include\string.h:85:47: note: expected 'const char *' but argument is of type 'int'
+   85 | _CRTIMP __cdecl __MINGW_NOTHROW  int strncmp (const char *, const char *, size_t) __MINGW_ATTRIB_PURE;
+      |                                               ^~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+21:34:31 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c: In function 'cliente_esCuitRepetido':
+..\src\cliente.c:112:13: warning: passing argument 1 of 'strncmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |  if(strncmp((Cliente*)cliente_getCuit(pCliente, cuitAuxiliar), cuit, sizeof(cuitAuxiliar)) == 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             |
+      |             Cliente * {aka struct <anonymous> *}
+In file included from ..\src\cliente.c:10:
+c:\mingw\include\string.h:85:47: note: expected 'const char *' but argument is of type 'Cliente *' {aka 'struct <anonymous> *'}
+   85 | _CRTIMP __cdecl __MINGW_NOTHROW  int strncmp (const char *, const char *, size_t) __MINGW_ATTRIB_PURE;
+      |                                               ^~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+21:35:53 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c: In function 'cliente_esCuitRepetido':
+..\src\cliente.c:112:13: warning: passing argument 1 of 'strncmp' from incompatible pointer type [-Wincompatible-pointer-types]
+  112 |  if(strncmp((Cliente*)cliente_getCuit(pCliente, cuitAuxiliar), cuit, sizeof(cuitAuxiliar)) == 0)
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |             |
+      |             Cliente * {aka struct <anonymous> *}
+In file included from ..\src\cliente.c:10:
+c:\mingw\include\string.h:85:47: note: expected 'const char *' but argument is of type 'Cliente *' {aka 'struct <anonymous> *'}
+   85 | _CRTIMP __cdecl __MINGW_NOTHROW  int strncmp (const char *, const char *, size_t) __MINGW_ATTRIB_PURE;
+      |                                               ^~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+21:38:52 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c: In function 'cliente_esCuitRepetido':
+..\src\cliente.c:115:18: warning: comparison between pointer and integer
+  115 |  if(cuitAuxiliar == *pCuit)
+      |                  ^~
+..\src\cliente.c:109:8: warning: unused variable 'pCuitAuxiliar' [-Wunused-variable]
+  109 |  char* pCuitAuxiliar = (char*) pCuit;
+      |        ^~~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+21:39:43 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c: In function 'cliente_esCuitRepetido':
+..\src\cliente.c:114:18: warning: comparison between pointer and integer
+  114 |  if(cuitAuxiliar == *pCuit)
+      |                  ^~
+..\src\cliente.c: At top level:
+..\src\cliente.c:121:1: error: expected identifier or '(' before '{' token
+  121 | {
+      | ^
+21:40:00 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c:121:1: error: expected identifier or '(' before '{' token
+  121 | {
+      | ^
+21:40:35 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
+Info: Nothing to build for Clase_25_PARCIAL_2
+22:04:35 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\controller.o: in function `controller_addCliente':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_25_PARCIAL_2\Debug/../src/controller.c:197: undefined reference to `controller_esCuitRepetido'
+collect2.exe: error: ld returned 1 exit status
+22:05:25 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+22:06:55 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
+18:09:21 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+..\src\utn.c: In function 'utn_getCuit':
+..\src\utn.c:615:44: error: too few arguments to function 'utn_isCuit'
+  615 |    if(myGets(bufferString, limite) == 0 && utn_isCuit(bufferString) == 1) {
+      |                                            ^~~~~~~~~~
+..\src\utn.c:360:5: note: declared here
+  360 | int utn_isCuit(char* cadena, int len)
+      |     ^~~~~~~~~~
+18:09:31 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ventas.o" "..\\src\\ventas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
+18:10:36 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ventas.o" "..\\src\\ventas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\utn.o" "..\\src\\utn.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+18:10:42 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+18:17:33 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
+19:47:22 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+19:47:56 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\main.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_25_PARCIAL_2\Debug/../src/main.c:133: undefined reference to `controller_imprimirClienteConMasAfichesVendidos'
+collect2.exe: error: ld returned 1 exit status
+19:48:06 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c:515:5: error: conflicting types for 'controller_imprimirClienteConMasAfichesVendidos'
+  515 | int controller_imprimirClienteConMasAfichesVendidos(LinkedList* pArrayListaClientes, LinkedList* pArrayListaVentas, int estado)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\controller.c:14:
+..\src\controller.h:24:5: note: previous declaration of 'controller_imprimirClienteConMasAfichesVendidos' was here
+   24 | int controller_imprimirClienteConMasAfichesVendidos(LinkedList* pArrayListaClientes, LinkedList* pArrayListaVentas);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+19:48:23 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c:515:5: error: conflicting types for 'controller_imprimirClienteConMasAfichesVendidos'
+  515 | int controller_imprimirClienteConMasAfichesVendidos(LinkedList* pArrayListaClientes, LinkedList* pArrayListaVentas, int estado)
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\controller.c:14:
+..\src\controller.h:24:5: note: previous declaration of 'controller_imprimirClienteConMasAfichesVendidos' was here
+   24 | int controller_imprimirClienteConMasAfichesVendidos(LinkedList* pArrayListaClientes, LinkedList* pArrayListaVentas);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+19:48:40 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\controller.o: in function `controller_imprimirClienteConMasAfichesVendidos':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_25_PARCIAL_2\Debug/../src/controller.c:557: undefined reference to `venta_contarClienteConMasAfichesVendidos'
+collect2.exe: error: ld returned 1 exit status
+20:39:08 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:133:17: warning: implicit declaration of function 'controller_imprimirClienteConMasOMenosAfichesVendidos'; did you mean 'controller_imprimirClienteConMenosAfichesVendidos'? [-Wimplicit-function-declaration]
+  133 |              if(controller_imprimirClienteConMasOMenosAfichesVendidos(listaClientes, listaVentas, 1) == 0)
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                 controller_imprimirClienteConMenosAfichesVendidos
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ventas.o" "..\\src\\ventas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c: In function 'controller_imprimirClienteConMasAfichesVendidos':
+..\src\controller.c:540:28: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  540 |     idClienteConMasAfiches = &idCliente; // ?
+      |                            ^
+..\src\controller.c:546:28: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  546 |     idClienteConMasAfiches = &idCliente; // ?
+      |                            ^
+..\src\controller.c:528:6: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+  528 |  int flag = FALSE;
+      |      ^~~~
+..\src\controller.c:519:14: warning: unused variable 'pListaFiltrada' [-Wunused-variable]
+  519 |  LinkedList* pListaFiltrada = NULL;
+      |              ^~~~~~~~~~~~~~
+..\src\controller.c: In function 'controller_imprimirClienteConMenosAfichesVendidos':
+..\src\controller.c:582:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  582 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:588:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  588 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:570:6: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+  570 |  int flag = FALSE;
+      |      ^~~~
+..\src\controller.c:561:14: warning: unused variable 'pListaFiltrada' [-Wunused-variable]
+  561 |  LinkedList* pListaFiltrada = NULL;
+      |              ^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+..\src\LinkedList.c: In function 'll_reduceFloat':
+..\src\LinkedList.c:785:1: error: expected declaration or statement at end of input
+  785 | }
+      | ^
+At top level:
+..\src\LinkedList.c:766:5: warning: 'll_count' defined but not used [-Wunused-function]
+  766 | int ll_count(LinkedList* this, int(*pFunc)(void*))
+      |     ^~~~~~~~
+20:39:21 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+..\src\LinkedList.c: In function 'll_reduceFloat':
+..\src\LinkedList.c:785:1: error: expected declaration or statement at end of input
+  785 | }
+      | ^
+At top level:
+..\src\LinkedList.c:766:5: warning: 'll_count' defined but not used [-Wunused-function]
+  766 | int ll_count(LinkedList* this, int(*pFunc)(void*))
+      |     ^~~~~~~~
+20:39:40 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
+20:40:33 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:40:34 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+20:45:04 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c: In function 'controller_imprimirClienteConMasAfichesVendidos':
+..\src\controller.c:527:6: warning: unused variable 'flag' [-Wunused-variable]
+  527 |  int flag = FALSE;
+      |      ^~~~
+..\src\controller.c:522:6: warning: variable 'idClienteMaximo' set but not used [-Wunused-but-set-variable]
+  522 |  int idClienteMaximo;
+      |      ^~~~~~~~~~~~~~~
+..\src\controller.c: In function 'controller_imprimirClienteConMenosAfichesVendidos':
+..\src\controller.c:578:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  578 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:584:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  584 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:566:6: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+  566 |  int flag = FALSE;
+      |      ^~~~
+..\src\controller.c:557:14: warning: unused variable 'pListaFiltrada' [-Wunused-variable]
+  557 |  LinkedList* pListaFiltrada = NULL;
+      |              ^~~~~~~~~~~~~~
+..\src\controller.c: In function 'controller_imprimirClienteConMasAfichesVendidos':
+..\src\controller.c:546:3: warning: 'idClienteConMasAfiches' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  546 |   cliente_findClienteByIdAndImprimir(pArrayListaClientes, idClienteConMasAfiches);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:45:22 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c: In function 'controller_imprimirClienteConMasAfichesVendidos':
+..\src\controller.c:522:6: warning: variable 'idClienteMaximo' set but not used [-Wunused-but-set-variable]
+  522 |  int idClienteMaximo;
+      |      ^~~~~~~~~~~~~~~
+..\src\controller.c: In function 'controller_imprimirClienteConMenosAfichesVendidos':
+..\src\controller.c:576:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  576 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:582:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  582 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:564:6: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+  564 |  int flag = FALSE;
+      |      ^~~~
+..\src\controller.c:555:14: warning: unused variable 'pListaFiltrada' [-Wunused-variable]
+  555 |  LinkedList* pListaFiltrada = NULL;
+      |              ^~~~~~~~~~~~~~
+..\src\controller.c: In function 'controller_imprimirClienteConMasAfichesVendidos':
+..\src\controller.c:544:3: warning: 'idClienteConMasAfiches' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  544 |   cliente_findClienteByIdAndImprimir(pArrayListaClientes, idClienteConMasAfiches);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:45:43 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c: In function 'controller_imprimirClienteConMenosAfichesVendidos':
+..\src\controller.c:575:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  575 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:581:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  581 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:563:6: warning: variable 'flag' set but not used [-Wunused-but-set-variable]
+  563 |  int flag = FALSE;
+      |      ^~~~
+..\src\controller.c:554:14: warning: unused variable 'pListaFiltrada' [-Wunused-variable]
+  554 |  LinkedList* pListaFiltrada = NULL;
+      |              ^~~~~~~~~~~~~~
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:45:48 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c: In function 'controller_imprimirClienteConMenosAfichesVendidos':
+..\src\controller.c:573:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  573 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:574:5: error: 'flag' undeclared (first use in this function)
+  574 |     flag = TRUE;
+      |     ^~~~
+..\src\controller.c:574:5: note: each undeclared identifier is reported only once for each function it appears in
+..\src\controller.c:579:30: warning: assignment to 'int' from 'int *' makes integer from pointer without a cast [-Wint-conversion]
+  579 |     idClienteConMenosAfiches = &idCliente; // ?
+      |                              ^
+..\src\controller.c:554:14: warning: unused variable 'pListaFiltrada' [-Wunused-variable]
+  554 |  LinkedList* pListaFiltrada = NULL;
+      |              ^~~~~~~~~~~~~~
+20:45:58 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:46:01 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\main.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_25_PARCIAL_2\Debug/../src/main.c:133: undefined reference to `controller_imprimirClienteConMenosAfichesVendidos'
+collect2.exe: error: ld returned 1 exit status
+20:46:01 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\main.o: in function `main':
+C:\Users\Hzkr\eclipse-workspace\Laboratorio_2020_1H_Ejercicios\Clase_25_PARCIAL_2\Debug/../src/main.c:133: undefined reference to `controller_imprimirClienteConMenosAfichesVendidos'
+collect2.exe: error: ld returned 1 exit status
+20:46:17 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
+20:46:30 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:46:32 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+20:49:21 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:49:36 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:49:38 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+20:53:36 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\LinkedList.o" "..\\src\\LinkedList.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+..\src\cliente.c:106:5: error: conflicting types for 'cliente_esCuitRepetido'
+  106 | int cliente_esCuitRepetido(LinkedList* pArrayListaClientes, char* pCuit)
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\cliente.c:13:
+..\src\cliente.h:29:5: note: previous declaration of 'cliente_esCuitRepetido' was here
+   29 | int cliente_esCuitRepetido(void* pElement, char* pCuit);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+20:53:47 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\parser.o" "..\\src\\parser.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+..\src\controller.c: In function 'controller_addCliente':
+..\src\controller.c:197:7: warning: implicit declaration of function 'cliente_esCuitRepetido2'; did you mean 'cliente_esCuitRepetido'? [-Wimplicit-function-declaration]
+  197 |    if(cliente_esCuitRepetido2(pArrayListaClientes, auxiliarCliente.cuit) == 0)
+      |       ^~~~~~~~~~~~~~~~~~~~~~~
+      |       cliente_esCuitRepetido
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:53:54 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:55:55 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:55:57 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+20:56:30 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
+Info: Nothing to build for Clase_25_PARCIAL_2
+Info: Nothing to build for Clase_25_PARCIAL_2
+21:01:30 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\controller.o" "..\\src\\controller.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:01:32 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+21:02:50 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\cliente.o" "..\\src\\cliente.c" 
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file Clase_25_PARCIAL_2.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:02:51 **** Incremental Build of configuration Debug for project Clase_25_PARCIAL_2 ****
+Info: Internal Builder is used for build
+gcc -o Clase_25_PARCIAL_2.exe "src\\LinkedList.o" "src\\cliente.o" "src\\controller.o" "src\\main.o" "src\\parser.o" "src\\utn.o" "src\\ventas.o" 
+Info: Nothing to build for Clase_25_PARCIAL_2
